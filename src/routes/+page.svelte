@@ -1,6 +1,6 @@
 <script lang="ts">
   import logo from '$icons/temporal-logo.svg';
-  import Introduction from './introduction.md';
+  import Introduction from '$content/introduction.md';
 </script>
 
 <div class="container my-10 flex flex-col items-center gap-4 font-display text-4xl uppercase">
@@ -10,4 +10,4 @@
   <p>London, UK</p>
 </div>
 
-<Introduction class="container space-y-4" />
+<Introduction class="container max-w-3xl space-y-4" />
