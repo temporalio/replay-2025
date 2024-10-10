@@ -25,9 +25,7 @@
   });
 
   $effect(() => {
-    console.log('cookieConsent', cookieConsent);
     if (isCookieConsent(cookieConsent)) {
-      console.log('is cookie consent');
       localStorage.setItem(cookieConsentKey, cookieConsent);
     }
   });
@@ -35,7 +33,9 @@
 
 {#if cookieConsent === 'undecided'}
   <div class="fixed bottom-0 left-0 right-0 z-10 flex bg-black px-4 py-6 text-white">
-    <div class="container flex items-center gap-8">
+    <div
+      class="md:grid-cols- container grid grid-cols-[2rem_1fr] items-center gap-8 md:grid-cols-[2rem_2fr_1fr] md:flex-row"
+    >
       <img src={cookie} alt="cookie icon" class="block w-8" />
       <div>
         <h2 class="font-mono font-medium">View Our Cookie Policy</h2>
@@ -53,15 +53,15 @@
           </a>.
         </p>
       </div>
-      <div class="flex flex-col gap-4 md:flex-row">
+      <div class="col-span-2 flex w-full flex-row gap-4 md:col-span-1 md:w-fit">
         <button
-          class=" w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
+          class="w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
           onclick={accept}
         >
           Accept
         </button>
         <button
-          class=" w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
+          class="w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
           onclick={decline}
         >
           Decline
