@@ -1,6 +1,8 @@
 <script lang="ts">
   import logo from '$icons/temporal-logo.svg';
   import Introduction from '$content/introduction.md';
+  import LastYear from '$content/last-year.md';
+  import Tickets from '$components/tickets.svelte';
 </script>
 
 <svelte:head>
@@ -14,4 +16,8 @@
   <p>London, UK</p>
 </div>
 
-<Introduction as="section" class="container max-w-3xl space-y-4" />
+<section class="container max-w-3xl space-y-16">
+  <Introduction class="prose prose-invert" />
+  <Tickets />
+  <LastYear class="prose prose-invert" />
+</section>
