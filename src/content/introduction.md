@@ -5,5 +5,3 @@ Whether you're new to Temporal or a seasoned pro, Replay 2025 is your chance to 
 Save the date and stay tuned for registration details—**Replay 2025** is an event you won’t want to miss!
 
 Interested in sponsoring? Email [sponsorships@temporal.io](mailto:sponsorships@temporal.io).
-
-Looking for the [Replay 2024 website](https://replay.temporal.io/2024)? You can also check out [last year's talks](https://temporal.io/replay-2023/videos).
