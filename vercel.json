@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/2024/:subdir*",
+      "destination": "https://replay-2024.preview.thundergun.io/:subdir*"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
