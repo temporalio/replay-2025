@@ -7,8 +7,4 @@
     background-color: rgb(68, 76, 231);
     color: white;
   }
-
-  a {
-    @apply underline decoration-2 underline-offset-2;
-  }
 }
