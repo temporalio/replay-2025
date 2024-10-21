@@ -1,4 +1,6 @@
 <script lang="ts">
+  import logo from '$icons/temporal-logo.svg';
+
   import CookieConsent from '$components/cookie-consent.svelte';
   import openGraph from '$assets/open-graph.jpg';
   import metadata from '$content/metadata.yaml';
@@ -7,6 +9,13 @@
 </script>
 
 <main>
+  <div class="container my-10 flex flex-col items-center gap-4 font-display text-4xl uppercase">
+    <img src={logo} alt="Temporal logo" class="w-24" />
+    <h1 class="text-6xl lg:text-9xl">Replay</h1>
+    <p>March 3–5, 2025</p>
+    <p>London, UK</p>
+  </div>
+
   <slot />
   <CookieConsent />
 </main>
