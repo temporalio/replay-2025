@@ -6,5 +6,6 @@
   body {
     background-color: rgb(68, 76, 231);
     color: white;
+    @apply mb-16 md:mb-40;
   }
 }
