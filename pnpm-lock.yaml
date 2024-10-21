@@ -60,8 +60,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.4(svelte@5.0.0-next.262)(typescript@5.6.2)
       svelte-markdown-component:
-        specifier: ^0.0.2
-        version: 0.0.2(svelte@5.0.0-next.262)(typescript@5.6.2)
+        specifier: ^0.0.4
+        version: 0.0.4(svelte@5.0.0-next.262)(typescript@5.6.2)
       tailwind-merge:
         specifier: ^2.5.3
         version: 2.5.3
@@ -1640,10 +1640,10 @@ packages:
       svelte:
         optional: true
 
-  svelte-markdown-component@0.0.2:
-    resolution: {integrity: sha512-A/eShApq6k9r6RMU1Rua6jvgHVqZVJaAmBgL4rSEaW7VHmuBXNwR1qlzhI7U1b89ZsyPMAJyARFhoVMJ9DNqpg==}
+  svelte-markdown-component@0.0.4:
+    resolution: {integrity: sha512-/RWf9z3aFczws2+3iupczRcepD4MR8FLRM32/fLZpVcuocjHZZWq0otzBUFjicvBP1nI867+AL/NMVLtINf4AQ==}
     peerDependencies:
-      svelte: ^5.0.0-next.1
+      svelte: '*'
 
   svelte-tree-walker@0.0.2:
     resolution: {integrity: sha512-TG3uQWTcOmYbsoOpv9MKHXaIF1/5fkF6TPFj9t9R9sYk5jDyoo1Cxgv8SK0i12ljDolbOwpKWaDByvJ0jm+BmQ==}
@@ -3434,7 +3434,7 @@ snapshots:
     optionalDependencies:
       svelte: 5.0.0-next.262
 
-  svelte-markdown-component@0.0.2(svelte@5.0.0-next.262)(typescript@5.6.2):
+  svelte-markdown-component@0.0.4(svelte@5.0.0-next.262)(typescript@5.6.2):
     dependencies:
       gray-matter: 4.0.3
       magic-string: 0.30.11

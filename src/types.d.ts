@@ -1,4 +1,7 @@
 declare module '*.md' {
-  const Component: import('svelte-markdown-component/types.d.ts').default;
-  export default Component;
+  import type { SvelteComponent } from 'svelte';
+
+  export default SvelteComponent<{ class?: string; as?: keyof HTMLElementTagNameMap }>;
+
+  export const metadata: Record<string, unknown>;
 }

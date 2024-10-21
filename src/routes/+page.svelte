@@ -14,4 +14,4 @@
   <p>London, UK</p>
 </div>
 
-<Introduction class="container max-w-3xl space-y-4" />
+<Introduction as="section" class="container max-w-3xl space-y-4" />
