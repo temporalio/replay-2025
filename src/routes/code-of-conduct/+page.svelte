@@ -6,7 +6,7 @@
   <title>Code of Conduct | Replay 2025</title>
 </svelte:head>
 
-<section class="container my-10 max-w-2xl space-y-16">
+<section class="container my-10 max-w-4xl space-y-16">
   <h1 class="font-display text-4xl">Code of Conduct</h1>
 
   <a

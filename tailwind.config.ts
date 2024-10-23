@@ -19,6 +19,13 @@ export default {
       screens: {
         xs: '375px',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100ch', // add required value here
+          },
+        },
+      },
     },
   },
   plugins: [typography],
