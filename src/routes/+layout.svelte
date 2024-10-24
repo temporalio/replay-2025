@@ -52,6 +52,7 @@
 <svelte:head>
   <meta property="og:title" content={metadata.title} />
   <meta property="og:description" content={metadata.description} />
+  <meta property="description" content={metadata.description} />
   <meta property="og:site_name" content={metadata.title} />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
