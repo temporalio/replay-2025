@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/2024/:subdir*",
-      "destination": "https://replay-2024-git-subdomain.preview.thundergun.io/2024/:subdir*"
+      "destination": "https://replay-2024.preview.thundergun.io/2024/:subdir*"
     },
     {
       "source": "/replay-2024/:subdir*",
-      "destination": "https://replay-2024-git-subdomain.preview.thundergun.io/2024/replay-2024/:subdir*"
+      "destination": "https://replay-2024.preview.thundergun.io/2024/replay-2024/:subdir*"
     },
     { "source": "/(.*)", "destination": "/" }
   ]
