@@ -57,4 +57,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://replay.temporal.io" />
   <meta property="og:image" content={openGraph} />
+  <meta property="twitter:image" content={openGraph} />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content={metadata.description} />
+  <meta property="twitter:description" content={metadata.description} />
 </svelte:head>
