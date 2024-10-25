@@ -11,7 +11,9 @@
 
 <section class="container max-w-3xl space-y-16">
   <Introduction class="prose prose-invert" />
-  <Tickets />
-  <CallForProposals />
+  <div class="space-y-8">
+    <Tickets />
+    <CallForProposals />
+  </div>
   <LastYear class="prose prose-invert" />
 </section>
