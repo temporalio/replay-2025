@@ -6,6 +6,4 @@ Join us at the **Convene in 22 Bishopsgate** in London, UK. Tickets are on sale 
 
 Do you have a great idea for a Replay talk? Check out our CFP [here](http://papercall.io/replay-2025). The CFP closes on December 13th, 2024.
 
-For more information, email [replay@temporal.io](mailto:replay@temporal.io). 
-
-Interested in sponsoring? Email [sponsorships@temporal.io](mailto:sponsorships@temporal.io).
+For more information, email [replay@temporal.io](mailto:replay@temporal.io). Interested in sponsoring? Email [sponsorships@temporal.io](mailto:sponsorships@temporal.io).
