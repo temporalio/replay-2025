@@ -42,8 +42,9 @@ export default {
         },
       },
       fontFamily: {
+        jaro: ['Jaro Variable', 'sans-serif'],
         display: ['Afacad Variable', 'sans-serif'],
-        label: ['Aeonik', 'sans-serif'],
+        sans: ['Aeonik', 'sans-serif'],
       },
       screens: {
         xs: '375px',
