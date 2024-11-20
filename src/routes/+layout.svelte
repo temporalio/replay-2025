@@ -12,7 +12,7 @@
   <header class="mb-16">
     <a
       href="/"
-      class="container my-10 flex flex-col items-center gap-3 font-display text-3xl uppercase"
+      class="container my-10 flex flex-col items-center gap-2 font-display text-3xl uppercase"
     >
       <img src={logo} alt="Temporal logo" class="w-24" />
       <h1 class="text-6xl lg:text-[7rem]">Replay</h1>
