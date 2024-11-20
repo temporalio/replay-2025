@@ -12,13 +12,6 @@
     return true;
   };
 
-  const accept = () => {
-    cookieConsent = 'accepted';
-  };
-  const decline = () => {
-    cookieConsent = 'rejected';
-  };
-
   onMount(() => {
     const value = localStorage.getItem(cookieConsentKey);
     cookieConsent = isCookieConsent(value) ? value : 'undecided';
@@ -56,13 +49,13 @@
       <div class="col-span-2 flex w-full flex-row gap-4 md:col-span-1 md:w-fit">
         <button
           class="w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
-          onclick={accept}
+          onclick={() => (cookieConsent = 'accepted')}
         >
           Accept
         </button>
         <button
           class="w-full rounded-lg border-2 border-white px-4 py-2 hover:bg-white/20"
-          onclick={decline}
+          onclick={() => (cookieConsent = 'rejected')}
         >
           Decline
         </button>

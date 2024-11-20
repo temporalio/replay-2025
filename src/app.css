@@ -4,8 +4,9 @@
 
 @layer base {
   body {
-    background-color: rgb(68, 76, 231);
+    background-image: url('$assets/grid.svg');
+    background-size: 25px;
     color: white;
-    @apply mb-16 md:mb-40;
+    @apply mb-16 bg-slate-950 md:mb-40;
   }
 }

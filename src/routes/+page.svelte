@@ -9,11 +9,11 @@
   <title>Replay 2025 — March 3–5 — London, UK</title>
 </svelte:head>
 
-<section class="container max-w-3xl space-y-16">
-  <Introduction class="prose prose-invert" />
-  <div class="space-y-8">
+<section class="bg-pear-300 container max-w-3xl space-y-16 py-16">
+  <Introduction class="prose" />
+  <div class="flex flex-col gap-4 md:flex-row">
     <Tickets />
     <CallForProposals />
   </div>
-  <LastYear class="prose prose-invert" />
+  <LastYear class="prose" />
 </section>
