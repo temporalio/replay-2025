@@ -42,7 +42,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Futura', 'sans-serif'],
+        display: ['Afacad Variable', 'sans-serif'],
       },
       screens: {
         xs: '375px',

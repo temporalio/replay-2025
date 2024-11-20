@@ -13,6 +13,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@fontsource-variable/afacad": "^5.1.0",
     "@modyfi/vite-plugin-yaml": "^1.1.0",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",

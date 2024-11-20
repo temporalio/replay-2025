@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@fontsource-variable/afacad':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@modyfi/vite-plugin-yaml':
         specifier: ^1.1.0
         version: 1.1.0(rollup@4.24.0)(vite@5.4.8)
@@ -265,6 +268,9 @@ packages:
   '@eslint/plugin-kit@0.2.0':
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/afacad@5.1.0':
+    resolution: {integrity: sha512-elc8W8WREN8GYcuDvT+zYt43R7gON76nUmTygQAeNIwUjS4dXgKgRs4cPuvSiHJyGUyP2XsFe9Ly2Hrew71lfA==}
 
   '@humanfs/core@0.19.0':
     resolution: {integrity: sha512-2cbWIHbZVEweE853g8jymffCA+NCMiuqeECeBBLm8dg2oFdjuGJhgN4UAbI+6v0CKbbhvtXA4qV8YR5Ji86nmw==}
@@ -2018,6 +2024,8 @@ snapshots:
   '@eslint/plugin-kit@0.2.0':
     dependencies:
       levn: 0.4.1
+
+  '@fontsource-variable/afacad@5.1.0': {}
 
   '@humanfs/core@0.19.0': {}
 
