@@ -1,4 +1,4 @@
-Get ready for **Replay 2025**! From March 3-5, 2025, we're bringing **Temporal's flagship conference** to **London**, where developers, engineers, and industry leaders will gather to explore the future of application development.  This year’s theme, “Modernizing the Monolith,” will focus on transcending legacy systems and adopting resilient and scalable architectures.
+Get ready for **Replay 2025**! From March 3-5, 2025, we're bringing **Temporal's flagship conference** to **London**, where developers, engineers, and industry leaders will gather to explore the future of application development.  This year’s theme, **“Modernizing the Monolith”,** will focus on transcending legacy systems and adopting resilient and scalable architectures.
 
 Join us for three immersive days filled with **keynotes, hands-on workshops (in Go, .NET, and Java), live demos**, and networking with the brightest minds in tech.
 
