@@ -1,4 +1,4 @@
-@import '@fontsource-variable/afacad';
+@import './fonts.css';
 
 @tailwind base;
 @tailwind components;

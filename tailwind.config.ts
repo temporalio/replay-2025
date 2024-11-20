@@ -43,17 +43,20 @@ export default {
       },
       fontFamily: {
         display: ['Afacad Variable', 'sans-serif'],
+        label: ['Aeonik', 'sans-serif'],
       },
       screens: {
         xs: '375px',
       },
-      typography: {
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            maxWidth: '100ch', // add required value here
+            maxWidth: '120ch',
+            '--tw-prose-body': theme('colors.slate[950]'),
+            '--tw-prose-bold': theme('colors.slate[950]'),
           },
         },
-      },
+      }),
     },
   },
   plugins: [typography],
