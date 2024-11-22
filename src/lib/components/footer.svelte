@@ -1,7 +1,7 @@
 <footer>
-  <div class="bg-stonehenge h-80 bg-center bg-no-repeat"></div>
+  <div class="bg-stonehenge h-80 bg-no-repeat"></div>
   <ul
-    class="bg-pink flex w-full flex-col items-center gap-2 py-3 font-bold text-slate-950 md:flex-row md:justify-center md:py-12"
+    class="bg-pink flex w-full flex-col items-center gap-2 py-3 font-bold text-slate-950 md:flex-row md:justify-center md:gap-6 md:py-12"
   >
     <li>
       <a

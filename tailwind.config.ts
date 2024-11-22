@@ -12,6 +12,10 @@ export default {
       backgroundSize: {
         grid: '25px',
       },
+      backgroundPosition: {
+        'center-bottom': 'center bottom',
+        stonehenge: 'center bottom',
+      },
       colors: {
         slate: {
           '50': '#f6f6f9',
