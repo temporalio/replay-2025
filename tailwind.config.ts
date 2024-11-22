@@ -7,7 +7,7 @@ export default {
     extend: {
       backgroundImage: {
         grid: "url('/backgrounds/grid.svg')",
-        stonehenge: "url('/backgrounds/stonehenge.svg')",
+        stonehenge: "url('/backgrounds/stonehenge.png')",
       },
       backgroundSize: {
         grid: '25px',
