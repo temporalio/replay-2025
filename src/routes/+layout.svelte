@@ -3,7 +3,7 @@
   import metadata from '$content/metadata.yaml';
 
   import logo from '$assets/logo.svg';
-  import openGraph from '$assets/open-graph.jpg';
+  import openGraph from '$assets/open-graph.png';
 
   import CookieConsent from '$components/cookie-consent.svelte';
   import Footer from '$components/footer.svelte';
