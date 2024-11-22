@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Button from '$components/button.svelte';
   import CodeOfConduct from '$content/code-of-conduct.md';
 </script>
 
@@ -6,15 +7,10 @@
   <title>Code of Conduct | Replay 2025</title>
 </svelte:head>
 
-<section class="container my-10 max-w-4xl space-y-16">
-  <h1 class="font-display text-4xl">Code of Conduct</h1>
+<section class="bg-pear container my-10 max-w-5xl space-y-8 py-12">
+  <h1 class="prose font-jaro text-4xl">Code of Conduct</h1>
 
-  <a
-    href="https://forms.gle/CciLKfYRWGs38qnV7"
-    class="block whitespace-break-spaces rounded-lg border-2 border-white bg-transparent py-4 text-center font-bold uppercase text-white transition-colors hover:bg-white/20"
-  >
-    Harassment Complaint Form
-  </a>
+  <Button href="https://forms.gle/CciLKfYRWGs38qnV7">Harassment Complaint Form</Button>
 
-  <CodeOfConduct class="prose prose-invert" />
+  <CodeOfConduct class="prose" />
 </section>

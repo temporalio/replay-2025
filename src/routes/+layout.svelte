@@ -1,54 +1,28 @@
 <script lang="ts">
-  import logo from '$icons/temporal-logo.svg';
-
-  import CookieConsent from '$components/cookie-consent.svelte';
-  import openGraph from '$assets/open-graph.jpg';
+  import '../app.css';
   import metadata from '$content/metadata.yaml';
 
-  import '../app.css';
+  import logo from '$assets/logo.svg';
+  import openGraph from '$assets/open-graph.jpg';
+
+  import CookieConsent from '$components/cookie-consent.svelte';
+  import Footer from '$components/footer.svelte';
+
+  const { children } = $props();
 </script>
 
-<main>
-  <header class="mb-16">
-    <a
-      href="/"
-      class="container my-10 flex flex-col items-center gap-2 font-display text-3xl uppercase"
-    >
-      <img src={logo} alt="Temporal logo" class="w-24" />
-      <h1 class="text-6xl lg:text-[7rem]">Replay</h1>
-      <p>March 3–5, 2025</p>
-      <p>London, UK</p>
+<main class="grid h-screen grid-rows-[auto_1fr_auto]">
+  <header class="m-8 flex justify-center">
+    <h1 class="sr-only">{metadata.title}</h1>
+    <p class="sr-only">{metadata.description}</p>
+    <a href="/">
+      <img src={logo} alt="Replay: Modernize the Monolith, March 3–5, 2025" />
     </a>
   </header>
-  <slot />
+  {@render children()}
+  <Footer />
   <CookieConsent />
 </main>
-
-<footer class="container my-24 font-display">
-  <ul class="flex flex-col gap-4 md:flex-row md:justify-center">
-    <li>
-      <a href="https://temporal.io" class="text-white hover:underline hover:underline-offset-2">
-        Temporal
-      </a>
-    </li>
-    <li>
-      <a href="/code-of-conduct" class="text-white hover:underline hover:underline-offset-2">
-        Code of Conduct
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://temporal.io/global-privacy-policy"
-        class="text-white hover:underline hover:underline-offset-2"
-      >
-        Privacy Policy
-      </a>
-    </li>
-    <li>
-      <a href="/2024" class="text-white hover:underline hover:underline-offset-2">Replay 2024</a>
-    </li>
-  </ul>
-</footer>
 
 <svelte:head>
   <meta property="og:title" content={metadata.title} />

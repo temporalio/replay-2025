@@ -5,6 +5,13 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      backgroundImage: {
+        grid: "url('/backgrounds/grid.svg')",
+        stonehenge: "url('/backgrounds/stonehenge.svg')",
+      },
+      backgroundSize: {
+        grid: '25px',
+      },
       colors: {
         slate: {
           '50': '#f6f6f9',
@@ -31,6 +38,21 @@ export default {
           '800': '#536113',
           '900': '#455215',
           '950': '#242d06',
+          DEFAULT: '#ddee59',
+        },
+        pink: {
+          '50': '#fef3ff',
+          '100': '#fce6ff',
+          '200': '#faccff',
+          '300': '#f9a3ff',
+          '400': '#f76dff',
+          '500': '#ee46ff',
+          '600': '#d516e3',
+          '700': '#b40ebd',
+          '800': '#940e9a',
+          '900': '#7c117e',
+          '950': '#530055',
+          DEFAULT: '#ee46ff',
         },
       },
       container: {
