@@ -10,7 +10,7 @@
   <title>Replay 2025 — March 3–5 — London, UK</title>
 </svelte:head>
 
-<section class="bg-pear container max-w-5xl space-y-8 py-12 prose-h3:mb-0">
+<section class="container max-w-5xl space-y-8 bg-green py-12 prose-h3:mb-0">
   <Introduction class="prose" />
   <div class="flex flex-col gap-4 md:flex-row">
     <Button href={links.tickets}>Buy Tickets</Button>

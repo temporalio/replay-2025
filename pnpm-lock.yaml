@@ -14,6 +14,9 @@ importers:
       '@fontsource-variable/jaro':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource/tiny5':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@modyfi/vite-plugin-yaml':
         specifier: ^1.1.0
         version: 1.1.0(rollup@4.24.0)(vite@5.4.8)
@@ -277,6 +280,9 @@ packages:
 
   '@fontsource-variable/jaro@5.1.0':
     resolution: {integrity: sha512-tdaTxgfR4g3axGhqDHYFTq88WM9MO0PK1Vs0e1JZNT6LxZkudWt+bR2SYEuS2yIj3luZYvniVHEMyx9R0SDEqA==}
+
+  '@fontsource/tiny5@5.1.0':
+    resolution: {integrity: sha512-MCyU9+0RoD/M6kQAUxx3lvgxgqXT7PB2vzCQjAZjKG5tdfRRQQS1oOTx0e+w+Qu0bFLUCyPfssCk0XrugVk3HQ==}
 
   '@humanfs/core@0.19.0':
     resolution: {integrity: sha512-2cbWIHbZVEweE853g8jymffCA+NCMiuqeECeBBLm8dg2oFdjuGJhgN4UAbI+6v0CKbbhvtXA4qV8YR5Ji86nmw==}
@@ -2034,6 +2040,8 @@ snapshots:
   '@fontsource-variable/afacad@5.1.0': {}
 
   '@fontsource-variable/jaro@5.1.0': {}
+
+  '@fontsource/tiny5@5.1.0': {}
 
   '@humanfs/core@0.19.0': {}
 

@@ -10,6 +10,6 @@
   }
 
   body {
-    @apply bg-grid mb-16 min-h-full bg-slate-950 text-white md:mb-40;
+    @apply mb-16 min-h-full bg-slate-950 bg-grid text-white md:mb-40;
   }
 }
