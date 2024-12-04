@@ -10,13 +10,23 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",
     "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@fontsource-variable/afacad": "^5.1.0",
     "@fontsource-variable/jaro": "^5.1.0",
     "@fontsource/tiny5": "^5.1.0",
     "@modyfi/vite-plugin-yaml": "^1.1.0",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/addon-svelte-csf": "^5.0.0-next.13",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/svelte": "^8.4.6",
+    "@storybook/sveltekit": "^8.4.6",
+    "@storybook/test": "^8.4.6",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
@@ -25,13 +35,16 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
     "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-storybook": "^0.11.1",
     "eslint-plugin-svelte": "^2.36.0",
     "globals": "^15.0.0",
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "storybook": "^8.4.6",
     "svelte": "^5.0.0-next.1",
     "svelte-check": "^4.0.0",
     "svelte-markdown-component": "^0.0.4",
@@ -43,5 +56,10 @@
     "vitest": "^2.0.0"
   },
   "type": "module",
-  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }

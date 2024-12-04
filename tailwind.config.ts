@@ -42,7 +42,8 @@ export default {
       backgroundImage: {
         grid: "url('/backgrounds/grid.svg')",
         stonehenge: "url('/backgrounds/stonehenge.png')",
-        'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%));',
+        'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
+        'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
         'mint-to-yellow': 'linear-gradient(180deg, #A7FFBB 4.67%, #E2FF6E 104.22%)',
         'blue-to-mint': 'linear-gradient(90deg, #2AD1DD 0%, #78DA9A 100%)',
       },
@@ -65,9 +66,6 @@ export default {
         sans: ['Aeonik', 'sans-serif'],
         pixelated: ['Tiny5', 'monospace'],
       },
-      maxWidth: ({ theme }) => ({
-        section: theme('maxWidth.6xl'),
-      }),
       screens: {
         xs: '375px',
       },

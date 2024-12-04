@@ -1,0 +1,7 @@
+@import '../src/app.css';
+
+@layer base {
+  :root {
+    @apply p-4;
+  }
+}

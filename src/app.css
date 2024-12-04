@@ -5,11 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    @apply overscroll-y-none;
-  }
-
   body {
-    @apply mb-16 min-h-full bg-slate-950 bg-grid text-white md:mb-40;
+    @apply mb-16 min-h-full bg-black bg-grid text-white md:mb-40;
   }
 }
