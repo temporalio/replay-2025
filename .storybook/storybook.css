@@ -4,4 +4,8 @@
   :root {
     @apply p-4;
   }
+
+  body {
+    @apply bg-white text-black;
+  }
 }

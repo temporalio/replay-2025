@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -10,8 +11,8 @@ export default {
       white: '#ffffff',
       black: '#151620',
       green: {
-        dark: '#0A2C1D',
-        DEFAULT: '#ddee59',
+        dark: '#61682C',
+        DEFAULT: '#DDEE59',
       },
       lilac: {
         DEFAULT: '#D9CAFB',
@@ -34,7 +35,7 @@ export default {
         '950': '#151620',
       },
       teal: {
-        dark: '#0F2C2C',
+        dark: '#297964',
         DEFAULT: '#33FFC9',
       },
     },
@@ -42,6 +43,7 @@ export default {
       backgroundImage: {
         grid: "url('/backgrounds/grid.svg')",
         stonehenge: "url('/backgrounds/stonehenge.png')",
+        line: 'linear-gradient(to right, #61682C 49%, transparent 49%, transparent 51%, #61682C 51%)',
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
         'mint-to-yellow': 'linear-gradient(180deg, #A7FFBB 4.67%, #E2FF6E 104.22%)',
@@ -49,6 +51,7 @@ export default {
       },
       backgroundSize: {
         grid: '25px',
+        line: '100% 1px',
       },
       backgroundPosition: {
         'center-bottom': 'center bottom',
@@ -80,5 +83,21 @@ export default {
       }),
     },
   },
-  plugins: [typography],
+  plugins: [
+    typography,
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
+        '.horizontal-writing-tb': { 'writing-mode': 'horizontal-tb' },
+        '.vertical-writing-rl': { 'writing-mode': 'vertical-rl' },
+        '.vertical-writing-lr': { 'writing-mode': 'vertical-lr' },
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
+        '.orientation-mixed': { 'text-orientation': 'mixed' },
+        '.orientation-upright': { 'text-orientation': 'upright' },
+        '.orientation-sideways-right': { 'text-orientation': 'sideways-right' },
+        '.orientation-sideways': { 'text-orientation': 'sideways' },
+        '.orientation-glyph': { 'text-orientation': 'use-glyph-orientation' },
+      });
+    }),
+  ],
 } satisfies Config;

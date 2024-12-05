@@ -28,7 +28,7 @@ export const portrait = cva(
   {
     variants: {
       type: {
-        keynote: ['max-w-60', 'md:w-80'],
+        keynote: ['max-w-60', 'md:w-80', 'md:max-w-80'],
         speaker: ['w-60'],
       },
     },

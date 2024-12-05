@@ -10,7 +10,7 @@ export const button = cva(
     'justify-center',
     'items-center',
     'px-20',
-    'py-6',
+    'py-8',
   ],
   {
     variants: {
