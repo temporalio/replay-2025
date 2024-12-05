@@ -10,17 +10,9 @@
   }: {
     title: string;
     badge?: string;
-    background: 'teal' | 'green' | 'pink';
+    background: 'bg-teal' | 'bg-green' | 'bg-pink';
     children?: Snippet;
   } = $props();
-
-  const backgroundColor = $derived(
-    {
-      teal: 'bg-teal',
-      green: 'bg-green',
-      pink: 'bg-pink',
-    }[background],
-  );
 </script>
 
 {#snippet callout({ badge }: { badge: string })}
@@ -32,8 +24,8 @@
 <section class={merge('flex w-full flex-col gap-1 md:flex-row')}>
   <header
     class={merge(
-      'md:orientation-sideways md:vertical-writing-lr flex w-full max-w-fit items-center justify-center gap-4 whitespace-nowrap p-4 md:flex-row-reverse',
-      backgroundColor,
+      'md:orientation-sideways md:vertical-writing-lr relative flex w-full items-center justify-center gap-4 whitespace-nowrap p-4 before:absolute before:h-full before:w-full before:bg-[rgb(0,0,0,0.2)] md:max-w-fit md:flex-row-reverse',
+      background,
     )}
   >
     <h2 class="py-3 font-jaro text-2xl md:rotate-180">
@@ -43,7 +35,8 @@
       {@render callout({ badge })}
     {/if}
   </header>
-  <div class={merge('w-full', backgroundColor)}>
+
+  <div class={merge('w-full', background)}>
     {#if children}
       {@render children()}
     {/if}

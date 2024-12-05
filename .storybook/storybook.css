@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    @apply p-4;
+    @apply p-2;
   }
 
   body {

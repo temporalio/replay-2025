@@ -43,7 +43,7 @@ export default {
       backgroundImage: {
         grid: "url('/backgrounds/grid.svg')",
         stonehenge: "url('/backgrounds/stonehenge.png')",
-        line: 'linear-gradient(to right, #61682C 49%, transparent 49%, transparent 51%, #61682C 51%)',
+        line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
         'mint-to-yellow': 'linear-gradient(180deg, #A7FFBB 4.67%, #E2FF6E 104.22%)',
@@ -69,6 +69,10 @@ export default {
         sans: ['Aeonik', 'sans-serif'],
         pixelated: ['Tiny5', 'monospace'],
       },
+      fontSize: {
+        'title-small': '3rem',
+        'title-medium': '3.75rem',
+      },
       screens: {
         xs: '375px',
       },
@@ -85,13 +89,13 @@ export default {
   },
   plugins: [
     typography,
-    plugin(function ({ addUtilities }) {
+    plugin(function ({ addUtilities, theme }) {
       addUtilities({
-        // https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
+        '.title-small': { 'font-size': '3rem', 'font-family': theme('fontFamily.jaro') },
+        '.title-medium': { 'font-size': '3.75rem', 'font-family': theme('fontFamily.jaro') },
         '.horizontal-writing-tb': { 'writing-mode': 'horizontal-tb' },
         '.vertical-writing-rl': { 'writing-mode': 'vertical-rl' },
         '.vertical-writing-lr': { 'writing-mode': 'vertical-lr' },
-        // https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
         '.orientation-mixed': { 'text-orientation': 'mixed' },
         '.orientation-upright': { 'text-orientation': 'upright' },
         '.orientation-sideways-right': { 'text-orientation': 'sideways-right' },

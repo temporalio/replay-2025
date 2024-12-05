@@ -6,24 +6,24 @@
   import Link from '$components/link/link.svelte';
 
   const { Story } = defineMeta({
-    title: 'Events',
+    title: 'Events/Events',
     component: Events,
     tags: ['autodocs'],
     argTypes: {
       title: { control: 'text' },
       badge: { control: 'text' },
-      background: { control: 'select', options: ['teal', 'green', 'pink'] },
+      background: { control: 'select', options: ['bg-teal', 'bg-green', 'bg-pink'] },
     },
     args: {
       title: 'Day One',
       badge: '',
-      background: 'teal',
+      background: 'bg-teal',
     },
   });
 </script>
 
 <Story name="One Event">
-  {#snippet children({ title = 'Event Title', background = 'teal', ...args })}
+  {#snippet children({ title = 'Event Title', background = 'bg-teal', ...args })}
     <Events {title} {background} {...args}>
       <Event
         title={title ?? ''}
@@ -38,7 +38,7 @@
 </Story>
 
 <Story name="Two Events">
-  {#snippet children({ title = 'Event Title', background = 'teal', ...args })}
+  {#snippet children({ title = 'Event Title', background = 'bg-teal', ...args })}
     <Events {title} {background} {...args}>
       <Event
         title="Workshops"
