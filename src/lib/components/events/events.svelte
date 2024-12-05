@@ -24,7 +24,7 @@
 <section class={merge('flex w-full flex-col gap-1 md:flex-row')}>
   <header
     class={merge(
-      'md:orientation-sideways md:vertical-writing-lr relative flex w-full items-center justify-center gap-4 whitespace-nowrap p-4 before:absolute before:h-full before:w-full before:bg-[rgb(0,0,0,0.2)] md:max-w-fit md:flex-row-reverse',
+      'relative flex w-full items-center justify-center gap-4 whitespace-nowrap p-4 before:absolute before:h-full before:w-full before:bg-[rgb(0,0,0,0.2)] md:max-w-fit md:flex-row-reverse md:vertical-writing-lr md:orientation-sideways',
       background,
     )}
   >

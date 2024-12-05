@@ -16,7 +16,7 @@
 </script>
 
 <div
-  class="after:bg-line flex w-full flex-col items-center gap-6 p-6 after:w-full after:bg-center after:bg-no-repeat after:text-center after:font-jaro after:text-2xl after:text-green-dark after:content-['OR'] last:after:content-none md:items-start"
+  class="flex w-full flex-col items-center gap-6 p-6 after:w-full after:bg-line after:bg-center after:bg-no-repeat after:text-center after:font-jaro after:text-2xl after:text-green-dark after:content-['OR'] last:after:content-none md:items-start"
 >
   <div class={merge('flex w-full flex-col gap-4 text-2xl text-black md:flex-row', className)}>
     <div class="w-full space-y-6">
