@@ -64,6 +64,10 @@ export default {
           DEFAULT: '1em',
         },
       },
+      maxWidth: {
+        '8xl': '90rem',
+        '9xl': '100rem',
+      },
       fontFamily: {
         jaro: ['Jaro Variable', 'sans-serif'],
         afacad: ['Afacad Variable', 'sans-serif'],
@@ -107,17 +111,22 @@ export default {
             'font-size': '8rem',
           },
           '@screen lg': {
-            'font-size': '9.25',
-            'line-height': '85%',
+            'font-size': '9.25rem',
           },
           '@screen xl': {
             'font-size': '12rem',
           },
         },
         '.hero-subtitle': {
-          'font-size': theme('fontSize.3xl'),
+          'font-size': '1.875rem',
           'font-family': theme('fontFamily.afacad'),
           'letter-spacing': '2.61px',
+          '@screen md': {
+            'font-size': '3.75rem',
+          },
+          '@screen lg': {
+            'font-size': '4rem',
+          },
         },
       });
       addUtilities({
