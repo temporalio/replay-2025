@@ -1,11 +1,7 @@
 @import '../src/app.css';
 
 @layer base {
-  :root {
-    @apply p-2;
-  }
-
   body {
-    @apply bg-white text-black;
+    @apply bg-white bg-none text-black;
   }
 }

@@ -9,4 +9,4 @@ declare module '*.md' {
 type Extend<
   T extends keyof import('svelte/elements').SvelteHTMLElements,
   P extends Record<string, unknown> = Record<string, unknown>,
-> = Omit<Partial<import('svelte/elements').SvelteHTMLElements[T]>, keyof P | 'class'> & P;
+> = Omit<Partial<import('svelte/elements').SvelteHTMLElements[T]>, keyof P> & P;

@@ -16,6 +16,7 @@ export default {
       },
       lilac: {
         DEFAULT: '#D9CAFB',
+        dark: '#47588E',
       },
       pink: {
         dark: '#4B0852',
@@ -41,8 +42,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        grid: "url('/backgrounds/grid.svg')",
-        stonehenge: "url('/backgrounds/stonehenge.png')",
+        grid: "url('$assets/backgrounds/grid.svg')",
+        stonehenge: "url('$assets/backgrounds/stonehenge.png')",
         line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
@@ -60,7 +61,7 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: '1.5rem',
+          DEFAULT: '1em',
         },
       },
       fontFamily: {
@@ -76,6 +77,9 @@ export default {
       screens: {
         xs: '375px',
       },
+      spacing: {
+        128: '32rem',
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -89,7 +93,33 @@ export default {
   },
   plugins: [
     typography,
-    plugin(function ({ addUtilities, theme }) {
+    plugin(function ({ addUtilities, addComponents, theme }) {
+      addComponents({
+        '.hero-title': {
+          'font-size': theme('fontSize.6xl'),
+          'line-height': '87.5%',
+          'font-family': theme('fontFamily.afacad'),
+          'background-image': theme('backgroundImage.mint-to-yellow'),
+          'background-clip': 'text',
+          '-webkit-background-clip': 'text',
+          '-webkit-text-fill-color': 'transparent',
+          '@screen md': {
+            'font-size': '8rem',
+          },
+          '@screen lg': {
+            'font-size': '9.25',
+            'line-height': '85%',
+          },
+          '@screen xl': {
+            'font-size': '12rem',
+          },
+        },
+        '.hero-subtitle': {
+          'font-size': theme('fontSize.3xl'),
+          'font-family': theme('fontFamily.afacad'),
+          'letter-spacing': '2.61px',
+        },
+      });
       addUtilities({
         '.title-small': { 'font-size': '3rem', 'font-family': theme('fontFamily.jaro') },
         '.title-medium': { 'font-size': '3.75rem', 'font-family': theme('fontFamily.jaro') },

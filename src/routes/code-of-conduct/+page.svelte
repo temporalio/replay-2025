@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Button from '$components/button';
   import CodeOfConduct from '$content/code-of-conduct.md';
+  import { Button } from '$components/button';
 </script>
 
 <svelte:head>

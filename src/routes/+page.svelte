@@ -3,7 +3,7 @@
   import LastYear from '$content/last-year.md';
 
   import links from '$content/links.yaml';
-  import Button from '$components/button';
+  import { Button } from '$components/button';
 </script>
 
 <svelte:head>

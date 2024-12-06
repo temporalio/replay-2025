@@ -9,7 +9,7 @@ export const button = cva(
     'inline-flex',
     'justify-center',
     'items-center',
-    'px-20',
+    'px-16',
     'py-8',
   ],
   {
@@ -19,6 +19,7 @@ export const button = cva(
           'bg-pink-to-red',
           'text-4xl',
           'p-4',
+          'text-white',
           'border-transparent',
           'hover:bg-red-to-pink',
           'active:shadow-lg',
@@ -36,11 +37,12 @@ export const button = cva(
       },
       size: {
         full: ['w-full'],
+        fit: ['w-fit'],
       },
     },
     defaultVariants: {
       intent: 'primary',
-      size: 'full',
+      size: 'fit',
     },
   },
 );
