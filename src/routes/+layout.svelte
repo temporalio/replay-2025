@@ -11,16 +11,8 @@
   const { children } = $props();
 </script>
 
-<main class="grid h-screen grid-rows-[auto_1fr_auto]">
-  <header class="m-8 flex justify-center">
-    <h1 class="sr-only">{metadata.title}</h1>
-    <p class="sr-only">{metadata.description}</p>
-    <a href="/">
-      <img src={logo} alt="Replay: Modernize the Monolith, March 3–5, 2025" />
-    </a>
-  </header>
+<main>
   {@render children()}
-  <Footer />
   <CookieConsent />
 </main>
 

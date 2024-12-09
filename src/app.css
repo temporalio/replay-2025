@@ -6,6 +6,12 @@
 
 @layer base {
   body {
-    @apply mb-16 min-h-full bg-black bg-grid text-white md:mb-40;
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .section {
+    @apply container md:mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-6xl;
   }
 }

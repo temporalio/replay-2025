@@ -44,6 +44,8 @@ export default {
       backgroundImage: {
         grid: "url('$assets/backgrounds/grid.svg')",
         stonehenge: "url('$assets/backgrounds/stonehenge.png')",
+        colloseum: "url('$assets/backgrounds/colloseum.png')",
+        speaker: "url('$assets/backgrounds/speaker-banner.png')",
         line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
@@ -57,12 +59,17 @@ export default {
       backgroundPosition: {
         'center-bottom': 'center bottom',
         stonehenge: 'center bottom',
+        speaker: 'top left',
       },
       container: {
         center: true,
         padding: {
           DEFAULT: '1em',
+          md: '1.5em',
         },
+      },
+      content: {
+        arrow: 'url("$assets/icons/arrow.svg")',
       },
       maxWidth: {
         '8xl': '90rem',
@@ -100,38 +107,70 @@ export default {
     plugin(function ({ addUtilities, addComponents, theme }) {
       addComponents({
         '.hero-title': {
-          'font-size': theme('fontSize.6xl'),
+          '--minimum-title-size': '3rem',
+          '--preferred-title-size': '12vw',
+          '--maximum-title-size': '12rem',
+          'font-size':
+            'clamp(var(--minimum-title-size), var(--preferred-title-size), var(--maximum-title-size))',
           'line-height': '87.5%',
           'font-family': theme('fontFamily.afacad'),
           'background-image': theme('backgroundImage.mint-to-yellow'),
           'background-clip': 'text',
           '-webkit-background-clip': 'text',
           '-webkit-text-fill-color': 'transparent',
-          '@screen md': {
-            'font-size': '8rem',
-          },
-          '@screen lg': {
-            'font-size': '9.25rem',
-          },
-          '@screen xl': {
-            'font-size': '12rem',
-          },
         },
         '.hero-subtitle': {
-          'font-size': '1.875rem',
+          '--minimum-subtitle-size': '1.5rem',
+          '--preferred-subtitle-size': '5vw',
+          '--maximum-subtitle-size': '4rem',
+          'font-size':
+            'clamp(var(--minimum-subtitle-size), var(--preferred-subtitle-size), var(--maximum-subtitle-size))',
           'font-family': theme('fontFamily.afacad'),
           'letter-spacing': '2.61px',
           '@screen md': {
-            'font-size': '3.75rem',
+            '--minimum-subtitle-size': '3.75rem',
           },
           '@screen lg': {
-            'font-size': '4rem',
+            '--minimum-subtitle-size': '4rem',
           },
         },
       });
       addUtilities({
-        '.title-small': { 'font-size': '3rem', 'font-family': theme('fontFamily.jaro') },
-        '.title-medium': { 'font-size': '3.75rem', 'font-family': theme('fontFamily.jaro') },
+        '.title-xs': {
+          'font-family': theme('fontFamily.jaro'),
+          'font-size': '2rem',
+          'letter-spacing': '2.88px',
+          'text-transform': 'uppercase',
+        },
+        '.title-small': {
+          'font-size': '3rem',
+          'font-family': theme('fontFamily.jaro'),
+          'letter-spacing': '4.32px',
+          'line-height': 'normal',
+          'text-transform': 'uppercase',
+        },
+        '.title-medium': {
+          'font-size': '3.75rem',
+          'font-family': theme('fontFamily.jaro'),
+          'letter-spacing': '5.4px',
+          'text-transform': 'uppercase',
+        },
+        '.body-medium': {
+          'font-size': '1.625rem',
+          'font-family': theme('fontFamily.aeonik'),
+          'line-height': '1.5',
+          'margin-bottom': '1.5em',
+        },
+        '.body-small': {
+          'font-size': '1rem',
+          'font-family': theme('fontFamily.aeonik'),
+          'line-height': '1.375rem',
+        },
+        '.label': {
+          'font-size:': '1.5rem',
+          'font-family': theme('fontFamily.jaro'),
+          'letter-spacing': '2.16px',
+        },
         '.horizontal-writing-tb': { 'writing-mode': 'horizontal-tb' },
         '.vertical-writing-rl': { 'writing-mode': 'vertical-rl' },
         '.vertical-writing-lr': { 'writing-mode': 'vertical-lr' },
