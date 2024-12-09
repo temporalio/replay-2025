@@ -1,16 +1,16 @@
 <script lang="ts">
   import { Hero } from '$components/hero';
   import { Navigation } from '$components/navigation';
-  import Quote from '$components/quote.svelte';
   import { Speaker } from '$components/speaker';
-  import Benefits from '$components/benefits.svelte';
-  import Sponsors from '$components/sponsors/sponsors.svelte';
-  import Location from '$components/location.svelte';
-  import Tickets from '$components/tickets.svelte';
-  import Footer from '$components/footer.svelte';
-  import PreviousYear from '$components/previous-year.svelte';
   import Agenda from '$components/agenda.svelte';
+  import Benefits from '$components/benefits.svelte';
   import Buildings from '$components/buildings.svelte';
+  import Footer from '$components/footer.svelte';
+  import Location from '$components/location.svelte';
+  import PreviousYear from '$components/previous-year.svelte';
+  import Quote from '$components/quote.svelte';
+  import Sponsors from '$components/sponsors/sponsors.svelte';
+  import Tickets from '$components/tickets.svelte';
 </script>
 
 <svelte:head>
@@ -81,11 +81,13 @@
 </section>
 
 <div class="section space-y-20 py-32">
-  <Quote
-    content="A lot of great collective minds coming in together to solve complex distributed problems."
-    source="Salesforce"
-  />
-  <PreviousYear />
+  <div class="flex flex-col gap-20 xl:flex-row xl:gap-8">
+    <Quote
+      content="A lot of great collective minds coming in together to solve complex distributed problems."
+      source="Salesforce"
+    />
+    <PreviousYear />
+  </div>
   <Benefits />
 </div>
 
