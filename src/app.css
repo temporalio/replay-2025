@@ -12,6 +12,6 @@
 
 @layer utilities {
   .section {
-    @apply container md:mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-6xl;
+    @apply px-4 md:mx-auto md:max-w-2xl md:px-6 lg:max-w-4xl xl:max-w-6xl;
   }
 }

@@ -1,4 +1,5 @@
 <script>
+  import links from '$content/links.yaml';
   import About from '$components/about.svelte';
   import { Events, Event } from './events';
   import { Button } from '$components/button';
@@ -13,14 +14,14 @@
         title="Workshops"
         description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET, Go, and Java."
       >
-        <Button intent="tertiary" label="Buy a Workshop Ticket" size="full" />
+        <Button href={links.tickets} intent="tertiary" label="Buy a Workshop Ticket" size="full" />
       </Event>
       <Event
         time="12pm - 6pm"
         title="Hackathon"
         description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
       >
-        <Button intent="tertiary" label="Buy Hackathon Ticket" size="full" />
+        <Button href={links.tickets} intent="tertiary" label="Buy Hackathon Ticket" size="full" />
       </Event>
     </Events>
 
