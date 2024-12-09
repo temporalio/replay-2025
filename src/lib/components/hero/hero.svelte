@@ -4,11 +4,14 @@
 </script>
 
 <header
-  class="pb-128 bg-black bg-stonehenge bg-[center_bottom_-200px] bg-no-repeat px-1 pt-12 font-afacad"
+  class="h-[768px] bg-black bg-stonehenge bg-[length:1024px] bg-[center_bottom_-20px] bg-no-repeat px-1 pt-12"
 >
   <div class="2xl:max-w-9xl container mx-auto flex max-w-7xl flex-col gap-8">
-    <p class="hero-subtitle uppercase text-white">London • Mar 3-5, 2025</p>
-    <h1 class="hero-title uppercase">Modernize the Monolith</h1>
+    <p class="hero-subtitle text-nowrap uppercase text-white">London • Mar 3-5, 2025</p>
+    <h1 class="hero-title uppercase">
+      <span class="block text-nowrap">Modernize</span>
+      <span class="block text-nowrap">the Monolith</span>
+    </h1>
     <Button intent="primary" href={links.tickets} label="Get Your Ticket" />
   </div>
 </header>
