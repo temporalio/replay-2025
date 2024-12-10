@@ -20,12 +20,12 @@
   @keyframes buildings-move {
     0% {
       background-position:
-        left calc(200vw + theme('spacing.8')) bottom,
+        left calc(200vw + theme('spacing.8')) bottom -10px,
         right bottom;
     }
     90% {
       background-position:
-        left calc(65vw + theme('spacing.8')) bottom,
+        left calc(65vw + theme('spacing.8')) bottom -10px,
         right bottom;
     }
   }
@@ -35,7 +35,7 @@
       url('$assets/backgrounds/abstract-footer.png');
     background-repeat: no-repeat, no-repeat;
     background-position:
-      center bottom calc(-275px),
+      center bottom calc(-270px),
       left bottom;
     padding-bottom: 200px;
   }
@@ -50,13 +50,15 @@
   }
 
   @media screen(lg) {
-    section {
-      padding-bottom: theme('spacing.32');
+    @supports (animation-timeline: scroll(y)) {
+      section {
+        padding-bottom: theme('spacing.32');
 
-      animation-name: buildings-move;
-      animation-duration: 1ms;
-      animation-timing-function: linear;
-      animation-timeline: scroll(y);
+        animation-name: buildings-move;
+        animation-duration: 1ms;
+        animation-timing-function: linear;
+        animation-timeline: scroll(y);
+      }
     }
   }
 </style>

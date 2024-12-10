@@ -22,33 +22,40 @@
     --stonehenge-scroll-adjustment: 20%;
   }
 
-  @keyframes stonehenge-move {
-    0% {
-      background-position: var(--stonehenge-origin) bottom
-        calc(var(--stonehenge-space-below) - var(--stonehenge-height));
-    }
-    10% {
-      background-position: var(--stonehenge-origin) bottom
-        calc(
-          var(--stonehenge-space-below) - var(--stonehenge-height) +
-            var(--stonehenge-scroll-adjustment)
-        );
-    }
-  }
-
   header {
     background-image: url('$assets/backgrounds/stonehenge@2x.png');
     background-repeat: no-repeat;
     padding-bottom: var(--stonehenge-space-below);
-    animation: stonehenge-move 0.1s linear;
-    animation-timeline: scroll(y nearest);
+    background-position: var(--stonehenge-origin) bottom
+      calc(var(--stonehenge-space-below) - var(--stonehenge-height));
   }
 
-  @media (min-width: 768px) {
+  @supports (animation-timeline: scroll(y)) {
+    @keyframes stonehenge-move {
+      0% {
+        background-position: var(--stonehenge-origin) bottom
+          calc(var(--stonehenge-space-below) - var(--stonehenge-height));
+      }
+      10% {
+        background-position: var(--stonehenge-origin) bottom
+          calc(
+            var(--stonehenge-space-below) - var(--stonehenge-height) +
+              var(--stonehenge-scroll-adjustment)
+          );
+      }
+    }
+
+    header {
+      background-position: initial;
+      animation: stonehenge-move 1s linear;
+      animation-timeline: scroll(y nearest);
+    }
+  }
+
+  @media screen(md) {
     header {
       --stonehenge-origin: left;
       --stonehenge-space-below: theme('spacing.144');
-      --stonehenge-scroll-adjustment: 10%;
     }
   }
 </style>

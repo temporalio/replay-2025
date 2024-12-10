@@ -50,9 +50,11 @@
     }
   }
 
-  .background {
-    background-image: theme('backgroundImage.red-to-pink');
-    animation: navigation-color 1s linear;
-    animation-timeline: scroll(root);
+  @supports (animation-timeline: scroll(root)) {
+    .background {
+      background-image: theme('backgroundImage.red-to-pink');
+      animation: navigation-color 1s linear;
+      animation-timeline: scroll(root);
+    }
   }
 </style>
