@@ -19,6 +19,7 @@
     --stonehenge-origin: center;
     --stonehenge-height: 738px;
     --stonehenge-space-below: theme('spacing.96');
+    --stonehenge-scroll-adjustment: 20%;
   }
 
   @keyframes stonehenge-move {
@@ -28,7 +29,10 @@
     }
     10% {
       background-position: var(--stonehenge-origin) bottom
-        calc(var(--stonehenge-space-below) - var(--stonehenge-height) + 20%);
+        calc(
+          var(--stonehenge-space-below) - var(--stonehenge-height) +
+            var(--stonehenge-scroll-adjustment)
+        );
     }
   }
 
@@ -44,6 +48,7 @@
     header {
       --stonehenge-origin: left;
       --stonehenge-space-below: theme('spacing.160');
+      --stonehenge-scroll-adjustment: 15%;
     }
   }
 </style>
