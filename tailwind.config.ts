@@ -43,7 +43,7 @@ export default {
     extend: {
       backgroundImage: {
         grid: "url('$assets/backgrounds/grid.svg')",
-        stonehenge: "url('$assets/backgrounds/stonehenge.png')",
+        stonehenge: "url('$assets/backgrounds/stonehenge@2x.png')",
         colloseum: "url('$assets/backgrounds/colloseum.png')",
         speaker: "url('$assets/backgrounds/speaker-banner.png')",
         line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
@@ -58,7 +58,6 @@ export default {
       },
       backgroundPosition: {
         'center-bottom': 'center bottom',
-        stonehenge: 'center bottom',
         speaker: 'top left',
       },
       container: {
@@ -90,6 +89,8 @@ export default {
       },
       spacing: {
         128: '32rem',
+        144: '36rem',
+        160: '40rem',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
