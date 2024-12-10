@@ -32,7 +32,7 @@
     <img src={menu} alt="Menu" class="h-10" id="navigation-menu-button" />
   </label>
   <ul
-    class="absolute left-0 top-20 hidden w-full flex-col bg-black/80 text-white peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4 2xl:bg-transparent"
+    class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4 2xl:bg-transparent"
     role="list"
   >
     {@render navigationItem({ href: links.cfp, label: 'Speaker CFP' })}

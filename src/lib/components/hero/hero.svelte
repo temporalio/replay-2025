@@ -5,7 +5,9 @@
 
 <header class="flex flex-col bg-black px-1 pt-12">
   <div class="container mx-auto flex max-w-7xl flex-col gap-8 2xl:max-w-9xl">
-    <p class="hero-subtitle text-nowrap uppercase text-white">London • Mar 3-5, 2025</p>
+    <time class="hero-subtitle block text-nowrap uppercase text-white" datetime="2025-03-03">
+      London • Mar 3-5, 2025
+    </time>
     <h1 class="hero-title uppercase">
       <span class="block text-nowrap">Modernize</span>
       <span class="block text-nowrap">the Monolith</span>

@@ -25,6 +25,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://replay.temporal.io" />
   <meta property="og:image" content={openGraph} />
+  <meta property="og:start_date" content="2025-03-03" />
+  <meta property="og:end_date" content="2025-03-05" />
+  <meta property="og:venue" content="Convene 22 Bishopsgate" />
+  <meta property="og:location" content="22 Bishopsgate, London EC2N 4BQ, United Kingdom" />
   <meta property="twitter:image" content={openGraph} />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content={metadata.description} />
