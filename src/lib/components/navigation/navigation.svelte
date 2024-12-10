@@ -7,7 +7,7 @@
 {#snippet navigationItem({ href, label }: { href: string; label: string })}
   <a
     {href}
-    class="block h-24 border-b border-b-lilac-dark px-4 py-8 uppercase last:border-b-0 hover:bg-slate-900 2xl:h-auto 2xl:border-b-0 2xl:py-2"
+    class="block h-24 border-b border-b-lilac-dark px-4 py-8 uppercase last:border-b-0 hover:bg-slate-900 2xl:h-auto 2xl:border-b-0 2xl:bg-transparent 2xl:py-2"
   >
     <li>
       {label}
@@ -32,7 +32,7 @@
     <img src={menu} alt="Menu" class="h-10" id="navigation-menu-button" />
   </label>
   <ul
-    class="absolute left-0 top-20 hidden w-full flex-col bg-black/80 text-white peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4"
+    class="absolute left-0 top-20 hidden w-full flex-col bg-black/80 text-white peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4 2xl:bg-transparent"
     role="list"
   >
     {@render navigationItem({ href: links.cfp, label: 'Speaker CFP' })}

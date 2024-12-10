@@ -47,8 +47,8 @@
   @media (min-width: 768px) {
     header {
       --stonehenge-origin: left;
-      --stonehenge-space-below: theme('spacing.160');
-      --stonehenge-scroll-adjustment: 15%;
+      --stonehenge-space-below: theme('spacing.144');
+      --stonehenge-scroll-adjustment: 10%;
     }
   }
 </style>

@@ -24,7 +24,7 @@
 <Agenda />
 
 <section class="bg-grid">
-  <div class="section">
+  <div class="section py-16">
     <h2 class="title-medium">Speakers</h2>
     <div class="flex flex-col gap-8">
       <div class="flex flex-col gap-8 xl:flex-row xl:flex-wrap xl:justify-between">
