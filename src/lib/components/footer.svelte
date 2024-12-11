@@ -1,7 +1,11 @@
 <script lang="ts">
+  import { twMerge as merge } from 'tailwind-merge';
+
   import links from '$content/links.yaml';
   import logo from '$assets/replay-full-logo.svg';
   import temporal from '$assets/icons/temporal-logo.svg';
+
+  const { class: className }: { class?: string } = $props();
 </script>
 
 {#snippet link({ href, label }: { href: string; label: string })}
@@ -12,7 +16,7 @@
   </li>
 {/snippet}
 
-<footer class="section space-y-12 py-16">
+<footer class={merge('section space-y-12 py-16', className)}>
   <ul class="flex flex-col gap-2 text-lg text-green">
     {@render link({ href: links.tickets, label: 'Get Tickets' })}
     {@render link({ href: links.cfp, label: 'Submit Talk' })}

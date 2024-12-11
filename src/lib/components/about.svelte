@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { twMerge as merge } from 'tailwind-merge';
+
+  const { class: className }: { class?: string } = $props();
 </script>
 
-<section class="section mt-20">
+<section class={merge('section mt-20', className)}>
   <div class="flex flex-col gap-8 lg:flex-row">
     {@render content({
       title: 'What to Expect',

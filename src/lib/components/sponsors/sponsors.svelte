@@ -30,8 +30,8 @@
   </a>
 {/snippet}
 
-<section class="bg-green py-16 text-black">
-  <div class="section">
+<section class="bg-green text-black">
+  <div class="section py-16">
     <header class="mb-20">
       <h2 class="uppercase title-medium">Sponsors</h2>
     </header>
