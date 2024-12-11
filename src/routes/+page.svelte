@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Hero } from '$components/hero';
   import { Navigation } from '$components/navigation';
-  import { Speaker } from '$components/speaker';
+  import { Speakers } from '$components/speaker';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
   import Buildings from '$components/buildings.svelte';
@@ -23,62 +23,7 @@
 <Tickets heading="Break Free from the Status Quo" />
 <Agenda />
 
-<section class="bg-grid">
-  <div class="section py-16">
-    <h2 class="mb-8 title-medium">Speakers</h2>
-    <div class="flex flex-col gap-8">
-      <div class="flex flex-col gap-8 xl:flex-row xl:flex-wrap xl:justify-between">
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
-      </div>
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+<Speakers />
 
 <div class="section space-y-20 py-32">
   <div class="flex flex-col gap-20 xl:flex-row xl:gap-8">

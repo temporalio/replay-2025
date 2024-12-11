@@ -43,9 +43,6 @@ export default {
     extend: {
       backgroundImage: {
         grid: "url('$assets/backgrounds/grid.svg')",
-        stonehenge: "url('$assets/backgrounds/stonehenge@2x.png')",
-        colloseum: "url('$assets/backgrounds/colloseum.png')",
-        speaker: "url('$assets/backgrounds/speaker-banner.png')",
         line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',

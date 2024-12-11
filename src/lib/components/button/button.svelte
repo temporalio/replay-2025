@@ -1,16 +1,9 @@
 <script lang="ts">
   import { twMerge as merge } from 'tailwind-merge';
   import { button, type ButtonProps } from './variants';
-  const {
-    href,
-    label,
-    intent = 'primary',
-    size,
-    class: className,
-    ...props
-  }: ButtonProps = $props();
+  const { href, label, intent = 'primary', class: className, ...props }: ButtonProps = $props();
 </script>
 
-<a {href} class={merge(button({ intent, size }), className)} {...props}>
+<a {href} class={merge(button({ intent }), className)} {...props}>
   {label}
 </a>

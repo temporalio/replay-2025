@@ -3,7 +3,6 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 export const button = cva(
   [
-    'font-jaro',
     'transition-colors',
     'text-center',
     'inline-flex',
@@ -11,9 +10,6 @@ export const button = cva(
     'items-center',
     'px-4',
     'py-8',
-    'md:px-8',
-    'md:py-6',
-    'uppercase',
   ],
   {
     variants: {
@@ -26,6 +22,8 @@ export const button = cva(
           'active:shadow-lg',
           'title-xs',
           'md:title-small',
+          'w-full',
+          'md:w-fit',
         ],
         secondary: [
           'bg-blue-to-mint',
@@ -36,24 +34,21 @@ export const button = cva(
           'hover:text-teal',
           'title-xs',
           'md:title-small',
+          'w-full',
+          'md:w-fit',
         ],
         tertiary: [
           'bg-black',
           'text-white',
-          'text-2xl',
           'hover:text-green',
           'active:text-teal',
           'label',
+          'w-full',
         ],
-      },
-      size: {
-        full: ['w-full'],
-        fit: ['w-fit'],
       },
     },
     defaultVariants: {
       intent: 'primary',
-      size: 'fit',
     },
   },
 );

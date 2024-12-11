@@ -2,8 +2,6 @@
   import links from '$content/links.yaml';
   import logo from '$assets/replay-full-logo.svg';
   import temporal from '$assets/icons/temporal-logo.svg';
-
-  const currentYear = new Date().getFullYear();
 </script>
 
 {#snippet link({ href, label }: { href: string; label: string })}
@@ -26,6 +24,6 @@
 
   <div class="flex items-center gap-4 text-sm uppercase">
     <img src={temporal} alt="Temporal" class="block h-16 w-16" />
-    <p class="text-nowrap">© {currentYear} Temporal Technologies INC.</p>
+    <p class="text-nowrap">© {new Date().getFullYear()} Temporal Technologies INC.</p>
   </div>
 </footer>

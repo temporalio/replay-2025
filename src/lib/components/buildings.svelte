@@ -31,7 +31,7 @@
   }
 
   section {
-    background-image: url('$assets/backgrounds/colloseum.png'),
+    background-image: url('$assets/backgrounds/colosseum.png'),
       url('$assets/backgrounds/abstract-footer.png');
     background-repeat: no-repeat, no-repeat;
     background-position:

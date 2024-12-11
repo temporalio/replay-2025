@@ -1,2 +1,4 @@
 import Speaker from './speaker.svelte';
-export { Speaker };
+import Speakers from './speakers.svelte';
+
+export { Speaker, Speakers };
