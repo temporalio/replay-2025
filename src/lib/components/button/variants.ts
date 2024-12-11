@@ -10,6 +10,7 @@ export const button = cva(
     'items-center',
     'px-4',
     'py-8',
+    'transition-[background-image]',
   ],
   {
     variants: {

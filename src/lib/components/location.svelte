@@ -3,7 +3,7 @@
   import links from '$content/links.yaml';
 </script>
 
-<section title="Location" class="bg-grid">
+<section class="bg-grid">
   <div class="section flex flex-col py-20 lg:flex-row lg:items-center">
     <div class="space-y-8">
       <h2 class="title-small">Location</h2>
@@ -15,7 +15,7 @@
       <a
         href={links.venue}
         target="_blank"
-        class="inline-flex items-center gap-2 font-bold uppercase after:block after:content-arrow"
+        class="inline-flex items-center gap-2 font-bold uppercase after:block after:h-6 after:w-6 after:content-arrow hover:underline hover:decoration-pink hover:decoration-2 hover:underline-offset-2"
       >
         <span class="block">Visit convene.com for more info</span>
       </a>
