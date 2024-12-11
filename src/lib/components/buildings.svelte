@@ -17,19 +17,6 @@
 </section>
 
 <style lang="postcss">
-  @keyframes buildings-move {
-    0% {
-      background-position:
-        left calc(200vw + theme('spacing.8')) bottom -10px,
-        right bottom;
-    }
-    90% {
-      background-position:
-        left calc(65vw + theme('spacing.8')) bottom -10px,
-        right bottom;
-    }
-  }
-
   section {
     background-image: url('$assets/backgrounds/colosseum.png'),
       url('$assets/backgrounds/abstract-footer.png');
@@ -51,13 +38,25 @@
 
   @media screen(lg) {
     @supports (animation-timeline: scroll(y)) {
-      section {
-        padding-bottom: theme('spacing.32');
+      @keyframes buildings-move {
+        0% {
+          background-position:
+            left calc(200vw + theme('spacing.8')) bottom -10px,
+            right bottom;
+        }
+        90% {
+          background-position:
+            left calc(65vw + theme('spacing.8')) bottom -10px,
+            right bottom;
+        }
+      }
 
+      section {
         animation-name: buildings-move;
         animation-duration: 1ms;
         animation-timing-function: linear;
         animation-timeline: scroll(y);
+        padding-bottom: theme('spacing.32');
       }
     }
   }

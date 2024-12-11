@@ -3,6 +3,7 @@
 
   import links from '$content/links.yaml';
   import highlights from '$assets/highlights.png';
+  import play from '$assets/icons/play.svg';
 
   const { class: className }: { class?: string } = $props();
 </script>
@@ -15,8 +16,8 @@
       target="_blank"
       class="flex gap-2 bg-blue-to-mint px-8 py-4 font-sans text-lg font-bold uppercase text-black hover:cursor-pointer hover:text-pink-dark"
     >
-      <span>Play 2024 Reel</span>
-      <span>▶️</span>
+      <span class="block">Play 2024 Reel</span>
+      <img src={play} class="block h-6 w-6" alt="Play" />
     </a>
   </div>
 </section>
