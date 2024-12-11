@@ -19,21 +19,17 @@
 
 <Navigation />
 <Hero />
-
 <Tickets heading="Break Free from the Status Quo" />
 <Agenda />
-
 <Speakers />
 
-<div class="section space-y-20 py-32">
-  <div class="flex flex-col gap-20 xl:flex-row xl:gap-8">
-    <Quote
-      content="A lot of great collective minds coming in together to solve complex distributed problems."
-      source="Salesforce"
-    />
-    <PreviousYear />
-  </div>
-  <Benefits />
+<div class="section grid grid-cols-1 items-center gap-20 py-32 xl:grid-cols-2 xl:gap-8">
+  <Quote
+    content="A lot of great collective minds coming in together to solve complex distributed problems."
+    source="Salesforce"
+  />
+  <PreviousYear />
+  <Benefits class="xl:col-span-2" />
 </div>
 
 <Sponsors />

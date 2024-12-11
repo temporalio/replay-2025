@@ -71,18 +71,20 @@
   }
 
   @supports (animation-timeline: scroll(y)) {
-    @keyframes stonehenge-move {
-      0% {
-        transform: translateX(-100vw);
+    @media screen(lg) {
+      @keyframes stonehenge-move {
+        0% {
+          transform: translateX(-100vw);
+        }
+        45% {
+          transform: translateX(0);
+        }
       }
-      45% {
-        transform: translateX(0);
-      }
-    }
 
-    .abstract {
-      animation: stonehenge-move 1s linear;
-      animation-timeline: scroll(y nearest);
+      .abstract {
+        animation: stonehenge-move 1s linear;
+        animation-timeline: scroll(y nearest);
+      }
     }
   }
 </style>

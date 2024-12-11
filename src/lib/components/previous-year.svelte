@@ -1,9 +1,13 @@
 <script lang="ts">
+  import { twMerge as merge } from 'tailwind-merge';
+
   import links from '$content/links.yaml';
   import highlights from '$assets/highlights.png';
+
+  const { class: className }: { class?: string } = $props();
 </script>
 
-<section>
+<section class={merge(className)}>
   <div class="flex flex-col items-center">
     <img src={highlights} alt="Highlights" class="block w-full md:w-fit" />
     <a

@@ -1,8 +1,14 @@
 <script lang="ts">
-  const { content, source }: { content: string; source: string } = $props();
+  import { twMerge as merge } from 'tailwind-merge';
+
+  const {
+    content,
+    source,
+    class: className,
+  }: { content: string; source: string; class?: string } = $props();
 </script>
 
-<section>
+<section class={merge(className)}>
   <div class="mx-auto max-w-3xl space-y-4">
     <blockquote
       class="font-afacad text-4xl uppercase before:mb-4 before:block before:content-[url('$assets/icons/quote.svg')]"

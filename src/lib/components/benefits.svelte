@@ -1,7 +1,11 @@
 <script lang="ts">
+  import { twMerge as merge } from 'tailwind-merge';
+
   import askTheExperts from '$assets/icons/ask-the-experts.svg';
   import network from '$assets/icons/network.svg';
   import futureProof from '$assets/icons/future-proof.svg';
+
+  const { class: className }: { class?: string } = $props();
 </script>
 
 {#snippet benefit({ icon, title, body }: { icon: string; title: string; body: string })}
@@ -14,7 +18,7 @@
   </li>
 {/snippet}
 
-<section>
+<section class={merge(className)}>
   <ul class="flex flex-col lg:flex-row">
     {@render benefit({
       icon: askTheExperts,
