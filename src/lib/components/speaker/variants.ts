@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 export const speaker = cva(['group', 'text-black', 'flex', 'w-full', 'flex-col'], {
   variants: {
     type: {
-      keynote: ['bg-green', 'xl:w-80', 'md:flex-row', 'md:text-2xl', 'xl:flex-col'],
+      keynote: ['bg-green', 'xl:w-80', 'sm:flex-row', 'md:text-2xl', 'xl:flex-col'],
       speaker: ['bg-teal', 'flex-col'],
     },
   },
