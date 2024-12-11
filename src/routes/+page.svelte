@@ -11,6 +11,7 @@
   import Quote from '$components/quote.svelte';
   import Sponsors from '$components/sponsors/sponsors.svelte';
   import Tickets from '$components/tickets.svelte';
+  import About from '$components/about.svelte';
 </script>
 
 <svelte:head>
@@ -20,6 +21,7 @@
 <Navigation />
 <Hero />
 <Tickets heading="Break Free from the Status Quo" />
+<About />
 <Agenda />
 <Speakers />
 

@@ -82,6 +82,7 @@
       }
 
       .abstract {
+        background-position: top left;
         animation: stonehenge-move 1s linear;
         animation-timeline: scroll(y nearest);
       }

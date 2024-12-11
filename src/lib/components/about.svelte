@@ -1,8 +1,8 @@
 <script lang="ts">
 </script>
 
-<section>
-  <div class="flex flex-col gap-8">
+<section class="section mt-20">
+  <div class="flex flex-col gap-8 lg:flex-row">
     {@render content({
       title: 'What to Expect',
       body: "Replay '25 is an opportunity to transition away from outdated, monolithic systems and methodologies to embrace cutting edge technologies. Bring your team along for three days packed with insightful tech talks, hands on workshops, and meaningful conversations.",
@@ -15,8 +15,8 @@
 </section>
 
 {#snippet content({ title, body }: { title: string; body: string })}
-  <article>
+  <article class="w-full">
     <h3 class="title-small">{title}</h3>
-    <p class="body-medium text-lilac">{body}</p>
+    <p class="text-lilac body-medium">{body}</p>
   </article>
 {/snippet}

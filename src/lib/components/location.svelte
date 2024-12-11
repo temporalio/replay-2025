@@ -4,7 +4,7 @@
 </script>
 
 <section title="Location" class="bg-grid">
-  <div class="section flex flex-col py-20 lg:flex-row">
+  <div class="section flex flex-col py-20 lg:flex-row lg:items-center">
     <div class="space-y-8">
       <h2 class="title-small">Location</h2>
       <p class="font-afacad text-lg uppercase text-green">Convene at 22 Bishopsgate in London</p>
@@ -15,7 +15,7 @@
       <a
         href={links.venue}
         target="_blank"
-        class="after:content-arrow inline-flex items-center gap-2 font-bold uppercase after:block"
+        class="inline-flex items-center gap-2 font-bold uppercase after:block after:content-arrow"
       >
         <span class="block">Visit convene.com for more info</span>
       </a>
