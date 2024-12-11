@@ -17,7 +17,7 @@
         <Button href={links.tickets} intent="tertiary" label="Buy a Workshop Ticket" size="full" />
       </Event>
       <Event
-        time="12pm - 6pm"
+        time="10pam - 4pm"
         title="Hackathon"
         description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
       >
@@ -37,7 +37,7 @@
 
     <Events title="Day 3" background="bg-pink">
       <Event
-        time="5pm - 7pm"
+        time="TBD"
         title="Afterparty"
         description="Whether you’re celebrating a successful Hackathon, reflecting on great talks, or just looking to have a good time with your new friends from Replay, the afterparty is the best place to be! Taking place on March 5th, the afterparty is a chance to live it up, connect, and continue conversations in a lively setting. You also expect food, drinks, and fun alongside your Replay community."
       />
