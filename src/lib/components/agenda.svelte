@@ -29,7 +29,7 @@
       <Event
         time="9am - 5pm"
         title="Keynotes + Tech Talks"
-        description="Immerse yourself in two days of technical talks from backend software engineering leaders at top organizations. They’ll discuss challenges they’ve encountered and strategies and solutions they’ve employed during their modernization efforts and beyond. "
+        description="Immerse yourself in two days of technical talks from backend software engineering leaders at top organizations. They’ll discuss challenges they’ve encountered and strategies and solutions they’ve employed during their modernisation efforts and beyond. "
       >
         <Button intent="tertiary" label="Early Bird Tickets" />
       </Event>
@@ -37,7 +37,7 @@
 
     <Events title="Day 3" background="bg-pink">
       <Event
-        time="TBD"
+        time="March 5"
         title="Afterparty"
         description="Whether you’re celebrating a successful Hackathon, reflecting on great talks, or just looking to have a good time with your new friends from Replay, the afterparty is the best place to be! Taking place on March 5th, the afterparty is a chance to live it up, connect, and continue conversations in a lively setting. You also expect food, drinks, and fun alongside your Replay community."
       />
