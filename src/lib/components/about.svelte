@@ -9,7 +9,7 @@
     })}
     {@render content({
       title: "What You'll Learn",
-      body: "This year's theme focuses on the strategic and technical journey of evolving legacy systems, modernizing infrastructure, and building the scalable, durable software that powers today's top businesses.",
+      body: "This year's theme focuses on the strategic and technical journey of evolving legacy systems, modernising infrastructure, and building the scalable, durable software that powers today's top businesses.",
     })}
   </div>
 </section>
