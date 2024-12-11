@@ -15,6 +15,6 @@
       </ul>
       <Button intent="secondary" label="Get Your Ticket" href={links.tickets} />
     </div>
-    <p class="text-center text-2xl text-pink-dark">Early bird ticket sales end on January 7.</p>
+    <p class="text-center text-2xl text-pink-dark">Early bird ticket sales end on January 31.</p>
   </div>
 </section>

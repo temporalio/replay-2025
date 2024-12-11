@@ -20,7 +20,7 @@
     {@render link({ href: links.privacy, label: 'Privacy Policy' })}
   </ul>
 
-  <img src={logo} alt="Replay: Modernize the Monolith" />
+  <img src={logo} alt="Replay: Modernise the Monolith" />
 
   <div class="flex items-center gap-4 text-sm uppercase">
     <img src={temporal} alt="Temporal" class="block h-16 w-16" />
