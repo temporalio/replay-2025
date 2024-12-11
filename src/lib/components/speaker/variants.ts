@@ -26,7 +26,6 @@ export const portrait = cva(
     'group-hover:ring-inset',
     'group-hover:ring-pink',
     'group-hover:grayscale-0',
-    'w-full',
   ],
   {
     variants: {
