@@ -67,7 +67,8 @@
     background-repeat: no-repeat;
     background-size: auto contain;
     height: 7rem;
-    width: 100%;
+    width: 75rem;
+    max-width: 100%;
   }
 
   @supports (animation-timeline: scroll(y)) {

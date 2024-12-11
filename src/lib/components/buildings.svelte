@@ -1,5 +1,5 @@
 <section class="bg-green text-black">
-  <div class="section">
+  <div class="section py-20">
     <div class="lg:ml-0 lg:w-2/3">
       <h2 class="title-small">What's with all the buildings?</h2>
       <p class="body-medium">

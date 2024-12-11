@@ -4,7 +4,7 @@
   import { Button } from '$components/button';
 </script>
 
-<section class="md:section flex flex-col gap-8 pt-20">
+<section class="md:section flex flex-col gap-8 pt-20 lg:pb-20">
   <Events title="Day 1" background="bg-green">
     <Event
       time="9am - 5pm"
