@@ -1,5 +1,4 @@
 <script lang="ts">
-  import map from '$assets/map.png';
   import links from '$content/links.yaml';
 </script>
 
@@ -21,7 +20,7 @@
       </a>
     </div>
     <a href={links.map} target="_blank" class="block">
-      <img src={map} alt="Convene" />
+      <enhanced:img src="$assets/map.png" alt="Convene" />
     </a>
   </div>
 </section>
