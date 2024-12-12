@@ -1,26 +1,16 @@
 <script lang="ts">
   import '../app.css';
-  import metadata from '$content/metadata.yaml';
 
-  import logo from '$assets/logo.svg';
+  import metadata from '$content/metadata.yaml';
   import openGraph from '$assets/open-graph.png';
 
   import CookieConsent from '$components/cookie-consent.svelte';
-  import Footer from '$components/footer.svelte';
 
   const { children } = $props();
 </script>
 
-<main class="grid h-screen grid-rows-[auto_1fr_auto]">
-  <header class="m-8 flex justify-center">
-    <h1 class="sr-only">{metadata.title}</h1>
-    <p class="sr-only">{metadata.description}</p>
-    <a href="/">
-      <img src={logo} alt="Replay: Modernize the Monolith, March 3–5, 2025" />
-    </a>
-  </header>
+<main>
   {@render children()}
-  <Footer />
   <CookieConsent />
 </main>
 
@@ -33,6 +23,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://replay.temporal.io" />
   <meta property="og:image" content={openGraph} />
+  <meta property="og:start_date" content="2025-03-03" />
+  <meta property="og:end_date" content="2025-03-05" />
+  <meta property="og:venue" content="Convene 22 Bishopsgate" />
+  <meta property="og:location" content="22 Bishopsgate, London EC2N 4BQ, United Kingdom" />
   <meta property="twitter:image" content={openGraph} />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content={metadata.description} />

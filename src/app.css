@@ -5,7 +5,17 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    animation-timeline: --page-scroll;
+  }
+
   body {
-    @apply mb-16 min-h-full bg-black bg-grid text-white md:mb-40;
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .section {
+    @apply px-4 md:mx-auto md:max-w-3xl md:px-6 lg:max-w-4xl lg:px-0 xl:max-w-6xl;
   }
 }

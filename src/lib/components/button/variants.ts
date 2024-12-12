@@ -3,46 +3,53 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 export const button = cva(
   [
-    'font-jaro',
     'transition-colors',
     'text-center',
     'inline-flex',
     'justify-center',
     'items-center',
-    'px-16',
+    'px-4',
     'py-8',
+    'transition-[background-image]',
   ],
   {
     variants: {
       intent: {
         primary: [
           'bg-pink-to-red',
-          'text-4xl',
-          'p-4',
           'text-white',
           'border-transparent',
           'hover:bg-red-to-pink',
           'active:shadow-lg',
+          'title-xs',
+          'md:title-small',
+          'w-full',
+          'md:w-fit',
         ],
         secondary: [
-          'bg-mint-to-yellow',
+          'bg-blue-to-mint',
           'text-black',
-          'text-4xl',
           'hover:bg-none',
           'active:shadow-lg',
           'hover:bg-black',
           'hover:text-teal',
+          'title-xs',
+          'md:title-small',
+          'w-full',
+          'md:w-fit',
         ],
-        tertiary: ['bg-black', 'text-white', 'text-2xl', 'hover:text-green', 'active:text-teal'],
-      },
-      size: {
-        full: ['w-full'],
-        fit: ['w-fit'],
+        tertiary: [
+          'bg-black',
+          'text-white',
+          'hover:text-green',
+          'active:text-teal',
+          'label',
+          'w-full',
+        ],
       },
     },
     defaultVariants: {
       intent: 'primary',
-      size: 'fit',
     },
   },
 );

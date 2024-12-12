@@ -1,6 +1,6 @@
 {
-  "name": "Temporal Technologies",
-  "short_name": "Temporal",
+  "name": "Replay 2025: Temporal Technologies",
+  "short_name": "Replay 2025",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#6169ED",
-  "background_color": "#141414",
+  "theme_color": "#4B0852",
+  "background_color": "#151620",
   "display": "standalone"
 }

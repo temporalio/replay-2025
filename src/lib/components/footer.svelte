@@ -1,38 +1,33 @@
-<footer>
-  <div class="h-80 bg-stonehenge bg-no-repeat"></div>
-  <ul
-    class="flex w-full flex-col items-center gap-2 bg-pink py-3 font-bold text-slate-950 md:flex-row md:justify-center md:gap-6 md:py-12"
-  >
-    <li>
-      <a
-        href="https://temporal.io"
-        class="decoration-pink-dark decoration-4 hover:underline hover:underline-offset-4"
-      >
-        Temporal
-      </a>
-    </li>
-    <li>
-      <a
-        href="/code-of-conduct"
-        class="decoration-pink-dark decoration-4 hover:underline hover:underline-offset-4"
-      >
-        Code of Conduct
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://temporal.io/global-privacy-policy"
-        class="decoration-pink-dark decoration-4 hover:underline hover:underline-offset-4"
-      >
-        Privacy Policy
-      </a>
-    </li>
-    <li>
-      <a
-        href="/2024"
-        class="decoration-pink-dark decoration-4 hover:underline hover:underline-offset-4"
-        >Replay 2024</a
-      >
-    </li>
+<script lang="ts">
+  import { twMerge as merge } from 'tailwind-merge';
+
+  import links from '$content/links.yaml';
+  import logo from '$assets/replay-full-logo.svg';
+  import temporal from '$assets/icons/temporal-logo.svg';
+
+  const { class: className }: { class?: string } = $props();
+</script>
+
+{#snippet link({ href, label }: { href: string; label: string })}
+  <li>
+    <a {href}>
+      {label}
+    </a>
+  </li>
+{/snippet}
+
+<footer class={merge('section space-y-12 py-16', className)}>
+  <ul class="flex flex-col gap-2 text-lg text-green">
+    {@render link({ href: links.tickets, label: 'Get Tickets' })}
+    {@render link({ href: links.cfp, label: 'Submit Talk' })}
+    {@render link({ href: links.codeOfConduct, label: 'Code of Conduct' })}
+    {@render link({ href: links.privacy, label: 'Privacy Policy' })}
   </ul>
+
+  <img src={logo} alt="Replay: Modernise the Monolith" />
+
+  <div class="flex items-center gap-4 text-sm uppercase">
+    <img src={temporal} alt="Temporal" class="block h-16 w-16" />
+    <p class="text-nowrap">© {new Date().getFullYear()} Temporal Technologies INC.</p>
+  </div>
 </footer>
