@@ -22,13 +22,17 @@
 <About />
 <Agenda />
 
-<div class="section grid grid-cols-1 items-center gap-20 py-32 xl:grid-cols-2 xl:gap-16">
-  <Quote
-    content="A lot of great collective minds coming in together to solve complex distributed problems."
-    source="Salesforce"
-  />
-  <PreviousYear />
-  <Benefits class="xl:col-span-2" />
+<div class="bg-lines bg-no-repeat 3xl:bg-none">
+  <div
+    class="section grid grid-cols-1 items-center gap-20 bg-no-repeat py-32 xl:grid-cols-2 xl:gap-16"
+  >
+    <Quote
+      content="A lot of great collective minds coming in together to solve complex distributed problems."
+      source="Salesforce"
+    />
+    <PreviousYear />
+    <Benefits class="xl:col-span-2" />
+  </div>
 </div>
 
 <Buildings />

@@ -18,38 +18,52 @@
 
 <style lang="postcss">
   :root {
+    --stonehenge-background: url('$assets/backgrounds/stonehenge.png');
     --stonehenge-origin: center;
     --stonehenge-height: 738px;
     --stonehenge-space-below: theme('spacing.96');
-    --stonehenge-scroll-adjustment: 20%;
+    --stonehenge-scroll-adjustment: 10%;
+    --lines-background: url('$assets/backgrounds/lines.svg');
+    --lines-position: top left;
   }
 
   header {
-    background-image: url('$assets/backgrounds/stonehenge.png');
+    background-image: var(--stonehenge-background), var(--lines-background);
     background-repeat: no-repeat;
     padding-bottom: var(--stonehenge-space-below);
-    background-position: var(--stonehenge-origin) bottom
-      calc(var(--stonehenge-space-below) - var(--stonehenge-height));
+    background-position:
+      var(--stonehenge-origin) bottom calc(var(--stonehenge-space-below) - var(--stonehenge-height)),
+      var(--lines-position);
   }
 
   @supports (background-image: url('$assets/backgrounds/stonehenge.webp')) {
-    header {
-      background-image: url('$assets/backgrounds/stonehenge.webp');
+    :root {
+      --stonehenge-background: url('$assets/backgrounds/stonehenge.webp');
     }
   }
 
   @supports (animation-timeline: scroll(y)) {
     @keyframes stonehenge-move {
       0% {
-        background-position: var(--stonehenge-origin) bottom
-          calc(var(--stonehenge-space-below) - var(--stonehenge-height));
+        background-size:
+          150% auto,
+          auto;
+        background-position:
+          var(--stonehenge-origin) bottom
+            calc(var(--stonehenge-space-below) - var(--stonehenge-height)),
+          var(--lines-position);
       }
       10% {
-        background-position: var(--stonehenge-origin) bottom
-          calc(
-            var(--stonehenge-space-below) - var(--stonehenge-height) +
-              var(--stonehenge-scroll-adjustment)
-          );
+        background-size:
+          100% auto,
+          auto;
+        background-position:
+          var(--stonehenge-origin) bottom
+            calc(
+              var(--stonehenge-space-below) - var(--stonehenge-height) +
+                var(--stonehenge-scroll-adjustment)
+            ),
+          var(--lines-position);
       }
     }
 
