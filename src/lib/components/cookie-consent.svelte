@@ -29,7 +29,7 @@
     <div
       class="md:grid-cols- container grid grid-cols-[2rem_1fr] items-center gap-8 md:grid-cols-[2rem_2fr_1fr] md:flex-row"
     >
-      <img src={cookie} alt="cookie icon" class="block w-8" />
+      <img src={cookie} alt="cookie icon" class="block" height="32" width="32" />
       <div>
         <h2 class="font-mono font-medium">View Our Cookie Policy</h2>
         <p class=" font-sans text-sm font-light">

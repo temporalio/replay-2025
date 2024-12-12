@@ -1,9 +1,6 @@
 <script lang="ts">
   import { twMerge as merge } from 'tailwind-merge';
-
   import links from '$content/links.yaml';
-  import logo from '$assets/replay-full-logo.svg';
-  import temporal from '$assets/icons/temporal-logo.svg';
 
   const { class: className }: { class?: string } = $props();
 </script>
@@ -24,10 +21,14 @@
     {@render link({ href: links.privacy, label: 'Privacy Policy' })}
   </ul>
 
-  <img src={logo} alt="Replay: Modernise the Monolith" class="w-96" />
+  <enhanced:img
+    src="$assets/replay-full-logo.svg"
+    alt="Replay: Modernise the Monolith"
+    class="w-96"
+  />
 
   <div class="flex items-center gap-4 text-sm uppercase">
-    <img src={temporal} alt="Temporal" class="block h-16 w-16" />
+    <enhanced:img src="$assets/icons/temporal-logo.svg" alt="Temporal" class="block h-16 w-16" />
     <p class="text-nowrap">© {new Date().getFullYear()} Temporal Technologies INC.</p>
   </div>
 </footer>

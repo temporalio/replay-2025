@@ -25,11 +25,11 @@
     class="peer hidden"
     aria-labelledby="navigation-menu-button"
   />
-  <a href="/" class="h-10">
-    <img src={replay} alt="Replay 2025" class="h-10" />
+  <a href="/" class="h-10" aria-label="Replay">
+    <enhanced:img src="$assets/replay.svg" alt="Replay 2025" class="h-10" />
   </a>
   <label for="navigation-menu" class="cursor-pointer 2xl:hidden">
-    <img src={menu} alt="Menu" class="h-10" id="navigation-menu-button" />
+    <enhanced:img src="$assets/menu.svg" alt="Menu" class="h-10" id="navigation-menu-button" />
   </label>
   <ul
     class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4 2xl:bg-transparent"
