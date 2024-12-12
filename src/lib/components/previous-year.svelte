@@ -2,7 +2,6 @@
   import { twMerge as merge } from 'tailwind-merge';
 
   import links from '$content/links.yaml';
-  import highlights from '$assets/highlights.png';
   import play from '$assets/icons/play.svg';
 
   const { class: className }: { class?: string } = $props();
@@ -10,7 +9,7 @@
 
 <section class={merge(className)}>
   <div class="flex flex-col items-center">
-    <img src={highlights} alt="Highlights" class="block w-full md:w-fit" />
+    <enhanced:img src="$assets/highlights.png" alt="Highlights" class="block" />
     <a
       href={links.replay2024videos}
       target="_blank"
