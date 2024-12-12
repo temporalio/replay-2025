@@ -1,13 +1,11 @@
 <script lang="ts">
   import links from '$content/links.yaml';
-  import replay from '$assets/replay.svg';
-  import menu from '$assets/menu.svg';
 </script>
 
 {#snippet navigationItem({ href, label }: { href: string; label: string })}
   <a
     {href}
-    class="block h-24 border-b border-b-lilac-dark px-4 py-8 uppercase last:border-b-0 hover:bg-slate-900 2xl:h-auto 2xl:border-b-0 2xl:bg-transparent 2xl:py-2"
+    class="block h-24 border-b border-b-lilac-dark px-4 py-8 uppercase last:border-b-0 hover:bg-slate-900 xl:h-auto xl:border-b-0 xl:bg-transparent xl:py-2"
   >
     <li>
       {label}
@@ -16,7 +14,7 @@
 {/snippet}
 
 <nav
-  class="sticky top-0 z-10 flex h-20 flex-row items-center justify-between border-b-2 border-b-lilac-dark bg-black p-4 2xl:gap-8"
+  class="sticky top-0 z-10 flex h-20 flex-row items-center justify-between border-b-2 border-b-lilac-dark bg-black p-4 xl:gap-8"
 >
   <div class="background absolute left-0 top-0 -z-10 h-full w-full"></div>
   <input
@@ -28,11 +26,11 @@
   <a href="/" class="h-10" aria-label="Replay">
     <enhanced:img src="$assets/replay.svg" alt="Replay 2025" class="h-10" />
   </a>
-  <label for="navigation-menu" class="cursor-pointer 2xl:hidden">
+  <label for="navigation-menu" class="cursor-pointer xl:hidden">
     <enhanced:img src="$assets/menu.svg" alt="Menu" class="h-10" id="navigation-menu-button" />
   </label>
   <ul
-    class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex 2xl:relative 2xl:top-0 2xl:flex 2xl:flex-row 2xl:gap-4 2xl:bg-transparent"
+    class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex xl:relative xl:top-0 xl:flex xl:flex-row xl:gap-4 xl:bg-transparent"
     role="list"
   >
     {@render navigationItem({ href: links.cfp, label: 'Speaker CFP' })}
