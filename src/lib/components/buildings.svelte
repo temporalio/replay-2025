@@ -1,6 +1,6 @@
 <section class="bg-green text-black">
   <div class="section py-20">
-    <div class="lg:ml-0 lg:w-2/3">
+    <div class="rounded bg-green/50 backdrop-blur-lg lg:ml-0 lg:w-160">
       <h2 class="title-small">What's with all the buildings?</h2>
       <p class="body-medium">
         The visual theme for Replay 2025 draws inspiration from iconic historic landmarks across the
@@ -18,11 +18,13 @@
 
 <style lang="postcss">
   section {
-    background-image: url('$assets/backgrounds/colosseum.png'),
-      url('$assets/backgrounds/abstract-footer.png');
-    background-repeat: no-repeat, no-repeat;
+    --colosseum: url('$assets/backgrounds/colosseum.png');
+    --abstract: url('$assets/backgrounds/abstract-footer.png');
+
+    background-image: var(--colosseum), var(--abstract);
+    background-repeat: no-repeat;
     background-position:
-      center bottom calc(-270px),
+      center bottom -270px,
       left bottom;
     padding-bottom: 200px;
   }
@@ -30,23 +32,27 @@
   @media screen(md) {
     section {
       background-position:
-        calc(50vw + theme('spacing.8')) calc(100% + theme('spacing.24')),
+        calc(40vw + 2rem) calc(100% + 6rem),
         left bottom;
-      padding-bottom: theme('spacing.96');
+      padding-bottom: 18rem;
     }
   }
 
   @media screen(lg) {
+    :root {
+      --section-margins: calc(100vw - 1024px);
+    }
+
     @supports (animation-timeline: scroll(y)) {
       @keyframes buildings-move {
         0% {
           background-position:
-            left calc(200vw + theme('spacing.8')) bottom -10px,
+            left 200vw bottom,
             right bottom;
         }
-        90% {
+        60% {
           background-position:
-            left calc(65vw + theme('spacing.8')) bottom -10px,
+            calc(50vw + 40rem) bottom,
             right bottom;
         }
       }
