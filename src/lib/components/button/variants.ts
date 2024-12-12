@@ -54,4 +54,7 @@ export const button = cva(
   },
 );
 
-export type ButtonProps = Extend<'a', VariantProps<typeof button> & { label: string }>;
+export type ButtonProps = Extend<
+  'a',
+  VariantProps<typeof button> & { label: string; href: string }
+>;

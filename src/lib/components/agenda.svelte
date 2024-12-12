@@ -28,7 +28,7 @@
       title="Keynotes + Tech Talks"
       description="Immerse yourself in two days of technical talks from backend software engineering leaders at top organizations. They’ll discuss challenges they’ve encountered and strategies and solutions they’ve employed during their modernisation efforts and beyond. "
     >
-      <Button intent="tertiary" label="Early Bird Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="Early Bird Ticket" />
     </Event>
   </Events>
 
