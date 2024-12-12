@@ -25,11 +25,17 @@
   }
 
   header {
-    background-image: url('$assets/backgrounds/stonehenge@2x.png');
+    background-image: url('$assets/backgrounds/stonehenge.png');
     background-repeat: no-repeat;
     padding-bottom: var(--stonehenge-space-below);
     background-position: var(--stonehenge-origin) bottom
       calc(var(--stonehenge-space-below) - var(--stonehenge-height));
+  }
+
+  @supports (background-image: url('$assets/backgrounds/stonehenge.webp')) {
+    header {
+      background-image: url('$assets/backgrounds/stonehenge.webp');
+    }
   }
 
   @supports (animation-timeline: scroll(y)) {
