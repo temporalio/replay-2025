@@ -19,21 +19,25 @@
 <style lang="postcss">
   :root {
     --stonehenge-background: url('$assets/backgrounds/stonehenge.png');
-    --stonehenge-origin: center;
     --stonehenge-height: 738px;
-    --stonehenge-space-below: theme('spacing.96');
-    --stonehenge-scroll-adjustment: 10%;
+    --stonehenge-space-below: theme('spacing.72');
     --lines-background: url('$assets/backgrounds/lines.svg');
-    --lines-position: top left;
+  }
+
+  @media screen(md) {
+    :root {
+      --stonehenge-space-below: theme('spacing.144');
+    }
   }
 
   header {
     background-image: var(--stonehenge-background), var(--lines-background);
     background-repeat: no-repeat;
     padding-bottom: var(--stonehenge-space-below);
+    background-size: auto, auto;
     background-position:
-      var(--stonehenge-origin) bottom calc(var(--stonehenge-space-below) - var(--stonehenge-height)),
-      var(--lines-position);
+      50% calc(100% + var(--stonehenge-height) - var(--stonehenge-space-below)),
+      top left;
   }
 
   @supports (background-image: url('$assets/backgrounds/stonehenge.webp')) {
@@ -42,42 +46,29 @@
     }
   }
 
-  @supports (animation-timeline: scroll(y)) {
-    @keyframes stonehenge-move {
+  @supports (animation-timeline: scroll(y nearest)) {
+    @keyframes stonehenge-parallax {
       0% {
         background-size:
-          150% auto,
+          auto var(--stonehenge-height),
           auto;
         background-position:
-          var(--stonehenge-origin) bottom
-            calc(var(--stonehenge-space-below) - var(--stonehenge-height)),
-          var(--lines-position);
+          50% calc(100% + var(--stonehenge-height) - var(--stonehenge-space-below)),
+          top left;
       }
-      10% {
+      15% {
         background-size:
-          100% auto,
+          auto var(--stonehenge-space-below),
           auto;
         background-position:
-          var(--stonehenge-origin) bottom
-            calc(
-              var(--stonehenge-space-below) - var(--stonehenge-height) +
-                var(--stonehenge-scroll-adjustment)
-            ),
-          var(--lines-position);
+          40% calc(100% + 4rem),
+          top left;
       }
     }
 
     header {
-      background-position: initial;
-      animation: stonehenge-move 1s linear;
+      animation: stonehenge-parallax 1s forwards;
       animation-timeline: scroll(y nearest);
-    }
-  }
-
-  @media screen(md) {
-    header {
-      --stonehenge-origin: left;
-      --stonehenge-space-below: theme('spacing.144');
     }
   }
 </style>
