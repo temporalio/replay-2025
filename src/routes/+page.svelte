@@ -10,6 +10,8 @@
   import Quote from '$components/quote.svelte';
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
