@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "generate-contentful-types": "./scripts/generate-contentful-types.js && pnpm format",
+    "generate:contentful": "./scripts/generate-contentful-types.js && pnpm format",
     "env:pull": "vercel env pull"
   },
   "devDependencies": {
@@ -41,7 +41,9 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
     "autoprefixer": "^10.4.20",
+    "cf-content-types-generator": "^2.15.5",
     "class-variance-authority": "^0.7.1",
+    "contentful": "^10.6.14",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.11.1",
@@ -62,10 +64,6 @@
     "vitest": "^2.0.0"
   },
   "type": "module",
-  "dependencies": {
-    "cf-content-types-generator": "^2.15.5",
-    "contentful": "^10.6.14"
-  },
   "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
   "eslintConfig": {
     "extends": [
