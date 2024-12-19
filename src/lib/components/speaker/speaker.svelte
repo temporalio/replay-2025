@@ -6,7 +6,7 @@
 </script>
 
 <div class={speaker({ type })}>
-  <div class={portrait({ type })} style="background-image: url({image});"></div>
+  <div class={portrait({ type })} style="background-image: url({image}?w=640&h=720&fm=webp);"></div>
   <div class="min-h-40 w-full p-4">
     {#if isKeynote}
       <p class="font-pixelated text-base uppercase text-green-dark">Keynote</p>

@@ -3,7 +3,8 @@
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   import Speaker from './speaker.svelte';
-  const { speakers }: { speakers: Entry<SpeakerSkeleton, undefined, string>[] } = $props();
+  const { speakers }: { speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[] } =
+    $props();
 
   const keynotes = speakers.filter((speaker) => speaker.fields.keynote);
   const regularSpeakers = speakers.filter((speaker) => !speaker.fields.keynote);
@@ -20,7 +21,7 @@
             name={speaker.fields.fullName}
             jobTitle={speaker.fields.jobTitle}
             company={speaker.fields.companyName}
-            image={speaker.fields.image}
+            image={speaker.fields.image?.fields.file?.url!}
             type="keynote"
           />
         {/each}
@@ -31,8 +32,7 @@
             name={speaker.fields.fullName}
             jobTitle={speaker.fields.jobTitle}
             company={speaker.fields.companyName}
-            image={speaker.fields.image}
-            type="speaker"
+            image={speaker.fields.image?.fields.file?.url!}
           />
         {/each}
       </div>
