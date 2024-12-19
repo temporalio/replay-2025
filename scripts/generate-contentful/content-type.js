@@ -27,7 +27,7 @@ export class ContentType {
     this.generator = generator;
     this.contentType = contentType;
 
-    this.sourceFile = generator.project.createSourceFile(this.fullFilePath, '', {
+    this.sourceFile = generator.project.createSourceFile(this.path, '', {
       overwrite: true,
     });
   }
@@ -42,16 +42,12 @@ export class ContentType {
     return pascalCase(name);
   }
 
-  get fileName() {
+  get filename() {
     return kebabCase(this.contentType.name);
   }
 
-  get fullFilePath() {
-    return join(this.generator.destination, `${this.fileName}.ts`);
-  }
-
-  get fieldsType() {
-    return `${this.name}Fields`;
+  get path() {
+    return join(this.generator.destination, `${this.filename}.ts`);
   }
 
   /** @type import('ts-morph').InterfaceDeclarationStructure */
@@ -105,7 +101,7 @@ export class ContentType {
 
     for (const contentType of this.imports) {
       this.sourceFile.addImportDeclaration({
-        moduleSpecifier: `./${contentType.fileName}.js`,
+        moduleSpecifier: `./${contentType.filename}.js`,
         namedImports: [{ name: contentType.skeleton.name, isTypeOnly: true }],
       });
     }

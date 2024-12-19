@@ -10,6 +10,7 @@ import { rimraf } from 'rimraf';
 
 import { success, info } from './log.js';
 import { ContentfulGenerator } from './client.js';
+import { formatFile } from './format-file.js';
 
 const accessToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN;
 const spaceId = process.env.CONTENTFUL_SPACE_ID;
@@ -53,5 +54,13 @@ await writeFile(
 );
 
 await contentfulGenerator.generate();
+
+info('Formatting files…');
+
+formatFile(contentfulGenerator.path);
+
+for (const file of contentfulGenerator.files) {
+  formatFile(file);
+}
 
 success('🚀 Contentful client generated successfully!');
