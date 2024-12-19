@@ -1,0 +1,907 @@
+[
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "home",
+      "type": "ContentType",
+      "createdAt": "2024-12-02T20:18:23.839Z",
+      "updatedAt": "2024-12-06T19:53:27.293Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 21,
+      "publishedAt": "2024-12-06T19:53:27.293Z",
+      "firstPublishedAt": "2024-12-02T20:18:24.237Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 11,
+      "version": 22,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/home"
+    },
+    "displayField": "title",
+    "name": "Home",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title (for reference only)",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "seoTitle",
+        "name": "SEO Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "seoDescription",
+        "name": "SEO Description",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "size": {
+              "max": 160
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "hero",
+        "name": "Hero",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "heroCta",
+        "name": "Hero CTA",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkContentType": [
+              "cta"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Entry"
+      },
+      {
+        "id": "promoHeader",
+        "name": "Promo Header",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "promoCta",
+        "name": "Promo CTA",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkContentType": [
+              "cta"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Entry"
+      },
+      {
+        "id": "scheduleTextLeft",
+        "name": "Schedule Text (Left)",
+        "type": "Text",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "scheduleTextRight",
+        "name": "Schedule Text (Right)",
+        "type": "Text",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "day1Workshops",
+        "name": "Day 1 (Workshops)",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "workshopsCta",
+        "name": "Workshops CTA",
+        "type": "Array",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "size": {
+              "max": 2
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "cta"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "day1Hackathon",
+        "name": "Day 1 (Hackathon)",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "hackathonCta",
+        "name": "Hackathon CTA",
+        "type": "Array",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "size": {
+              "max": 2
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "cta"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "day23",
+        "name": "Day 2+3",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "day23Cta",
+        "name": "Day 2+3 CTA",
+        "type": "Array",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "size": {
+              "max": 2
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "cta"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "afterparty",
+        "name": "Afterparty",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "afterpartyCta",
+        "name": "Afterparty CTA",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "size": {
+              "max": 2
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "cta"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "speakers",
+        "name": "Speakers",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "speaker"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "testimonial",
+        "name": "Testimonial",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "replay2024Cta",
+        "name": "Replay 2024 CTA",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkContentType": [
+              "cta"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Entry"
+      },
+      {
+        "id": "feature1",
+        "name": "Feature 1",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "feature2",
+        "name": "Feature 2",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "feature3",
+        "name": "Feature 3",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "themeDescription",
+        "name": "Theme Description",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "location",
+        "name": "Location",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "preFooterHeader",
+        "name": "Pre-Footer Header",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "preFooterCta",
+        "name": "Pre-Footer CTA",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkContentType": [
+              "cta"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Entry"
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "globalSettings",
+      "type": "ContentType",
+      "createdAt": "2024-12-03T02:41:08.173Z",
+      "updatedAt": "2024-12-03T02:41:08.486Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 1,
+      "publishedAt": "2024-12-03T02:41:08.486Z",
+      "firstPublishedAt": "2024-12-03T02:41:08.486Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 1,
+      "version": 2,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/globalSettings"
+    },
+    "displayField": "title",
+    "name": "Global Settings",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title (for reference only)",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "price",
+        "name": "Price",
+        "type": "Number",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "range": {
+              "min": 0
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "discountedPrice",
+        "name": "Discounted Price",
+        "type": "Number",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "range": {
+              "min": 0
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "pricingFootnote",
+        "name": "Pricing Footnote",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "cta",
+      "type": "ContentType",
+      "createdAt": "2024-12-03T02:01:02.821Z",
+      "updatedAt": "2024-12-03T02:02:42.759Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 7,
+      "publishedAt": "2024-12-03T02:02:42.759Z",
+      "firstPublishedAt": "2024-12-03T02:01:03.221Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 4,
+      "version": 8,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/cta"
+    },
+    "displayField": "title",
+    "name": "CTA",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title (for reference only)",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "text",
+        "name": "Text",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "url",
+        "name": "URL",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "speaker",
+      "type": "ContentType",
+      "createdAt": "2024-12-02T20:19:27.016Z",
+      "updatedAt": "2024-12-02T21:02:16.825Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 5,
+      "publishedAt": "2024-12-02T21:02:16.825Z",
+      "firstPublishedAt": "2024-12-02T20:19:27.494Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 3,
+      "version": 6,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/speaker"
+    },
+    "displayField": "fullName",
+    "name": "Speaker",
+    "description": "",
+    "fields": [
+      {
+        "id": "fullName",
+        "name": "Full Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "image",
+        "name": "Image",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "jobTitle",
+        "name": "Job Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "companyName",
+        "name": "Company Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "keynote",
+        "name": "Keynote",
+        "type": "Boolean",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "defaultValue": {
+          "en-US": false
+        },
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "sponsor",
+      "type": "ContentType",
+      "createdAt": "2024-12-02T20:55:50.099Z",
+      "updatedAt": "2024-12-02T20:56:53.315Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 3,
+      "publishedAt": "2024-12-02T20:56:53.315Z",
+      "firstPublishedAt": "2024-12-02T20:55:50.493Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 2,
+      "version": 4,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/sponsor"
+    },
+    "displayField": "name",
+    "name": "Sponsor",
+    "description": "",
+    "fields": [
+      {
+        "id": "name",
+        "name": "Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "unique": true
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "sponsorType",
+        "name": "Sponsor Type",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "in": [
+              "Elite",
+              "Premier",
+              "Impact"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "darkLogo",
+        "name": "Dark Logo",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "lightLogo",
+        "name": "Light Logo",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "colorLogo",
+        "name": "Color Logo",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "Text",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "externalUrl",
+        "name": "External URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "regexp": {
+              "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+              "flags": null
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  }
+]
