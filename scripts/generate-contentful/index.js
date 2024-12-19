@@ -9,7 +9,7 @@ import contentfulManagement from 'contentful-management';
 import { rimraf } from 'rimraf';
 
 import { success, info } from './log.js';
-import { ContentfulGenerator } from './client.js';
+import { ContentfulGenerator } from './client/index.js';
 import { formatFile } from './format-file.js';
 
 const accessToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN;

@@ -5,8 +5,8 @@ import {
   type EntrySkeletonType,
   type LocaleCode,
 } from 'contentful';
-import { type CTASkeleton } from './cta.js';
-import { type SpeakerSkeleton } from './speaker.js';
+import { type CTASkeleton } from './cta';
+import { type SpeakerSkeleton } from './speaker';
 
 export interface HomeFields {
   title: EntryFieldTypes.Symbol;
