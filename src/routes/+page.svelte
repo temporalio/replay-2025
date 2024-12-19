@@ -10,6 +10,9 @@
   import Quote from '$components/quote.svelte';
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
+  import Speakers from '$components/speaker/speakers.svelte';
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -21,6 +24,8 @@
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
+
+<Speakers speakers={data.speakers} />
 
 <div class="bg-lines bg-no-repeat 3xl:bg-none">
   <div
