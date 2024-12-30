@@ -12,8 +12,6 @@
     return true;
   };
 
-  const secret = import.meta.env.VITE_GMT_SECRET;
-
   onMount(() => {
     const value = localStorage.getItem(cookieConsentKey);
     cookieConsent = isCookieConsent(value) ? value : 'undecided';
@@ -78,7 +76,7 @@
         j.async = true;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', secret);
+      })(window, document, 'script', 'dataLayer', 'GTM-TSXFPF2');
     </script>
   {/if}
 </svelte:head>
