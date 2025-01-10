@@ -9,8 +9,8 @@
       London • Mar 3-5, 2025
     </time>
     <h1 class="hero-title uppercase">
+      <span class="block text-nowrap after:content-[':']">Replay</span>
       <span class="block text-nowrap">Modernise</span>
-      <span class="block text-nowrap">the Monolith</span>
     </h1>
     <Button intent="primary" href={links.tickets} label="Get Your Ticket" />
   </div>
