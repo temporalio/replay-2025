@@ -3,7 +3,6 @@
   import { Navigation } from '$components/navigation';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
-  import Buildings from '$components/buildings.svelte';
   import Footer from '$components/footer.svelte';
   import Location from '$components/location.svelte';
   import PreviousYear from '$components/previous-year.svelte';
