@@ -40,7 +40,6 @@
   </div>
 </div>
 
-<Buildings />
 <Location />
 <Tickets heading="Build the future of scalable, resilient systems" />
 <Footer />
