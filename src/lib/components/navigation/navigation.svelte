@@ -33,7 +33,6 @@
     class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex lg:relative lg:top-0 lg:flex lg:flex-row lg:gap-4 lg:bg-transparent"
     role="list"
   >
-    {@render navigationItem({ href: links.cfp, label: 'Speaker CFP' })}
     {@render navigationItem({ href: links.codeOfConduct, label: 'Code of Conduct' })}
   </ul>
 </nav>
