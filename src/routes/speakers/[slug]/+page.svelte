@@ -1,32 +1,29 @@
 <script lang="ts" module>
-  export type SpeakerProps = {
-      fullName: string;
-  image: Image;
-  jobTitle: EntryFieldTypes.Symbol;
-  companyName: EntryFieldTypes.Symbol;
-  keynote: EntryFieldTypes.Boolean;
-    time: string;
-    title: string;
-    description: string;
-    children?: Snippet;
-    class?: string;
-  };
+  import { twMerge as merge } from 'tailwind-merge';
+  import { speaker, portrait, speakerName, type SpeakerProps } from '$components/speaker/variants';
+  import Stonehenge from '$components/stonehenge.svelte';
 </script>
 
 <script lang="ts">
-  import type { Snippet } from 'svelte';
   import Breadcrumb from '$components/breadcrumb.svelte';
 
-  const { time, title, description, children, class: className }: SpeakerProps = $props();
+  const { image, bio, jobTitle }: SpeakerProps = $props();
 </script>
 
-<div class="mt-24 flex flex-col justify-start px-6">
-  <Breadcrumb text="Return to schedule" href="/schedule" />
-  <h1 class="text-2xl font-bold text-white">{title}</h1>
-  <p class="text-green">{time}</p>
-  {#if description}
-    <div class="border-grey flex w-full flex-col items-center gap-4 border bg-black p-6">
-      <p class="font-lilac prose">{description}</p>
+<Stonehenge />
+<div class={merge(speaker({ type }), 'mt-24 flex flex-col justify-start px-6')}>
+  <Breadcrumb text="Return to speakers" href="/speakers" />
+  <h1 class={merge(speakerName({ type }), 'text-2xl font-bold text-white')}>{name}</h1>
+  <div class="border-grey flex w-full flex-col items-center gap-4 border bg-black p-6">
+    <div>
+      <p class="text-white">{jobTitle}</p>
+      {#if bio}
+        <p class="font-lilac prose">{bio}</p>
+      {/if}
+      <div
+        class={portrait({ type })}
+        style="background-image: url({image}?w=720&h=648&fm=webp);"
+      ></div>
     </div>
-  {/if}
+  </div>
 </div>
