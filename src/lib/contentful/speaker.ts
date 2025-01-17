@@ -11,6 +11,7 @@ export interface SpeakerFields {
   image: EntryFieldTypes.AssetLink;
   jobTitle: EntryFieldTypes.Symbol;
   companyName: EntryFieldTypes.Symbol;
+  bio?: EntryFieldTypes.Text;
   keynote: EntryFieldTypes.Boolean;
 }
 

@@ -8,10 +8,10 @@
           "id": "0u17lhw8p27f"
         }
       },
-      "id": "home",
+      "id": "speaker",
       "type": "ContentType",
-      "createdAt": "2024-12-02T20:18:23.839Z",
-      "updatedAt": "2024-12-06T19:53:27.293Z",
+      "createdAt": "2024-12-02T20:19:27.016Z",
+      "updatedAt": "2025-01-14T18:07:54.500Z",
       "environment": {
         "sys": {
           "id": "master",
@@ -19,8 +19,132 @@
           "linkType": "Environment"
         }
       },
-      "publishedVersion": 21,
-      "publishedAt": "2024-12-06T19:53:27.293Z",
+      "publishedVersion": 7,
+      "publishedAt": "2025-01-14T18:07:54.500Z",
+      "firstPublishedAt": "2024-12-02T20:19:27.494Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 4,
+      "version": 8,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/speaker"
+    },
+    "displayField": "fullName",
+    "name": "Speaker",
+    "description": "",
+    "fields": [
+      {
+        "id": "fullName",
+        "name": "Full Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "image",
+        "name": "Image",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "jobTitle",
+        "name": "Job Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "companyName",
+        "name": "Company Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "bio",
+        "name": "Bio",
+        "type": "Text",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "keynote",
+        "name": "Keynote",
+        "type": "Boolean",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "defaultValue": {
+          "en-US": false
+        },
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "home",
+      "type": "ContentType",
+      "createdAt": "2024-12-02T20:18:23.839Z",
+      "updatedAt": "2025-01-10T17:04:20.156Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 23,
+      "publishedAt": "2025-01-10T17:04:20.156Z",
       "firstPublishedAt": "2024-12-02T20:18:24.237Z",
       "createdBy": {
         "sys": {
@@ -36,8 +160,8 @@
           "id": "4q4LLY8UGRv7xQhTpKIf8E"
         }
       },
-      "publishedCounter": 11,
-      "version": 22,
+      "publishedCounter": 12,
+      "version": 24,
       "publishedBy": {
         "sys": {
           "type": "Link",
@@ -392,7 +516,7 @@
         "name": "Theme Description",
         "type": "Text",
         "localized": false,
-        "required": true,
+        "required": false,
         "validations": [],
         "disabled": false,
         "omitted": false
@@ -445,10 +569,10 @@
           "id": "0u17lhw8p27f"
         }
       },
-      "id": "globalSettings",
+      "id": "sponsor",
       "type": "ContentType",
-      "createdAt": "2024-12-03T02:41:08.173Z",
-      "updatedAt": "2024-12-03T02:41:08.486Z",
+      "createdAt": "2024-12-02T20:55:50.099Z",
+      "updatedAt": "2025-01-08T22:47:49.041Z",
       "environment": {
         "sys": {
           "id": "master",
@@ -456,8 +580,422 @@
           "linkType": "Environment"
         }
       },
-      "publishedVersion": 1,
-      "publishedAt": "2024-12-03T02:41:08.486Z",
+      "publishedVersion": 7,
+      "publishedAt": "2025-01-08T22:47:49.041Z",
+      "firstPublishedAt": "2024-12-02T20:55:50.493Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 4,
+      "version": 8,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/sponsor"
+    },
+    "displayField": "name",
+    "name": "Sponsor",
+    "description": "",
+    "fields": [
+      {
+        "id": "name",
+        "name": "Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "unique": true
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "sponsorType",
+        "name": "Sponsor Type",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "in": [
+              "Elite",
+              "Premier",
+              "Impact"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "darkLogo",
+        "name": "Dark Logo",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "lightLogo",
+        "name": "Light Logo",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "colorLogo",
+        "name": "Color Logo",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "externalUrl",
+        "name": "External URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "regexp": {
+              "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+              "flags": null
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "talk",
+      "type": "ContentType",
+      "createdAt": "2025-01-03T04:59:12.609Z",
+      "updatedAt": "2025-01-08T21:48:00.463Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 17,
+      "publishedAt": "2025-01-08T21:48:00.463Z",
+      "firstPublishedAt": "2025-01-03T04:59:12.953Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 9,
+      "version": 18,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/talk"
+    },
+    "displayField": "title",
+    "name": "Session",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "url",
+        "name": "URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "location",
+        "name": "Location",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "speakers",
+        "name": "Speakers",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "speaker"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "timeSlot",
+      "type": "ContentType",
+      "createdAt": "2025-01-03T05:03:09.047Z",
+      "updatedAt": "2025-01-03T05:33:39.231Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 9,
+      "publishedAt": "2025-01-03T05:33:39.231Z",
+      "firstPublishedAt": "2025-01-03T05:03:09.446Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 5,
+      "version": 10,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/timeSlot"
+    },
+    "displayField": "title",
+    "name": "Time Slot",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "startTime",
+        "name": "Start Time",
+        "type": "Date",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "dateRange": {
+              "after": null,
+              "before": null,
+              "min": "2025-03-02",
+              "max": "2025-03-06"
+            }
+          }
+        ],
+        "defaultValue": {
+          "en-US": "2025-03-03T00:00"
+        },
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "endTime",
+        "name": "End Time",
+        "type": "Date",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "dateRange": {
+              "after": null,
+              "before": null,
+              "min": "2025-03-02",
+              "max": "2025-03-06"
+            }
+          }
+        ],
+        "defaultValue": {
+          "en-US": "2025-03-03T00:00"
+        },
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "talk",
+        "name": "Talk",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "size": {
+              "max": 2
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "talk"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "globalSettings",
+      "type": "ContentType",
+      "createdAt": "2024-12-03T02:41:08.173Z",
+      "updatedAt": "2025-01-03T04:39:49.951Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 3,
+      "publishedAt": "2025-01-03T04:39:49.951Z",
       "firstPublishedAt": "2024-12-03T02:41:08.486Z",
       "createdBy": {
         "sys": {
@@ -473,8 +1011,8 @@
           "id": "4q4LLY8UGRv7xQhTpKIf8E"
         }
       },
-      "publishedCounter": 1,
-      "version": 2,
+      "publishedCounter": 2,
+      "version": 4,
       "publishedBy": {
         "sys": {
           "type": "Link",
@@ -539,6 +1077,23 @@
         "validations": [],
         "disabled": false,
         "omitted": false
+      },
+      {
+        "id": "ticketCta",
+        "name": "Ticket CTA",
+        "type": "Link",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "linkContentType": [
+              "cta"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Entry"
       }
     ]
   },
@@ -621,284 +1176,6 @@
         "localized": false,
         "required": true,
         "validations": [],
-        "disabled": false,
-        "omitted": false
-      }
-    ]
-  },
-  {
-    "sys": {
-      "space": {
-        "sys": {
-          "type": "Link",
-          "linkType": "Space",
-          "id": "0u17lhw8p27f"
-        }
-      },
-      "id": "speaker",
-      "type": "ContentType",
-      "createdAt": "2024-12-02T20:19:27.016Z",
-      "updatedAt": "2024-12-02T21:02:16.825Z",
-      "environment": {
-        "sys": {
-          "id": "master",
-          "type": "Link",
-          "linkType": "Environment"
-        }
-      },
-      "publishedVersion": 5,
-      "publishedAt": "2024-12-02T21:02:16.825Z",
-      "firstPublishedAt": "2024-12-02T20:19:27.494Z",
-      "createdBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "updatedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "publishedCounter": 3,
-      "version": 6,
-      "publishedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/speaker"
-    },
-    "displayField": "fullName",
-    "name": "Speaker",
-    "description": "",
-    "fields": [
-      {
-        "id": "fullName",
-        "name": "Full Name",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "image",
-        "name": "Image",
-        "type": "Link",
-        "localized": false,
-        "required": true,
-        "validations": [
-          {
-            "linkMimetypeGroup": [
-              "image"
-            ]
-          }
-        ],
-        "disabled": false,
-        "omitted": false,
-        "linkType": "Asset"
-      },
-      {
-        "id": "jobTitle",
-        "name": "Job Title",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "companyName",
-        "name": "Company Name",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "keynote",
-        "name": "Keynote",
-        "type": "Boolean",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "defaultValue": {
-          "en-US": false
-        },
-        "disabled": false,
-        "omitted": false
-      }
-    ]
-  },
-  {
-    "sys": {
-      "space": {
-        "sys": {
-          "type": "Link",
-          "linkType": "Space",
-          "id": "0u17lhw8p27f"
-        }
-      },
-      "id": "sponsor",
-      "type": "ContentType",
-      "createdAt": "2024-12-02T20:55:50.099Z",
-      "updatedAt": "2024-12-02T20:56:53.315Z",
-      "environment": {
-        "sys": {
-          "id": "master",
-          "type": "Link",
-          "linkType": "Environment"
-        }
-      },
-      "publishedVersion": 3,
-      "publishedAt": "2024-12-02T20:56:53.315Z",
-      "firstPublishedAt": "2024-12-02T20:55:50.493Z",
-      "createdBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "updatedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "publishedCounter": 2,
-      "version": 4,
-      "publishedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/sponsor"
-    },
-    "displayField": "name",
-    "name": "Sponsor",
-    "description": "",
-    "fields": [
-      {
-        "id": "name",
-        "name": "Name",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [
-          {
-            "unique": true
-          }
-        ],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "sponsorType",
-        "name": "Sponsor Type",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [
-          {
-            "in": [
-              "Elite",
-              "Premier",
-              "Impact"
-            ]
-          }
-        ],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "darkLogo",
-        "name": "Dark Logo",
-        "type": "Link",
-        "localized": false,
-        "required": true,
-        "validations": [
-          {
-            "linkMimetypeGroup": [
-              "image"
-            ]
-          }
-        ],
-        "disabled": false,
-        "omitted": false,
-        "linkType": "Asset"
-      },
-      {
-        "id": "lightLogo",
-        "name": "Light Logo",
-        "type": "Link",
-        "localized": false,
-        "required": false,
-        "validations": [
-          {
-            "linkMimetypeGroup": [
-              "image"
-            ]
-          }
-        ],
-        "disabled": false,
-        "omitted": false,
-        "linkType": "Asset"
-      },
-      {
-        "id": "colorLogo",
-        "name": "Color Logo",
-        "type": "Link",
-        "localized": false,
-        "required": false,
-        "validations": [
-          {
-            "linkMimetypeGroup": [
-              "image"
-            ]
-          }
-        ],
-        "disabled": false,
-        "omitted": false,
-        "linkType": "Asset"
-      },
-      {
-        "id": "description",
-        "name": "Description",
-        "type": "Text",
-        "localized": false,
-        "required": false,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "externalUrl",
-        "name": "External URL",
-        "type": "Symbol",
-        "localized": false,
-        "required": false,
-        "validations": [
-          {
-            "regexp": {
-              "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
-              "flags": null
-            }
-          }
-        ],
         "disabled": false,
         "omitted": false
       }

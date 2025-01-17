@@ -2,6 +2,7 @@
   import '../app.css';
 
   import metadata from '$content/metadata.yaml';
+  import { Navigation } from '$components/navigation';
   import openGraph from '$assets/open-graph.png';
 
   import CookieConsent from '$components/cookie-consent.svelte';
@@ -10,6 +11,7 @@
 </script>
 
 <main>
+  <Navigation />
   {@render children()}
   <CookieConsent />
 </main>
