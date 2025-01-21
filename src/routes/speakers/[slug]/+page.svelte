@@ -21,7 +21,7 @@
         <p class="font-lilac prose">{bio}</p>
       {/if}
       <div
-        class={portrait({ type })}
+        class={portrait}
         style="background-image: url({image}?w=720&h=648&fm=webp);"
       ></div>
     </div>

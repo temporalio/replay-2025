@@ -16,5 +16,5 @@
     label="Harassment Complaint Form"
   />
 
-  <CodeOfConduct class="prose text-black" />
+  <CodeOfConduct class="prose prose-invert" />
 </section>
