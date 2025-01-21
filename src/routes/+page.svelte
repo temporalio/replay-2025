@@ -9,6 +9,7 @@
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
+  import AbstractBanner from '$components/abstract-banner.svelte';
 
   const { data } = $props();
 </script>
@@ -22,6 +23,7 @@
 <About />
 <Agenda />
 
+<AbstractBanner />
 <Speakers speakers={data.speakers} />
 
 <div class="bg-lines bg-no-repeat 3xl:bg-none">

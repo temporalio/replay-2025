@@ -3,15 +3,22 @@
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   import Speaker from './speaker.svelte';
-  const { speakers }: { speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[] } =
-    $props();
+  const {
+    speakers,
+    animation = true,
+  }: {
+    speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[];
+    animation?: boolean;
+  } = $props();
 
   const keynotes = speakers.filter((speaker) => speaker.fields.keynote);
   const regularSpeakers = speakers.filter((speaker) => !speaker.fields.keynote);
 </script>
 
 <section class="relative bg-grid">
-  <div class="abstract"></div>
+  {#if animation}
+    <div class="abstract"></div>
+  {/if}
   <div class="section pb-16 pt-36">
     <h2 class="mb-8 title-medium">Speakers</h2>
     <div class="flex flex-col gap-8">
