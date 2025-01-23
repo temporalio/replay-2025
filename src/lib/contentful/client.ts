@@ -1,13 +1,7 @@
 import { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID, CONTENTFUL_HOST } from '$env/static/private';
-import {
-  createClient,
-  type EntriesQueries,
-  type EntrySkeletonType,
-  type EntryCollection,
-  type Entry,
-} from 'contentful';
+import { createClient, type EntriesQueries, type EntryCollection } from 'contentful';
 
-import { isType } from '$lib/utilities/is-type';
+import { getSessionEntries, getSpeakerEntries, type SpeakerSkeleton } from './index';
 
 // Create a single Contentful client instance
 const client = createClient({
@@ -80,44 +74,75 @@ export const paginateEntries =
 export type Slug = {
   slug: string;
 };
+// -------------------------test-------
+import type {
+  ChainModifiers,
+  Entry,
+  EntryFieldTypes,
+  EntrySkeletonType,
+  LocaleCode,
+} from 'contentful';
 
-/** Fetch slugs for a given content type */
-export const getSlugs = async <T extends EntrySkeletonType>(
-  content_type: ContentType,
-  query: Omit<
-    EntriesQueries<T, 'WITHOUT_UNRESOLVABLE_LINKS'>,
-    'content_type' | 'skip' | 'select'
-  > = {},
-): Promise<Slug[]> => {
-  let items: Entry<T, 'WITHOUT_UNRESOLVABLE_LINKS', never>[] = [];
-  let total = 0;
+export interface TypeResourceFields {
+  title?: EntryFieldTypes.Symbol;
+  metaTitle?: EntryFieldTypes.Symbol;
+  metaDescription?: EntryFieldTypes.Symbol;
+  publishDate: EntryFieldTypes.Date;
+  type: EntryFieldTypes.Symbol<'Blog Post' | 'Session'>;
+  industry?: EntryFieldTypes.Symbol<
+    'Crypto' | 'Financial Services' | 'High Tech' | 'Logistics' | 'Medical' | 'Retail'
+  >;
+  sdk?: EntryFieldTypes.Symbol<'.NET' | 'Go' | 'Java' | 'PHP' | 'Python' | 'TypeScript'>;
+  platform?: EntryFieldTypes.Symbol<'Cloud' | 'Self-Hosted'>;
+  developmentPattern?: EntryFieldTypes.Symbol<
+    | 'Batch processing'
+    | 'Event-driven architecture'
+    | 'Saga pattern'
+    | 'Scheduled jobs and cron'
+    | 'State machines'
+  >;
+  link?: EntryFieldTypes.Symbol;
+  slug?: EntryFieldTypes.Symbol;
+  companySize?: EntryFieldTypes.Symbol<'2000-10000' | '250-2000' | '51-250' | '<50' | 'Megacorp'>;
+  customerLogo?: EntryFieldTypes.AssetLink;
+  content?: EntryFieldTypes.Text;
+  quote?: EntryFieldTypes.Text;
+  useCase?: EntryFieldTypes.Symbol;
+  presenters?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePersonSkeleton>>;
+  videoEmbed?: EntryFieldTypes.Symbol;
+  cardImage?: EntryFieldTypes.AssetLink;
+  suggestedContent?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeResourceSkeleton>>;
+}
 
-  do {
-    const content = await client.withoutUnresolvableLinks.getEntries<T>({
-      content_type,
-      skip: items.length,
-      select: ['fields.slug'],
-      ...query,
-    });
+export type TypeResourceSkeleton = {
+  fields: TypeResourceFields;
+  contentTypeId: 'resource';
+};
+export type TypeResource<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
+  TypeResourceSkeleton,
+  Modifiers,
+  Locales
+>;
 
-    total = content.total;
-    items = [...items, ...content.items];
-  } while (items.length < total);
 
-  return items
-    .map((item) => (item.fields?.slug ? { slug: item.fields.slug } : undefined))
-    .filter(isType<Slug>);
+export const getSpeakerSlugs = async (): Promise<Slug[]> => {
+  const entries = await getSpeakerEntries()
+  const slugs = entries.items.map((entry) => ({
+    slug: entry.fields.slug, 
+  }));
+
+  return slugs.filter(({ slug }) => slug !== '');
 };
 
-/** Fetch all speaker entries */
-export const getSpeakerEntries = (query: ContentfulEntries<EntrySkeletonType> = {}) => {
-  return client.getEntries({ ...query, content_type: 'speaker' });
+export const getSessionSlugs = async (): Promise<Slug[]> => {
+  const entries = await getSessionEntries()
+  const slugs = entries.items.map((entry) => ({
+    slug: entry.fields.slug, 
+  }));
+
+  return slugs.filter(({ slug }) => slug !== '');
 };
 
-/** Fetch all session entries */
-export const getSessionEntries = (query: ContentfulEntries<EntrySkeletonType> = {}) => {
-  return client.getEntries({ ...query, content_type: 'talk' });
-};
 
 /** Fetch sessions by speaker */
 export const getSessionsBySpeaker = async (

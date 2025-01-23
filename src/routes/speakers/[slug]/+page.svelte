@@ -1,6 +1,6 @@
 <script lang="ts" module>
   import { type SpeakerProps } from '$components/speaker/variants';
-  import Stonehenge from '$components/stonehenge.svelte';
+  import AbstractBanner from '$components/abstract-banner.svelte';
 </script>
 
 <script lang="ts">
@@ -9,11 +9,11 @@
   const { image, bio, jobTitle, name }: SpeakerProps = $props();
 </script>
 
-<Stonehenge />
+<AbstractBanner />
 <div class={'mt-24 flex flex-col justify-start px-6'}>
   <Breadcrumb text="Return to speakers" href="/speakers" />
   <h1 class={'text-2xl font-bold text-white'}>{name}</h1>
-  <div class="border-grey flex w-full flex-col items-center gap-4 border bg-black p-6">
+  <div class="flex w-full flex-col items-center gap-4 border border-grey bg-black p-6">
     <div>
       <p class="text-white">{jobTitle}</p>
       {#if bio}

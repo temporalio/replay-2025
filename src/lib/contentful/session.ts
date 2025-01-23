@@ -13,6 +13,7 @@ export interface SessionFields {
   location?: EntryFieldTypes.Symbol;
   speakers?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<SpeakerSkeleton>>;
   description: EntryFieldTypes.Text;
+  slug: EntryFieldTypes.Symbol;
 }
 
 export type SessionSkeleton = EntrySkeletonType<SessionFields, 'talk'>;

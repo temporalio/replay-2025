@@ -8,10 +8,10 @@
           "id": "0u17lhw8p27f"
         }
       },
-      "id": "speaker",
+      "id": "talk",
       "type": "ContentType",
-      "createdAt": "2024-12-02T20:19:27.016Z",
-      "updatedAt": "2025-01-14T18:07:54.500Z",
+      "createdAt": "2025-01-03T04:59:12.609Z",
+      "updatedAt": "2025-01-23T19:08:01.906Z",
       "environment": {
         "sys": {
           "id": "master",
@@ -19,8 +19,143 @@
           "linkType": "Environment"
         }
       },
-      "publishedVersion": 7,
-      "publishedAt": "2025-01-14T18:07:54.500Z",
+      "publishedVersion": 19,
+      "publishedAt": "2025-01-23T19:08:01.906Z",
+      "firstPublishedAt": "2025-01-03T04:59:12.953Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "3vFjHacidmoEZhhFtmiyLQ"
+        }
+      },
+      "publishedCounter": 10,
+      "version": 20,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "3vFjHacidmoEZhhFtmiyLQ"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/talk"
+    },
+    "displayField": "title",
+    "name": "Session",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "url",
+        "name": "URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "location",
+        "name": "Location",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "speakers",
+        "name": "Speakers",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "speaker"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "slug",
+        "name": "Slug",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "unique": true
+          },
+          {
+            "regexp": {
+              "pattern": "[a-z\\-]+",
+              "flags": null
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "speaker",
+      "type": "ContentType",
+      "createdAt": "2024-12-02T20:19:27.016Z",
+      "updatedAt": "2025-01-23T19:07:13.665Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 9,
+      "publishedAt": "2025-01-23T19:07:13.665Z",
       "firstPublishedAt": "2024-12-02T20:19:27.494Z",
       "createdBy": {
         "sys": {
@@ -33,16 +168,16 @@
         "sys": {
           "type": "Link",
           "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+          "id": "3vFjHacidmoEZhhFtmiyLQ"
         }
       },
-      "publishedCounter": 4,
-      "version": 8,
+      "publishedCounter": 5,
+      "version": 10,
       "publishedBy": {
         "sys": {
           "type": "Link",
           "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+          "id": "3vFjHacidmoEZhhFtmiyLQ"
         }
       },
       "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/speaker"
@@ -118,6 +253,227 @@
         "defaultValue": {
           "en-US": false
         },
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "slug",
+        "name": "slug",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [
+          {
+            "unique": true
+          },
+          {
+            "regexp": {
+              "pattern": "[a-z\\-]+",
+              "flags": null
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "faq",
+      "type": "ContentType",
+      "createdAt": "2025-01-23T05:51:03.393Z",
+      "updatedAt": "2025-01-23T05:52:12.056Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 3,
+      "publishedAt": "2025-01-23T05:52:12.056Z",
+      "firstPublishedAt": "2025-01-23T05:51:03.661Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 2,
+      "version": 4,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/faq"
+    },
+    "displayField": "title",
+    "name": "FAQ",
+    "description": "",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "generalQuestions",
+        "name": "General Questions",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "questions"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "ticketingQuestions",
+        "name": "Ticketing Questions",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "questions"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "miscQuestions",
+        "name": "Misc. Questions",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "questions"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      }
+    ]
+  },
+  {
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "0u17lhw8p27f"
+        }
+      },
+      "id": "questions",
+      "type": "ContentType",
+      "createdAt": "2025-01-23T05:51:39.762Z",
+      "updatedAt": "2025-01-23T05:51:40.131Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 1,
+      "publishedAt": "2025-01-23T05:51:40.131Z",
+      "firstPublishedAt": "2025-01-23T05:51:40.131Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "publishedCounter": 1,
+      "version": 2,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "4q4LLY8UGRv7xQhTpKIf8E"
+        }
+      },
+      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/questions"
+    },
+    "displayField": "question",
+    "name": "Questions",
+    "description": "",
+    "fields": [
+      {
+        "id": "question",
+        "name": "Question",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "answer",
+        "name": "Answer",
+        "type": "Text",
+        "localized": false,
+        "required": true,
+        "validations": [],
         "disabled": false,
         "omitted": false
       }
@@ -719,121 +1075,6 @@
             }
           }
         ],
-        "disabled": false,
-        "omitted": false
-      }
-    ]
-  },
-  {
-    "sys": {
-      "space": {
-        "sys": {
-          "type": "Link",
-          "linkType": "Space",
-          "id": "0u17lhw8p27f"
-        }
-      },
-      "id": "talk",
-      "type": "ContentType",
-      "createdAt": "2025-01-03T04:59:12.609Z",
-      "updatedAt": "2025-01-08T21:48:00.463Z",
-      "environment": {
-        "sys": {
-          "id": "master",
-          "type": "Link",
-          "linkType": "Environment"
-        }
-      },
-      "publishedVersion": 17,
-      "publishedAt": "2025-01-08T21:48:00.463Z",
-      "firstPublishedAt": "2025-01-03T04:59:12.953Z",
-      "createdBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "updatedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "publishedCounter": 9,
-      "version": 18,
-      "publishedBy": {
-        "sys": {
-          "type": "Link",
-          "linkType": "User",
-          "id": "4q4LLY8UGRv7xQhTpKIf8E"
-        }
-      },
-      "urn": "crn:contentful:::content:spaces/0u17lhw8p27f/environments/master/content_types/talk"
-    },
-    "displayField": "title",
-    "name": "Session",
-    "description": "",
-    "fields": [
-      {
-        "id": "title",
-        "name": "Title",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "url",
-        "name": "URL",
-        "type": "Symbol",
-        "localized": false,
-        "required": true,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "location",
-        "name": "Location",
-        "type": "Symbol",
-        "localized": false,
-        "required": false,
-        "validations": [],
-        "disabled": false,
-        "omitted": false
-      },
-      {
-        "id": "speakers",
-        "name": "Speakers",
-        "type": "Array",
-        "localized": false,
-        "required": false,
-        "validations": [],
-        "disabled": false,
-        "omitted": false,
-        "items": {
-          "type": "Link",
-          "validations": [
-            {
-              "linkContentType": [
-                "speaker"
-              ]
-            }
-          ],
-          "linkType": "Entry"
-        }
-      },
-      {
-        "id": "description",
-        "name": "Description",
-        "type": "Text",
-        "localized": false,
-        "required": true,
-        "validations": [],
         "disabled": false,
         "omitted": false
       }

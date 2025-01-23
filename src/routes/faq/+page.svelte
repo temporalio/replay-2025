@@ -1,0 +1,38 @@
+<script>
+  import Faq from '$components/faq/faq.svelte';
+
+  export let data;
+  const { generalQuestions, ticketingQuestions, miscQuestions } = data;
+</script>
+
+<svelte:head>
+  <title>Frequently Asked Questions: Replay Conference</title>
+  <meta
+    name="description"
+    content="Faq for Replay, an annual conference hosted by Temporal dedicated to the platforms, practices, and trends in backend software engineering."
+  />
+  <meta property="og:title" content="FAQ: Replay Conference" />
+  <meta
+    property="og:description"
+    content="Frequently Asked Questions for Replay, an annual conference hosted by Temporal dedicated to the platforms, practices, and trends in backend software engineering."
+  />
+  <meta property="og:site_name" content="FAQ: Replay Conference" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://replay.temporal.io/faq" />
+  <meta property="og:image" content="/src/assets/og.png" />
+</svelte:head>
+
+<div class="max-w-[940px]">
+  {#if faq}
+    <Faq content={faq} />
+  {/if}
+
+  {#if otherQuestions}
+    <Faq content={otherQuestions} />
+  {/if}
+
+  {#if ticketingQuestions}
+    <Faq content={ticketingQuestions} />
+  {/if}
+</div>
