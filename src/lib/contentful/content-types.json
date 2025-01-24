@@ -105,9 +105,7 @@
         "required": false,
         "validations": [
           {
-            "linkContentType": [
-              "cta"
-            ]
+            "linkContentType": ["cta"]
           }
         ],
         "disabled": false,
@@ -132,9 +130,7 @@
         "required": false,
         "validations": [
           {
-            "linkContentType": [
-              "cta"
-            ]
+            "linkContentType": ["cta"]
           }
         ],
         "disabled": false,
@@ -190,9 +186,7 @@
           "type": "Link",
           "validations": [
             {
-              "linkContentType": [
-                "cta"
-              ]
+              "linkContentType": ["cta"]
             }
           ],
           "linkType": "Entry"
@@ -227,9 +221,7 @@
           "type": "Link",
           "validations": [
             {
-              "linkContentType": [
-                "cta"
-              ]
+              "linkContentType": ["cta"]
             }
           ],
           "linkType": "Entry"
@@ -264,9 +256,7 @@
           "type": "Link",
           "validations": [
             {
-              "linkContentType": [
-                "cta"
-              ]
+              "linkContentType": ["cta"]
             }
           ],
           "linkType": "Entry"
@@ -301,9 +291,7 @@
           "type": "Link",
           "validations": [
             {
-              "linkContentType": [
-                "cta"
-              ]
+              "linkContentType": ["cta"]
             }
           ],
           "linkType": "Entry"
@@ -322,9 +310,7 @@
           "type": "Link",
           "validations": [
             {
-              "linkContentType": [
-                "speaker"
-              ]
+              "linkContentType": ["speaker"]
             }
           ],
           "linkType": "Entry"
@@ -348,9 +334,7 @@
         "required": true,
         "validations": [
           {
-            "linkContentType": [
-              "cta"
-            ]
+            "linkContentType": ["cta"]
           }
         ],
         "disabled": false,
@@ -425,9 +409,7 @@
         "required": true,
         "validations": [
           {
-            "linkContentType": [
-              "cta"
-            ]
+            "linkContentType": ["cta"]
           }
         ],
         "disabled": false,
@@ -696,9 +678,7 @@
         "required": true,
         "validations": [
           {
-            "linkMimetypeGroup": [
-              "image"
-            ]
+            "linkMimetypeGroup": ["image"]
           }
         ],
         "disabled": false,
@@ -814,11 +794,7 @@
         "required": true,
         "validations": [
           {
-            "in": [
-              "Elite",
-              "Premier",
-              "Impact"
-            ]
+            "in": ["Elite", "Premier", "Impact"]
           }
         ],
         "disabled": false,
@@ -832,9 +808,7 @@
         "required": true,
         "validations": [
           {
-            "linkMimetypeGroup": [
-              "image"
-            ]
+            "linkMimetypeGroup": ["image"]
           }
         ],
         "disabled": false,
@@ -849,9 +823,7 @@
         "required": false,
         "validations": [
           {
-            "linkMimetypeGroup": [
-              "image"
-            ]
+            "linkMimetypeGroup": ["image"]
           }
         ],
         "disabled": false,
@@ -866,9 +838,7 @@
         "required": false,
         "validations": [
           {
-            "linkMimetypeGroup": [
-              "image"
-            ]
+            "linkMimetypeGroup": ["image"]
           }
         ],
         "disabled": false,
