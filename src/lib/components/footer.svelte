@@ -16,7 +16,6 @@
 <footer class={merge('section space-y-12 py-16', className)}>
   <ul class="flex flex-col gap-2 text-lg text-green">
     {@render link({ href: links.tickets, label: 'Get Tickets' })}
-    {@render link({ href: links.cfp, label: 'Submit Talk' })}
     {@render link({ href: links.codeOfConduct, label: 'Code of Conduct' })}
     {@render link({ href: links.privacy, label: 'Privacy Policy' })}
   </ul>
