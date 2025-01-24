@@ -20,3 +20,14 @@ export type FAQ<Modifiers extends ChainModifiers, Locales extends LocaleCode = L
   Modifiers,
   Locales
 >;
+export type QuestionAndAnswer = {
+  question: string;
+  answer: string;
+  entityId: string;
+};
+
+export type FAQs = {
+  title: string;
+  questionsAndAnswers: QuestionAndAnswer[];
+  entityId: string;
+};
