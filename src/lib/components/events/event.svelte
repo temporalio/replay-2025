@@ -22,7 +22,7 @@
     <div class="w-full">
       <p class="font-pixelated uppercase">{time}</p>
       <h3 class="title-small">{title}</h3>
-      <p class="font-light">{description}</p>
+      <p class="font-light">{@html description}</p>
     </div>
     {#if children}
       <div class="flex w-full flex-col items-center gap-4">
