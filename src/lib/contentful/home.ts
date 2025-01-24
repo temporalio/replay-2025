@@ -32,7 +32,7 @@ export interface HomeFields {
   feature1: EntryFieldTypes.Text;
   feature2: EntryFieldTypes.Text;
   feature3: EntryFieldTypes.Text;
-  themeDescription: EntryFieldTypes.Text;
+  themeDescription?: EntryFieldTypes.Text;
   location: EntryFieldTypes.Text;
   preFooterHeader: EntryFieldTypes.Symbol;
   preFooterCta: EntryFieldTypes.EntryLink<CTASkeleton>;

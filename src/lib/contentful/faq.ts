@@ -15,20 +15,8 @@ export interface FAQFields {
 }
 
 export type FAQSkeleton = EntrySkeletonType<FAQFields, 'faq'>;
-
 export type FAQ<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
   FAQSkeleton,
   Modifiers,
   Locales
 >;
-
-export type QuestionAndAnswer = {
-  question: string;
-  answer: string;
-  entityId: string;
-};
-export type FAQs = {
-  title: string;
-  questionsAndAnswers: QuestionAndAnswer[];
-  entityId: string;
-};
