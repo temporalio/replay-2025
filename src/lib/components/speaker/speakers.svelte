@@ -30,6 +30,7 @@
             company={speaker.fields.companyName}
             image={speaker.fields.image?.fields.file?.url!}
             type="keynote"
+            slug={speaker.fields.slug}
           />
         {/each}
       </div>
@@ -40,6 +41,7 @@
             jobTitle={speaker.fields.jobTitle}
             company={speaker.fields.companyName}
             image={speaker.fields.image?.fields.file?.url!}
+            slug={speaker.fields.slug}
           />
         {/each}
       </div>
