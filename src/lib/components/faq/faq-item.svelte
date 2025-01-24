@@ -3,22 +3,27 @@
 
   export let question: string;
   export let answer: string;
-
+  let chevronDown = '/src/assets/icons/chevron-down.svg';
+  let chevronUp = '/src/assets/icons/chevron-up.svg';
   let expanded = false;
 </script>
 
-<div class="border-blue-gray-300 w-full border-b bg-black p-4 py-4">
+<div class="w-full border-b border-slate-700 bg-black p-4 py-4">
   <button class="w-full" on:click={() => (expanded = !expanded)}>
     <div class="title-and-icon flex w-full items-center justify-between">
       <p class="text-start font-sans">{question}</p>
       <div>
-        <enhanced:img src="$assets/icons/arrow.svg" alt="arrow" />
+        {#if expanded}
+          <enhanced:img src="$assets/icons/chevron-down.svg" alt="arrow" />
+        {:else}
+          <enhanced:img src="$assets/icons/chevron-up.svg" alt="arrow" />
+        {/if}
       </div>
     </div>
   </button>
   {#if expanded}
     <div transition:slide class="py-4">
-      <p class="text-gray-600">{answer}</p>
+      <p class="text-lilac">{answer}</p>
     </div>
   {/if}
 </div>
