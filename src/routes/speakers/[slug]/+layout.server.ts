@@ -1,16 +1,26 @@
-import { getSpeaker } from '$lib/contentful/client'
-import type { BlogPost } from '$lib/contentful/models/blog';
+import { getSpeaker } from '$lib/contentful/client';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
 import { error, type ServerLoad } from '@sveltejs/kit';
 
-export const load: ServerLoad = async ({ params }): Promise<{ post: BlogPost }> => {
-    const post = await getSpeaker(params?.slug);
-      const markdown = await compileMarkdown(post.content, true);
+export const load: ServerLoad = async ({ params }) => {
+  const slug = params?.slug;
+
+  if (!slug) {
+    throw error(400, 'Speaker slug is missing');
+  }
+
+  const speaker = await getSpeaker(slug);
+
+  if (!speaker) {
+    throw error(404, 'Speaker not found');
+  }
+
+  const markdown = await compileMarkdown(speaker.fields.bio ?? '', true);
 
   return {
-    post: {
-      ...post,
-      content: markdown,
+    speaker: {
+      ...speaker,
+      content: markdown, // Add compiled markdown
     },
   };
 };
