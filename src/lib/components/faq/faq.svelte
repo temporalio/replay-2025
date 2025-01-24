@@ -1,18 +1,20 @@
 <script lang="ts">
-  import type { Questions } from '$lib/contentful';
-  import type { FAQ, QuestionAndAnswer } from './faq-types';
-  export let content: FAQ;
-  console.log('cxontetn', content);
-  $: ({ title, entityId, questionsAndAnswers } = content);
+  import type { FAQs, QuestionAndAnswer } from '$lib/contentful/models/faq';
+  import type { Entry } from 'contentful';
+
+  export let content: Entry<QuestionAndAnswer>[]; // An array of FAQ entries
+  export let title: string;
+  console.log('FAQs:', content);
 </script>
 
-<Grid as="div" layout="columns" {background}>
-  <Box as="div" class="flex flex-col items-center gap-8">
-    <Text {entityId} fieldId="title" variant="display-68">{title}</Text>
-    <div class="w-full">
-      {#each questionsAndAnswers as { question, answer, entityId }}
-        <FaqItem {question} {answer} {entityId} />
-      {/each}
-    </div>
-  </Box>
-</Grid>
+<div class="flex flex-col items-center gap-8">
+  <div id="title" class="text-2xl font-bold">{title}</div>
+  <div class="w-full">
+    {#each content as { fields: { question, answer } }}
+      <div class="border-blue-gray-300 flex w-full flex-col border-b py-4">
+        <p class="font-semibold">{question}</p>
+        <p class="text-gray-600">{answer}</p>
+      </div>
+    {/each}
+  </div>
+</div>

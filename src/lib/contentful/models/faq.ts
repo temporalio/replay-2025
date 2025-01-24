@@ -16,9 +16,11 @@ export type FAQs = {
 };
 
 export type QuestionAndAnswer = {
-  question: string;
-  answer: string;
-  entityId: string;
+  fields: {
+    question: string;
+    answer: string;
+  };
+  contentTypeId: string;
   contentType: ContentType<Questions<'WITHOUT_UNRESOLVABLE_LINKS', never>>;
 };
 

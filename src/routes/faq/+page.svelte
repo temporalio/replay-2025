@@ -25,14 +25,14 @@
 
 <div class="max-w-[940px]">
   {#if generalQuestions}
-    <Faq content={generalQuestions} />
+    <Faq title="General Questions" content={generalQuestions} />
   {/if}
 
   {#if ticketingQuestions}
-    <Faq content={ticketingQuestions} />
+    <Faq title="Ticketing Questions" content={ticketingQuestions} />
   {/if}
 
   {#if miscQuestions}
-    <Faq content={miscQuestions} />
+    <Faq title="Misc Questions" content={miscQuestions} />
   {/if}
 </div>
