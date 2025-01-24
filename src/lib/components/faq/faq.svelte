@@ -1,17 +1,20 @@
 <script lang="ts">
-  import type { FAQ, Questions } from '$lib/contentful/models/faq';
-  export let content: Questions[];
-  import FaqItem from './faq-item.svelte';
-  export let title: string;
+  import type { FAQs, QuestionAndAnswer } from '$lib/contentful/models/faq';
+  import type { Entry } from 'contentful';
 
-  $: ({ entityId, questionsAndAnswers } = content);
+  export let content: Entry<QuestionAndAnswer>[]; // An array of FAQ entries
+  export let title: string;
+  console.log('FAQs:', content);
 </script>
 
 <div class="flex flex-col items-center gap-8">
-  <div {entityId} fieldId="title" variant="display-68">{title}</div>
+  <div id="title" class="text-2xl font-bold">{title}</div>
   <div class="w-full">
-    {#each questionsAndAnswers}
-      <FaqItem content={questionsAndAnswers} />
+    {#each content as { fields: { question, answer } }}
+      <div class="border-blue-gray-300 flex w-full flex-col border-b py-4">
+        <p class="font-semibold">{question}</p>
+        <p class="text-gray-600">{answer}</p>
+      </div>
     {/each}
   </div>
 </div>
