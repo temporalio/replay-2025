@@ -17,7 +17,7 @@
     <div>
       <p class="text-white">{jobTitle}</p>
       {#if bio}
-        <p class="font-lilac prose">{bio}</p>
+        <p class="font-lilac prose">{@html bio}</p>
       {/if}
       <div style="background-image: url({image}?w=720&h=648&fm=webp);"></div>
     </div>
