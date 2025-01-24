@@ -1,7 +1,5 @@
 <script>
   import Faq from '$components/faq/faq.svelte';
-  import { LOGNAME } from '$env/static/private';
-
   const { data } = $props();
 
   const { generalQuestions, ticketingQuestions, miscQuestions } = data.faq[0].fields;
