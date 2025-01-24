@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { Questions } from '$lib/contentful';
-
-  export let content: { questions: Questions[]; title: string };
-  const { questions, title } = content;
+  import type { FAQs } from '$lib/contentful';
+  export let content: FAQs;
+  $: ({ title, entityId, questionsAndAnswers } = content);
 </script>
 
 <div>
@@ -10,7 +10,7 @@
     {title}
   </h2>
   <div class="space-y-12">
-    {#each questions as { question, answer }}
+    {#each questionsAndAnswers as { question, answer, entityId }}
       <article>
         <h2 class="font-label text-xl uppercase">{question}</h2>
         {@html answer}

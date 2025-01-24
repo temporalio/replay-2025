@@ -74,7 +74,7 @@ export const paginateEntries =
 export type Slug = {
   slug: string;
 };
-// -------------------------test-------
+
 import type {
   ChainModifiers,
   Entry,
@@ -118,31 +118,30 @@ export type TypeResourceSkeleton = {
   fields: TypeResourceFields;
   contentTypeId: 'resource';
 };
+
 export type TypeResource<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypeResourceSkeleton,
   Modifiers,
   Locales
 >;
 
-
 export const getSpeakerSlugs = async (): Promise<Slug[]> => {
-  const entries = await getSpeakerEntries()
+  const entries = await getSpeakerEntries();
   const slugs = entries.items.map((entry) => ({
-    slug: entry.fields.slug, 
+    slug: entry.fields.slug,
   }));
 
   return slugs.filter(({ slug }) => slug !== '');
 };
 
 export const getSessionSlugs = async (): Promise<Slug[]> => {
-  const entries = await getSessionEntries()
+  const entries = await getSessionEntries();
   const slugs = entries.items.map((entry) => ({
-    slug: entry.fields.slug, 
+    slug: entry.fields.slug,
   }));
 
   return slugs.filter(({ slug }) => slug !== '');
 };
-
 
 /** Fetch sessions by speaker */
 export const getSessionsBySpeaker = async (
