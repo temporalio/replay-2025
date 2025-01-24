@@ -1,11 +1,24 @@
 <script lang="ts">
-  import type { FAQ, Questions } from '$lib/contentful/models/faq';
-  export let content: Questions;
-  console.log('AHHHHH', content);
-  $: ({ entityId, question, answer } = content.fields);
+  import { slide } from 'svelte/transition';
+
+  export let question: string;
+  export let answer: string;
+
+  let expanded = false;
 </script>
 
-<div class="border-blue-gray-300 flex w-full flex-col border-b py-4">
-  <p>{question}</p>
-  <p>{answer}</p>
+<div class="border-blue-gray-300 w-full border-b bg-black p-4 py-4">
+  <button class="w-full" on:click={() => (expanded = !expanded)}>
+    <div class="title-and-icon flex w-full items-center justify-between">
+      <p class="text-start font-sans">{question}</p>
+      <div>
+        <enhanced:img src="$assets/icons/arrow.svg" alt="arrow" />
+      </div>
+    </div>
+  </button>
+  {#if expanded}
+    <div transition:slide class="py-4">
+      <p class="text-gray-600">{answer}</p>
+    </div>
+  {/if}
 </div>

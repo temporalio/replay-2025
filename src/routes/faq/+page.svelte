@@ -1,7 +1,7 @@
 <script>
   import Faq from '$components/faq/faq.svelte';
   const { data } = $props();
-
+  import AbstractBanner from '$components/abstract-banner.svelte';
   const { generalQuestions, ticketingQuestions, miscQuestions } = data.faq[0].fields;
 </script>
 
@@ -23,16 +23,22 @@
   <meta property="og:image" content="/src/assets/og.png" />
 </svelte:head>
 
-<div class="max-w-[940px]">
-  {#if generalQuestions}
-    <Faq title="General Questions" content={generalQuestions} />
-  {/if}
+<AbstractBanner />
+<section class="relative flex flex-col items-center bg-grid">
+  <div class="mt-40 max-w-[940px]">
+    <div class="flex flex-col items-center font-afacad text-4xl uppercase">
+      Frequently Asked Questions
+    </div>
+    {#if generalQuestions}
+      <Faq title="General Questions" content={generalQuestions} />
+    {/if}
 
-  {#if ticketingQuestions}
-    <Faq title="Ticketing Questions" content={ticketingQuestions} />
-  {/if}
+    {#if ticketingQuestions}
+      <Faq title="Ticketing Questions" content={ticketingQuestions} />
+    {/if}
 
-  {#if miscQuestions}
-    <Faq title="Misc Questions" content={miscQuestions} />
-  {/if}
-</div>
+    {#if miscQuestions}
+      <Faq title="Misc Questions" content={miscQuestions} />
+    {/if}
+  </div>
+</section>
