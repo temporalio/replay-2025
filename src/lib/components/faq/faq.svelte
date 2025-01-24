@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { FAQ } from '$lib/contentful/models/faq';
+  import type { Questions } from '$lib/contentful';
 
-  export let content: FAQ;
-  const { title, questionsAndAnswers } = content;
+  export let content: { questions: Questions[]; title: string };
+  const { questions, title } = content;
 </script>
 
 <div>
@@ -10,7 +10,7 @@
     {title}
   </h2>
   <div class="space-y-12">
-    {#each questionsAndAnswers as { question, answer }}
+    {#each questions as { question, answer }}
       <article>
         <h2 class="font-label text-xl uppercase">{question}</h2>
         {@html answer}
@@ -18,3 +18,5 @@
     {/each}
   </div>
 </div>
+
+<!-- To do: I'm struggling with the typing here. Need to get this fixed to make the FAQ's work.  -->

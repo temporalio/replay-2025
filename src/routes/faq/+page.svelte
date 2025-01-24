@@ -1,8 +1,10 @@
 <script>
   import Faq from '$components/faq/faq.svelte';
+  import { LOGNAME } from '$env/static/private';
 
-  export let data;
-  const { generalQuestions, ticketingQuestions, miscQuestions } = data;
+  const { data } = $props();
+
+  const { generalQuestions, ticketingQuestions, miscQuestions } = data.faq[0].fields;
 </script>
 
 <svelte:head>
@@ -24,15 +26,15 @@
 </svelte:head>
 
 <div class="max-w-[940px]">
-  {#if faq}
-    <Faq content={faq} />
-  {/if}
-
-  {#if otherQuestions}
-    <Faq content={otherQuestions} />
+  {#if generalQuestions}
+    <Faq content={generalQuestions} />
   {/if}
 
   {#if ticketingQuestions}
     <Faq content={ticketingQuestions} />
+  {/if}
+
+  {#if miscQuestions}
+    <Faq content={miscQuestions} />
   {/if}
 </div>
