@@ -5,7 +5,6 @@
   import AbstractBanner from '$components/abstract-banner.svelte';
 
   const { data } = $props();
-
   console.log(data.speakers);
 </script>
 

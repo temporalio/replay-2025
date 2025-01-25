@@ -39,10 +39,9 @@ export const getSpeakerSlugs = async (): Promise<Slug[]> => {
 };
 
 export const getSpeaker = async (slug: string): Promise<Speaker<never, string> | undefined> => {
-  const content = await getSpeakerEntries('speaker');
+  const content = await getSpeakerEntries();
 
   if (!content.items) return undefined;
-
   return content.items.find((entry) => entry.fields.slug === slug);
 };
 
@@ -63,7 +62,7 @@ export const getSessionSlugs = async (): Promise<Slug[]> => {
 };
 
 export const getSession = async (slug: string): Promise<Session<never, string> | undefined> => {
-  const content = await getSessionEntries('session');
+  const content = await getSessionEntries();
 
   if (!content.items) return undefined;
 
