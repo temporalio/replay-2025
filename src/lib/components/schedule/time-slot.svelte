@@ -1,5 +1,8 @@
 <script lang="ts">
-  const { title, startTime, endTime, talk }: TimeSlotProps = $props();
+  const { startTime, endTime, talk }: TimeSlotProps = $props();
+
+  const talkOne : talk[0]
+  const talkTwo?: talk[1]
 </script>
 
 <div class={'border-b py-6 '}>
@@ -8,10 +11,20 @@
     <p>{endTime}</p>
   </div>
   <div>
-    <p>{title}</p>
+    <p>{talkOne}</p>
+    {#if talkTwo}
+      <p>{talkTwo}</p>
+    {/if}
   </div>
 </div>
-
-<!-- TO DO: 
-Function - need to have two different stylings for lg view port. First styling will show the time, 
-second will not show the time except on < med -->
+{#if talkTwo}
+  <div class={'border-b py-6 '}>
+    <div class="text-green">
+      <p>{startTime} -</p>
+      <p>{endTime}</p>
+    </div>
+    <div>
+      <p>{talkTwo}</p>
+    </div>
+  </div>
+{/if}

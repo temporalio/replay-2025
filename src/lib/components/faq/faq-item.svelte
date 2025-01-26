@@ -23,7 +23,7 @@
   </button>
   {#if expanded}
     <div transition:slide class="py-4">
-      <p class="text-lilac">{answer}</p>
+      <p class="text-lilac">{@html answer}</p>
     </div>
   {/if}
 </div>

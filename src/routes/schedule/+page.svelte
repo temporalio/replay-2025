@@ -1,4 +1,5 @@
 <script lang="ts" module>
+  const { data } = $props();
   import AbstractBanner from '$components/abstract-banner.svelte';
 </script>
 
