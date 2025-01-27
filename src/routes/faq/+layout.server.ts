@@ -1,17 +1,27 @@
 import { getFAQEntries } from './../../lib/contentful/index';
-// import { compileMarkdown } from '$lib/utilities/compile-markdown';
+import { compileMarkdown } from '$lib/utilities/compile-markdown';
 import { error } from '@sveltejs/kit';
-import { getFaqEntriesByCategory } from './../../lib/contentful/index';
 import type { LayoutServerLoad } from './$types.js';
+
 
 export const prerender = true;
 export const load: LayoutServerLoad = async () => {
-  const faqEntries = await getFAQEntries();
-  if (!faqEntries) {
-    throw error(404, 'FAQ not found');
-  }
-  console.log(getFaqEntriesByCategory());
-  // console.log('faqEntries:  ', faqEntries.items);
+  const content = await getFAQEntries();
+
+  const faqEntries = await Promise.all((content.items ?? []).map(async (entry) => {
+    
+    
+    ...content, 
+    fields: {
+      ...content.fields,
+      answer: await compileMarkdown(content.fields.answer ?? '', true),
+    },
+
+    return entry}));
+
+
+
+
   // TO DO: We need to use the compileMarkdown function to format each of the answers for the questions in each category. KT
 
   // const markdown = await compileMarkdown(faqEntries ?? '', true);

@@ -104,16 +104,3 @@ export const getTimeSlotsByDate = async (
     .sort((a, b) => new Date(a.fields.startTime).getTime() - new Date(b.fields.startTime).getTime())
     .map((entry) => entry as TimeSlot<'WITHOUT_UNRESOLVABLE_LINKS', never>);
 };
-
-export const getFaqEntriesByCategory = async (): Promise<(FAQ<never, string> | undefined)[]> => {
-  const content = await getFAQEntries();
-
-  if (!content.items) return [];
-
-  const generalQuestions = content.items.find((entry) => entry?.fields.generalQuestions);
-  const ticketingQuestions = content.items.find((entry) => entry?.fields.ticketingQuestions);
-  const miscQuestions = content.items.find((entry) => entry?.fields.miscQuestions);
-
-  const entriesByCategory = [generalQuestions, ticketingQuestions, miscQuestions];
-  return entriesByCategory;
-};
