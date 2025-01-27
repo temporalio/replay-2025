@@ -13,13 +13,13 @@
 </script>
 
 <div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
-  <div class=" p-4 text-left text-green">
+  <div class="font-inter p-4 text-left text-base text-green">
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkOne}
-    <div class="flex items-center p-4">
-      <a href="/schedule/{talkOne.fields.slug}" class="block font-bold">
+    <div class="font-inter flex items-center text-base">
+      <a href="/schedule/{talkOne.fields.slug}" class="block">
         {talkOne.fields.title}
       </a>
     </div>
