@@ -24,6 +24,7 @@
 <Agenda />
 
 <AbstractBanner />
+
 <Speakers speakers={data.speakers} />
 
 <div class="bg-lines bg-no-repeat 3xl:bg-none">

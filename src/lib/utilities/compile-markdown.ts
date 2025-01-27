@@ -8,7 +8,6 @@ import rehypeSlug from 'rehype-slug';
 import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import rehypeShiki from '@shikijs/rehype';
 import addClasses from './plugins/add-classes';
 
 export const compileMarkdown = async (
