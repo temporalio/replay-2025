@@ -25,10 +25,7 @@ export const compileMarkdown = async (
       target: '_blank',
       rel: ['noopener'],
     })
-    .use(rehypeStringify, { allowDangerousHtml: true })
-    .use(rehypeShiki, {
-      theme: 'poimandres',
-    });
+    .use(rehypeStringify, { allowDangerousHtml: true });
 
   if (autolinkHeadings) {
     processor.use(rehypeAutolinkHeadings, {
