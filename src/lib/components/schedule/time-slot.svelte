@@ -35,7 +35,7 @@
 </div>
 
 {#if talkTwo}
-  <div class=" p-4 text-left text-green">
+  <div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
     <p>{start} -</p>
     <p>{end}</p>
   </div>
