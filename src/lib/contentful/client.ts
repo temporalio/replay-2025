@@ -1,14 +1,13 @@
 import { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID, CONTENTFUL_HOST } from '$env/static/private';
 import { createClient } from 'contentful';
 import type { Entry, EntrySkeletonType, UnresolvedLink } from 'contentful';
-import type { FAQ } from './faq';
 import type { Speaker } from './speaker';
 import type { Session } from './session';
 import type { TimeSlot } from './time-slot';
 import type { QuestionsSkeleton } from '$lib/contentful/questions';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
 
-import { getFAQEntries, getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
+import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
 
 const client = createClient({
   space: CONTENTFUL_SPACE_ID,
