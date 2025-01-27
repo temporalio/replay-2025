@@ -12,7 +12,9 @@
   const end = formatTime(endTime);
 </script>
 
-<div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
+<div
+  class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white last:border-b-0"
+>
   <div class="font-inter p-4 text-left text-base text-green">
     <p>{start} -</p>
     <p>{end}</p>
@@ -47,5 +49,3 @@
     </div>
   {/if}
 {/if}
-
-<!-- To do: need to make sure that the last instance of the time slots don't have a bottom underline -->
