@@ -1,20 +1,21 @@
 import { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID, CONTENTFUL_HOST } from '$env/static/private';
 import { createClient } from 'contentful';
+import type { Entry, EntrySkeletonType, UnresolvedLink } from 'contentful';
+import type { FAQ } from './faq';
 import type { Speaker } from './speaker';
 import type { Session } from './session';
 import type { TimeSlot } from './time-slot';
-import type { FAQ } from './faq';
+import type { QuestionsSkeleton } from '$lib/contentful/questions';
+import { compileMarkdown } from '$lib/utilities/compile-markdown';
 
 import { getFAQEntries, getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
 
-// Create a single Contentful client instance
 const client = createClient({
   space: CONTENTFUL_SPACE_ID,
   accessToken: CONTENTFUL_ACCESS_TOKEN,
   host: CONTENTFUL_HOST,
 });
 
-/** List of all content types in Contentful */
 export type ContentType =
   | 'speaker'
   | 'home'
@@ -24,13 +25,9 @@ export type ContentType =
   | 'globalSettings'
   | 'cta';
 
-/** Slug type for fetching slugs from Contentful */
 export type Slug = {
   slug: string;
 };
-
-import type { Entry, EntrySkeletonType } from 'contentful';
-import TimeSlot from '$components/schedule/time-slot.svelte';
 
 export const getSpeakerSlugs = async (): Promise<Slug[]> => {
   const entries = await getSpeakerEntries();
@@ -48,7 +45,6 @@ export const getSpeaker = async (slug: string): Promise<Speaker<never, string> |
   return content.items.find((entry) => entry.fields.slug === slug);
 };
 
-/** Fetch a single entry by ID */
 export const getEntry = async <T extends EntrySkeletonType>(
   id: string,
 ): Promise<Entry<T, 'WITHOUT_UNRESOLVABLE_LINKS', never>> => {
@@ -103,4 +99,23 @@ export const getTimeSlotsByDate = async (
     .filter((entry) => entry.fields.startTime.startsWith(date))
     .sort((a, b) => new Date(a.fields.startTime).getTime() - new Date(b.fields.startTime).getTime())
     .map((entry) => entry as TimeSlot<'WITHOUT_UNRESOLVABLE_LINKS', never>);
+};
+
+export const compileQuestions = async (
+  questions: (UnresolvedLink<'Entry'> | Entry<QuestionsSkeleton, undefined, string>)[] = [],
+): Promise<Entry<QuestionsSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', never>[]> => {
+  return Promise.all(
+    questions
+      .filter(
+        (question): question is Entry<QuestionsSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', never> =>
+          !!question && 'fields' in question, 
+      )
+      .map(async (question) => ({
+        ...question,
+        fields: {
+          ...question.fields,
+          answer: await compileMarkdown(question.fields.answer ?? '', true),
+        },
+      })),
+  );
 };
