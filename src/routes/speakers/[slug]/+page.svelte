@@ -8,10 +8,10 @@
   const speaker = data.speaker;
 </script>
 
-<section class={'flex w-full flex-col justify-start gap-12 bg-grid px-6 py-60'}>
+<section class={'flex w-full  flex-col justify-start gap-12 bg-grid px-20 py-60'}>
   <Breadcrumb text="Return to speakers" href="/speakers" />
   <h1 class={'font-afacad text-5xl uppercase text-white'}>{speaker.fields.fullName}</h1>
-  <div class="flex w-full flex-col items-center gap-4 border border-grey bg-black p-6">
+  <div class="flex w-full max-w-6xl flex-col items-center gap-4 border border-grey bg-black p-6">
     <div class="flex flex-row items-start gap-6 max-sm:flex-col">
       {#if speaker.fields.bio}
         <div class="flex-1">
