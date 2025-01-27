@@ -1,12 +1,11 @@
 import type { TimeSlot, Session } from '../index';
-import type { SimpleSession } from './session';
 import { toSession } from './session';
 
 export type Slot = {
   title: string;
   startTime: string;
   endTime: string;
-  talk?: SimpleSession[];
+  talk?: Session<'WITHOUT_UNRESOLVABLE_LINKS', never>[];
   contentType: 'slot';
 };
 

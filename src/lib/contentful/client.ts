@@ -2,8 +2,9 @@ import { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID, CONTENTFUL_HOST } from '$
 import { createClient } from 'contentful';
 import type { Speaker } from './speaker';
 import type { Session } from './session';
+import type { TimeSlot } from './time-slot';
 
-import { getSessionEntries, getSpeakerEntries } from './index';
+import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
 
 // Create a single Contentful client instance
 const client = createClient({
@@ -28,6 +29,7 @@ export type Slug = {
 };
 
 import type { Entry, EntrySkeletonType } from 'contentful';
+import TimeSlot from '$components/schedule/time-slot.svelte';
 
 export const getSpeakerSlugs = async (): Promise<Slug[]> => {
   const entries = await getSpeakerEntries();
@@ -69,7 +71,6 @@ export const getSession = async (slug: string): Promise<Session<never, string> |
   return content.items.find((entry) => entry.fields.slug === slug);
 };
 
-/** Fetch sessions by speaker */
 export const getSessionsBySpeaker = async (
   speakerId: string,
 ): Promise<Entry<EntrySkeletonType>[]> => {
@@ -80,4 +81,25 @@ export const getSessionsBySpeaker = async (
     console.error('Error fetching sessions by speaker:', error);
     return [];
   }
+};
+
+export const getSessionById = async (id: string): Promise<Session<never, string> | undefined> => {
+  const content = await getSessionEntries();
+
+  if (!content.items) return undefined;
+
+  return content.items.find((entry) => entry.sys.id === id);
+};
+
+export const getTimeSlotsByDate = async (
+  date: string,
+): Promise<TimeSlot<'WITHOUT_UNRESOLVABLE_LINKS', never>[]> => {
+  const content = await getTimeSlotEntries();
+
+  if (!content.items) return [];
+
+  return content.items
+    .filter((entry) => entry.fields.startTime.startsWith(date))
+    .sort((a, b) => new Date(a.fields.startTime).getTime() - new Date(b.fields.startTime).getTime())
+    .map((entry) => entry as TimeSlot<'WITHOUT_UNRESOLVABLE_LINKS', never>);
 };

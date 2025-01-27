@@ -20,8 +20,10 @@
         <p class="text-lilac">{@html speaker.content}</p>
       {/if}
       <div
-        style="background-image: url({speaker.fields.image?.fields?.file
-          ?.url!}?w=720&h=648&fm=webp);"
+        style="background-image: url({speaker.fields.image && 'fields' in speaker.fields.image
+          ? speaker.fields.image.fields.file?.url
+          : ''}?w=720&h=648&fm=webp);"
+        class="h-[200px] w-[200px] bg-cover bg-center"
       ></div>
     </div>
   </div>

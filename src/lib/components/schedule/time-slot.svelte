@@ -1,30 +1,45 @@
 <script lang="ts">
-  const { startTime, endTime, talk }: TimeSlotProps = $props();
+  import type { Slot } from '$lib/contentful/models/time-slot';
+  import { formatTime } from '$lib/utilities/format-time';
+  const { startTime, endTime, talk }: Slot = $props();
 
-  const talkOne : talk[0]
-  const talkTwo?: talk[1]
+  const talkOne = talk?.[0];
+  const talkTwo = talk?.[1] ?? null;
+  const start = formatTime(startTime);
+  const end = formatTime(endTime);
+
+  console.log('Talk?', talkOne);
 </script>
 
-<div class={'border-b py-6 '}>
-  <div class="text-green">
-    <p>{startTime} -</p>
-    <p>{endTime}</p>
+<div class=" flex w-full items-center border-b border-grey py-6">
+  <div class="flex flex-col items-start pr-10 text-green md:block">
+    <p class="text-nowrap">{start} -</p>
+    <p>{end}</p>
   </div>
-  <div>
-    <p>{talkOne}</p>
-    {#if talkTwo}
-      <p>{talkTwo}</p>
+
+  <div class="flex">
+    <a href="/schedule/{talkOne?.fields.slug}" class="text-white"
+      >{talkOne?.fields.title} Lorem ipsum dolor sit amet</a
+    >
+  </div>
+  <div class="flex">
+    >
+    {#if talkOne}
+      <a
+        href="/schedule/{talkOne?.fields.slug}"
+        class="hidden border-l border-grey text-white lg:block"
+        >{talkOne?.fields.title} talk two Lorem ipsum dolor sit amet</a
+      >
     {/if}
   </div>
 </div>
-{#if talkTwo}
-  <div class={'border-b py-6 '}>
-    <div class="text-green">
-      <p>{startTime} -</p>
-      <p>{endTime}</p>
-    </div>
+
+{#if talkOne}
+  <div class=" flex w-full items-center border-b border-l border-grey py-6 lg:hidden">
     <div>
-      <p>{talkTwo}</p>
+      <a href="/schedule/{talkOne?.fields.slug}" class="text-white"
+        >{talkOne?.fields.title} talk two Lorem ipsum dolor sit amet</a
+      >
     </div>
   </div>
 {/if}
