@@ -14,7 +14,7 @@
   <Breadcrumb text="Return to speakers" href="/speakers" />
   <h1 class={'font-afacad text-5xl uppercase text-white'}>{speaker.fields.fullName}</h1>
   <div class="flex w-full flex-col items-center gap-4 border border-grey bg-black p-6">
-    <div class="flex flex-row items-start gap-6">
+    <div class="flex flex-row items-start gap-6 max-sm:flex-col">
       {#if speaker.fields.bio}
         <div class="flex-1">
           <p class="text-lilac">{@html speaker.content}</p>
