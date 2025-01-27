@@ -26,10 +26,7 @@ export const compileMarkdown = async (
       target: '_blank',
       rel: ['noopener'],
     })
-    .use(rehypeStringify, { allowDangerousHtml: true })
-    .use(rehypeShiki, {
-      theme: 'poimandres',
-    });
+    .use(rehypeStringify, { allowDangerousHtml: true });
 
   if (autolinkHeadings) {
     processor.use(rehypeAutolinkHeadings, {
@@ -45,4 +42,4 @@ export const compileMarkdown = async (
   return String(file).trim();
 };
 
-// TO DO: Need to figure out why this isn't rendering things quite right? Might be the prose and not the markdown compiler. 
+// TO DO: Need to figure out why this isn't rendering things quite right? Might be the prose and not the markdown compiler.

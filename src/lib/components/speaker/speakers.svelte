@@ -6,9 +6,11 @@
   const {
     speakers,
     animation = true,
+    home = true,
   }: {
     speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[];
     animation?: boolean;
+    home?: boolean;
   } = $props();
 
   const keynotes = speakers.filter((speaker) => speaker.fields.keynote);
@@ -20,7 +22,11 @@
     <div class="abstract"></div>
   {/if}
   <div class="section pb-16 pt-36">
-    <h2 class="mb-8 title-medium">Speakers</h2>
+    {#if home}
+      <h2 class="mb-8 title-medium">Speakers</h2>
+    {:else}
+      <h1 class="hero-subtitle text-4xl uppercase text-white lg:text-5xl">Speakers</h1>
+    {/if}
     <div class="flex flex-col gap-8">
       <div class="flex flex-col gap-8 xl:flex-row xl:flex-wrap xl:justify-between">
         {#each keynotes as speaker}

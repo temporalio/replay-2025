@@ -12,6 +12,6 @@
 </svelte:head>
 
 <AbstractBanner />
-<Speakers speakers={data.speakers} animation={false} />
+<Speakers speakers={data.speakers} animation={false} home={false} />
 <Tickets heading="Build the future of scalable, resilient systems" />
 <Footer />
