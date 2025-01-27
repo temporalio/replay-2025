@@ -26,7 +26,7 @@
 <AbstractBanner />
 <section class="relative flex flex-col items-center bg-grid">
   <div class="mt-36 max-w-[940px]">
-    <div class="hero-subtitle flex flex-col items-start p-4 uppercase text-white">
+    <div class="hero-subtitle flex flex-col items-start p-4 uppercase tracking-wide text-white">
       Frequently Asked Questions
     </div>
     {#if generalQuestions}
