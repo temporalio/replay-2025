@@ -21,7 +21,6 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://replay.temporal.io/faq" />
-  <meta property="og:image" content="/src/assets/og.png" />
 </svelte:head>
 
 <AbstractBanner />
