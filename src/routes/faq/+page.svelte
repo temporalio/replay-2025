@@ -2,7 +2,8 @@
   import Faq from '$components/faq/faq.svelte';
   const { data } = $props();
   import AbstractBanner from '$components/abstract-banner.svelte';
-  const { generalQuestions, ticketingQuestions, miscQuestions } = data.faq[0].fields;
+  const [questions] = data.FAQ;
+  const { generalQuestions, ticketingQuestions, miscQuestions } = questions.fields;
 </script>
 
 <svelte:head>

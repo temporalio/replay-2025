@@ -12,7 +12,7 @@
 
 <main>
   <Navigation />
-  {@render children()}
+  {@render children?.()}
   <CookieConsent />
 </main>
 
