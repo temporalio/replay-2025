@@ -7,8 +7,8 @@
 </script>
 
 <div>
-  <p class="text-2xl uppercase text-teal">{title}</p>
-  <div class="flex w-full flex-col items-center gap-4 border border-grey bg-black px-6">
+  <p class="py-8 text-2xl uppercase text-teal">{title}</p>
+  <div class="flex w-full flex-col items-center border border-grey bg-black px-6">
     {#each slots as slot}
       <Slot timeSlot={slot} />
     {/each}

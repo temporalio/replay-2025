@@ -1,6 +1,4 @@
 <script lang="ts" module>
-  import { type SpeakerProps } from '$components/speaker/variants';
-  import AbstractBanner from '$components/abstract-banner.svelte';
   import Footer from '$components/footer.svelte';
 </script>
 
@@ -30,4 +28,4 @@
   </div>
 </section>
 <Footer />
-<!-- TO DO: Need to add  -->
+<!-- TO DO: Need to add the talks for the individual speaker -->

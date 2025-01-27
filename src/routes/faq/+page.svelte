@@ -1,7 +1,7 @@
 <script>
   import Faq from '$components/faq/faq.svelte';
   const { data } = $props();
-  import AbstractBanner from '$components/abstract-banner.svelte';
+  import AbstractBanner from '$components/abstract-banner.svelte?raw';
   const { generalQuestions, ticketingQuestions, miscQuestions } = data.faq[0].fields;
 </script>
 
