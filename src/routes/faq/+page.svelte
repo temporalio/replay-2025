@@ -3,6 +3,7 @@
   const { data } = $props();
   const [questions] = data.FAQ;
   const { generalQuestions, ticketingQuestions, miscQuestions } = questions.fields;
+  import AbstractBanner from '$components/abstract-banner.svelte';
 </script>
 
 <svelte:head>

@@ -1,6 +1,4 @@
 <script lang="ts" module>
-  import type { Session } from '$lib/contentful/session.js';
-  import AbstractBanner from '$components/abstract-banner.svelte';
 </script>
 
 <script lang="ts">
