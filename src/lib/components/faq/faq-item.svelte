@@ -3,8 +3,6 @@
 
   export let question: string;
   export let answer: string;
-  let chevronDown = '/src/assets/icons/chevron-down.svg';
-  let chevronUp = '/src/assets/icons/chevron-up.svg';
   let expanded = false;
 </script>
 
