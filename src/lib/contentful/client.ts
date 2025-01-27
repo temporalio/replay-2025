@@ -101,7 +101,7 @@ export const getSessionById = async (
   id: string,
 ): Promise<Entry<SessionSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', never> | undefined> => {
   try {
-    return await getEntry<SessionSkeleton>(id); // ✅ Properly fetches session entry
+    return await getEntry<SessionSkeleton>(id);
   } catch (error) {
     console.error(`Error fetching session by ID (${id}):`, error);
     return undefined;
