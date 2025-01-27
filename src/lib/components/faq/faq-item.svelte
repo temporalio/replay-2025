@@ -11,7 +11,7 @@
 <div class="w-full border-b border-slate-700 bg-black p-4 py-4">
   <button class="w-full" on:click={() => (expanded = !expanded)}>
     <div class="title-and-icon flex w-full items-center justify-between">
-      <p class="text-start font-sans">{question}</p>
+      <p class="font-inter text-start">{question}</p>
       <div>
         {#if expanded}
           <enhanced:img src="$assets/icons/chevron-down.svg" alt="arrow" />

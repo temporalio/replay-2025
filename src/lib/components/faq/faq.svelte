@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col items-start gap-8 p-4">
-  <div id="title" class="font-afacab text-start text-2xl uppercase text-teal">{title}</div>
+  <div id="title" class="font-josefin text-start text-2xl uppercase text-teal">{title}</div>
   <div class="w-full">
     {#each content as { fields: { question, answer } }}
       <FaqItem {question} {answer} />
