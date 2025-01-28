@@ -1,4 +1,4 @@
-import { getSessionById, getTimeSlotsByDate } from './../../lib/contentful/client';
+import { getSessionById, getTimeSlotsByDate } from '$lib/contentful/client';
 import type { LayoutServerLoad } from './$types.js';
 import type { Entry } from 'contentful';
 import type { SessionSkeleton } from '$lib/contentful/session';
