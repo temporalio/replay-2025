@@ -2,11 +2,11 @@
   import { slide } from 'svelte/transition';
 
   const { question, answer }: { question: string; answer: string } = $props();
-  let expanded = false;
+  let expanded = $state(false);
 </script>
 
 <div class="w-full border-b border-slate-700 bg-black p-4 py-4">
-  <button class="w-full" on:click={() => (expanded = !expanded)}>
+  <button class="w-full" onclick={() => (expanded = !expanded)}>
     <div class="title-and-icon flex w-full items-center justify-between">
       <p class="font-inter prose prose-invert text-start">{@html question}</p>
       <div>
