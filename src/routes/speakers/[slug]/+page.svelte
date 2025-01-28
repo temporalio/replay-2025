@@ -4,9 +4,6 @@
 
   const { data } = $props();
   const { speaker, biography, portrait } = data;
-
-  console.log(data.hasTalks);
-  console.log(data.talks);
 </script>
 
 <svelte:head>
