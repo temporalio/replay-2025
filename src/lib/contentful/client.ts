@@ -107,13 +107,13 @@ export const compileQuestions = async (
     questions
       .filter(
         (question): question is Entry<QuestionsSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', never> =>
-          !!question && 'fields' in question, 
+          !!question && 'fields' in question,
       )
       .map(async (question) => ({
         ...question,
         fields: {
           ...question.fields,
-          answer: await compileMarkdown(question.fields.answer ?? '', true),
+          answer: await compileMarkdown(question.fields.answer ?? ''),
         },
       })),
   );
