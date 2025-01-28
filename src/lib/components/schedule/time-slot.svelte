@@ -13,14 +13,14 @@
 </script>
 
 <div
-  class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white last:border-b-0"
+  class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0"
 >
   <div class="font-inter p-4 text-left text-base text-green">
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkOne}
-    <div class="font-inter flex items-center text-base">
+    <div class="font-inter items-center p-4 text-base">
       <a href="/schedule/{talkOne.fields.slug}" class="block">
         {talkOne.fields.title}
       </a>
@@ -28,7 +28,7 @@
   {/if}
 
   {#if talkTwo}
-    <div class="flex items-center border-l border-grey p-4">
+    <div class="items-center border-l border-grey p-4">
       <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
         {talkTwo.fields.title}
       </a>
@@ -37,12 +37,14 @@
 </div>
 
 {#if talkTwo}
-  <div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
+  <div
+    class="justify-content grid w-full grid-cols-[8rem_1fr_1fr] items-start border-b border-grey text-lg text-white last:border-b-0"
+  >
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkTwo}
-    <div class="flex items-center p-4">
+    <div class="items-center p-4">
       <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
         {talkTwo.fields.title}
       </a>
