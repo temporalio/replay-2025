@@ -20,7 +20,7 @@ export const toTimeSlot = (slot: TimeSlot<'WITHOUT_UNRESOLVABLE_LINKS', never>):
           (session): session is Session<'WITHOUT_UNRESOLVABLE_LINKS', never> =>
             session !== undefined,
         )
-        .map(toSession) ?? [],
+        .map((session) => toSession(session as Session<'WITHOUT_UNRESOLVABLE_LINKS', never>)) ?? [],
     contentType: 'slot',
   };
 };

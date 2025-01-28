@@ -19,7 +19,7 @@
         <span class="block">Visit convene.com for more info</span>
       </a>
     </div>
-    <a href={links.map} target="_blank" class="block">
+    <a href={links.map} target="_blank" class="block" aria-label="View map of Convene">
       <enhanced:img src="$assets/map.png" alt="Convene" />
     </a>
   </div>
