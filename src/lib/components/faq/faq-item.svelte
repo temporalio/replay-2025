@@ -1,8 +1,7 @@
 <script lang="ts">
   import { slide } from 'svelte/transition';
 
-  export let question: string;
-  export let answer: string;
+  const { question, answer }: { question: string; answer: string } = $props();
   let expanded = false;
 </script>
 
