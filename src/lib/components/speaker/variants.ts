@@ -59,4 +59,6 @@ export type SpeakerProps = VariantProps<typeof speaker> &
     name: string;
     company: string;
     jobTitle: string;
+    bio?: string;
+    slug: string;
   };

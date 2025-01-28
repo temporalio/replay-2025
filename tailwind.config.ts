@@ -14,6 +14,9 @@ export default {
         dark: '#61682C',
         DEFAULT: '#DDEE59',
       },
+      grey: {
+        DEFAULT: '#374761',
+      },
       lilac: {
         DEFAULT: '#D9CAFB',
         dark: '#47588E',

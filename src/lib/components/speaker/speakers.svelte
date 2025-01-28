@@ -3,17 +3,30 @@
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   import Speaker from './speaker.svelte';
-  const { speakers }: { speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[] } =
-    $props();
+  const {
+    speakers,
+    animation = true,
+    home = true,
+  }: {
+    speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[];
+    animation?: boolean;
+    home?: boolean;
+  } = $props();
 
   const keynotes = speakers.filter((speaker) => speaker.fields.keynote);
   const regularSpeakers = speakers.filter((speaker) => !speaker.fields.keynote);
 </script>
 
 <section class="relative bg-grid">
-  <div class="abstract"></div>
+  {#if animation}
+    <div class="abstract"></div>
+  {/if}
   <div class="section pb-16 pt-36">
-    <h2 class="mb-8 title-medium">Speakers</h2>
+    {#if home}
+      <h2 class="mb-8 title-medium">Speakers</h2>
+    {:else}
+      <h1 class="hero-subtitle text-4xl uppercase text-white lg:text-5xl">Speakers</h1>
+    {/if}
     <div class="flex flex-col gap-8">
       <div class="flex flex-col gap-8 xl:flex-row xl:flex-wrap xl:justify-between">
         {#each keynotes as speaker}
@@ -23,6 +36,7 @@
             company={speaker.fields.companyName}
             image={speaker.fields.image?.fields.file?.url!}
             type="keynote"
+            slug={speaker.fields.slug}
           />
         {/each}
       </div>
@@ -33,6 +47,7 @@
             jobTitle={speaker.fields.jobTitle}
             company={speaker.fields.companyName}
             image={speaker.fields.image?.fields.file?.url!}
+            slug={speaker.fields.slug}
           />
         {/each}
       </div>

@@ -10,9 +10,9 @@ export interface SponsorFields {
   name: EntryFieldTypes.Symbol;
   sponsorType: EntryFieldTypes.Symbol<'Elite' | 'Premier' | 'Impact'>;
   darkLogo: EntryFieldTypes.AssetLink;
-  lightLogo?: EntryFieldTypes.AssetLink;
+  lightLogo: EntryFieldTypes.AssetLink;
   colorLogo?: EntryFieldTypes.AssetLink;
-  description?: EntryFieldTypes.Text;
+  description: EntryFieldTypes.Text;
   externalUrl?: EntryFieldTypes.Symbol;
 }
 

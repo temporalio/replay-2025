@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Hero } from '$components/hero';
-  import { Navigation } from '$components/navigation';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
   import Footer from '$components/footer.svelte';
@@ -10,6 +9,7 @@
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
+  import AbstractBanner from '$components/abstract-banner.svelte';
 
   const { data } = $props();
 </script>
@@ -18,11 +18,12 @@
   <title>Replay 2025 — March 3–5 — London, UK</title>
 </svelte:head>
 
-<Navigation />
 <Hero />
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
+
+<AbstractBanner />
 
 <Speakers speakers={data.speakers} />
 
