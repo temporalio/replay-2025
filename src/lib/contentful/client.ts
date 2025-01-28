@@ -9,7 +9,7 @@ import { compileMarkdown } from '$lib/utilities/compile-markdown';
 
 import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
 
-const client = createClient({
+export const client = createClient({
   space: CONTENTFUL_SPACE_ID,
   accessToken: CONTENTFUL_ACCESS_TOKEN,
   host: CONTENTFUL_HOST,
@@ -107,7 +107,7 @@ export const compileQuestions = async (
     questions
       .filter(
         (question): question is Entry<QuestionsSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', never> =>
-          !!question && 'fields' in question, 
+          !!question && 'fields' in question,
       )
       .map(async (question) => ({
         ...question,

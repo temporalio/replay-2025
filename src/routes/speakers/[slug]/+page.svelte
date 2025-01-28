@@ -6,6 +6,19 @@
   const { speaker, biography, portrait } = data;
 </script>
 
+<svelte:head>
+  <title>Frequently Asked Questions: Replay Conference</title>
+  <meta name="description" content={speaker.bio} />
+  <meta
+    property="og:title"
+    content="{speaker.fullName}, {speaker.companyName}: Replay Conference"
+  />
+  <meta property="og:description" content={speaker.bio} />
+  <meta property="og:site_name" content="Replay Conference" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+</svelte:head>
+
 <section class="flex w-full flex-col justify-start gap-12 bg-grid py-24">
   <div class="container space-y-8">
     <Breadcrumb text="Return to speakers" href="/speakers" />
@@ -15,8 +28,22 @@
       <div class="space-y-4">
         <h3 class="font-afacad text-xl uppercase text-white">{speaker.jobTitle}</h3>
         <div class="prose prose-invert text-lilac">{@html biography}</div>
+
+        <div class="space-y-6">
+          <h3 class="font-afacad text-xl uppercase text-white">Talks</h3>
+          {#each data.talks as talk}
+            <div class="flex flex-col gap-4">
+              <a href="/sessions" class="font-sans text-lg font-bold text-white"
+                >{talk.fields.title}</a
+              >
+            </div>
+          {/each}
+        </div>
       </div>
-      <img src={portrait} alt={speaker.fullName} class="block max-w-full" />
+
+      <div class="aspect-square min-w-[280px] bg-grey">
+        <img src={portrait} alt={speaker.fullName} class="max-w-full" />
+      </div>
     </div>
   </div>
 </section>
