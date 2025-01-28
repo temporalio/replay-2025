@@ -5,7 +5,6 @@
   import Breadcrumb from '$components/breadcrumb.svelte';
   const { data } = $props();
   const session = data.session;
-  console.log(session);
 </script>
 
 <section class={' relative flex flex-col items-center justify-center gap-8 bg-grid px-6 pt-24'}>
