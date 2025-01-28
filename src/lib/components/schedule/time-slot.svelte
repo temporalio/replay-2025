@@ -12,7 +12,6 @@
   const end = formatTime(endTime);
 </script>
 
-<!-- // TODO: Remove the second Lunch if there is a second talk -->
 <div
   class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0 md:grid-cols-[18rem_1fr_1fr] lg:grid-cols-[24rem_1fr_1fr]"
 >
