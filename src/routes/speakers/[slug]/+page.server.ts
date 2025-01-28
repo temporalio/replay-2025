@@ -1,6 +1,7 @@
 import { getSessionEntries, getSpeakerEntries } from '$lib/contentful/index.js';
 import type { Speaker } from '$lib/contentful/speaker.js';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
+// import { z } from 'zod';
 import type { PageServerLoad } from './$types.js';
 import { error } from '@sveltejs/kit';
 
