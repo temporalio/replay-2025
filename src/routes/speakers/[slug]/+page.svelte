@@ -15,7 +15,7 @@
     <div class="flex flex-row items-start gap-6 max-sm:flex-col">
       {#if speaker.fields.bio}
         <div class="flex-1">
-          <p class="text-lilac">{@html speaker.content}</p>
+          <p class="prose prose-invert text-lilac">{@html speaker.content}</p>
         </div>
       {/if}
       <div

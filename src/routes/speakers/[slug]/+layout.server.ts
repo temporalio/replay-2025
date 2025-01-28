@@ -11,9 +11,9 @@ export const load: LayoutServerLoad = async ({ params }) => {
   const speaker = await getSpeaker(slug);
   if (!speaker) {
     throw error(404, 'Speaker not found');
-  } 
+  }
 
-  const markdown = await compileMarkdown(speaker.fields.bio ?? '', true);
+  const markdown = await compileMarkdown(speaker.fields.bio ?? '');
 
   return {
     speaker: {
