@@ -20,8 +20,12 @@
         {/if}
       </div>
       <div>
-        <h3 class="font-josefin text-xl uppercase text-white">About the Presenter</h3>
         {#if Array.isArray(speakers)}
+          {#if speakers.length > 1}
+            <h3 class="font-josefin text-xl uppercase text-white">About the Presenters</h3>
+          {:else}
+            <h3 class="font-josefin text-xl uppercase text-white">About the Presenter</h3>
+          {/if}
           {#each speakers as speaker (speaker.sys.id)}
             {#if 'fields' in speaker}
               <div class="flex flex-col gap-4 py-6 text-lilac">
@@ -40,7 +44,9 @@
                         {speaker.fields.fullName}
                       </div>
                       <div class="font-sans text-base text-lilac">{speaker.fields.jobTitle}</div>
-                      <div class="font-sans text-base text-lilac">{speaker.fields.companyName}</div>
+                      <div class="font-sans text-base text-lilac">
+                        {speaker.fields.companyName}
+                      </div>
                     </div>
                   </div>
                 </a>
