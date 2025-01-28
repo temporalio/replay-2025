@@ -1,9 +1,7 @@
-<script lang="ts" module>
-  import Footer from '$components/footer.svelte';
-</script>
-
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
+  import Footer from '$components/footer.svelte';
+
   const { data } = $props();
   const speaker = data.speaker;
 </script>
