@@ -22,9 +22,9 @@
         <h3 class="font-afacad text-xl uppercase text-white">Speakers</h3>
 
         <div class="flex flex-col gap-4">
-          <a href="/speakers/{speaker.fields.slug}" class="font-sans text-lg font-bold text-white"
+          <!-- <a href="/speakers/{speaker.fields.slug}" class="font-sans text-lg font-bold text-white"
             >{speaker.fields.fullName}</a
-          >
+          > -->
         </div>
       </div>
     </div>

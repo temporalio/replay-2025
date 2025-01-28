@@ -4,6 +4,9 @@
 
   const { data } = $props();
   const { speaker, biography, portrait } = data;
+
+  console.log(data.hasTalks);
+  console.log(data.talks);
 </script>
 
 <svelte:head>
@@ -28,17 +31,19 @@
       <div class="space-y-4">
         <h3 class="font-afacad text-xl uppercase text-white">{speaker.jobTitle}</h3>
         <div class="prose prose-invert text-lilac">{@html biography}</div>
-
-        <div class="space-y-6">
-          <h3 class="font-afacad text-xl uppercase text-white">Talks</h3>
-          {#each data.talks as talk}
-            <div class="flex flex-col gap-4">
-              <a href="/schedule/{talk.fields.slug}" class="font-sans text-lg font-bold text-white"
-                >{talk.fields.title}</a
-              >
-            </div>
-          {/each}
-        </div>
+        {#if data.hasTalks}
+          <div class="space-y-6">
+            <h3 class="font-afacad text-xl uppercase text-white">Talks</h3>
+            {#each data.talks as talk}
+              <div class="flex flex-col gap-4">
+                <a
+                  href="/schedule/{talk.fields.slug}"
+                  class="font-sans text-lg font-bold text-white">{talk.fields.title}</a
+                >
+              </div>
+            {/each}
+          </div>
+        {/if}
       </div>
 
       <div class="aspect-square min-w-[280px] bg-grey">
@@ -49,4 +54,3 @@
 </section>
 
 <Footer />
-<!-- TO DO: Need to add the talks for the individual speaker -->

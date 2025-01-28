@@ -13,25 +13,43 @@
 </script>
 
 <div
-  class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0 md:grid-cols-[18rem_1fr_1fr] lg:grid-cols-[24rem_1fr_1fr]"
+  class="font-inter grid w-full grid-cols-[6rem_1fr] items-center border-b border-grey text-lg text-white
+         last:border-b-0 md:grid-cols-[8rem_1fr_1fr]"
 >
-  <div class="font-inter p-4 text-left text-base text-green">
+  <div class="p-4 text-left text-base text-green">
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkOne}
-    <div class="font-inter items-center p-4 text-base">
-      <a href="/schedule/{talkOne.fields.slug}" class="block">
+    <div class="items-center p-4">
+      <a href="/schedule/{talkOne.fields.slug}">
         {talkOne.fields.title}
       </a>
     </div>
   {/if}
 
   {#if talkTwo}
-    <div class="items-center border-l border-grey p-4">
-      <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
+    <div class="hidden items-center border-l border-grey p-4 md:block">
+      <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
       </a>
     </div>
   {/if}
 </div>
+
+{#if talkTwo}
+  <div
+    class="font-inter grid w-full grid-cols-[6rem_1fr] items-start border-b border-grey text-lg text-white
+           last:border-b-0 md:hidden"
+  >
+    <div class="p-4 text-left text-base text-green">
+      <p>{start} -</p>
+      <p>{end}</p>
+    </div>
+    <div class="items-center p-4">
+      <a href="/schedule/{talkTwo.fields.slug}">
+        {talkTwo.fields.title}
+      </a>
+    </div>
+  </div>
+{/if}
