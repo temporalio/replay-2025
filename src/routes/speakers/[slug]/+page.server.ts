@@ -7,24 +7,24 @@ import { error } from '@sveltejs/kit';
 
 export const prerender = true;
 
-const speakerSchema = z.object({
-  sys: z.object({
-    id: z.string(),
-  }),
-  fields: z.object({
-    jobTitle: z.string(),
-    companyName: z.string(),
-    bio: z.string().optional(),
+// const speakerSchema = z.object({
+//   sys: z.object({
+//     id: z.string(),
+//   }),
+//   fields: z.object({
+//     jobTitle: z.string(),
+//     companyName: z.string(),
+//     bio: z.string().optional(),
 
-    image: z.object({
-      fields: z.object({
-        file: z.object({
-          url: z.string(),
-        }),
-      }),
-    }),
-  }),
-});
+//     image: z.object({
+//       fields: z.object({
+//         file: z.object({
+//           url: z.string(),
+//         }),
+//       }),
+//     }),
+//   }),
+// });
 
 const getPortrait = (speaker: Speaker<never, string>) => {
   const { image } = speaker.fields;
