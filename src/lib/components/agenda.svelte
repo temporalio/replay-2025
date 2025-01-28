@@ -9,16 +9,16 @@
     <Event
       time="9am - 5pm"
       title="Workshops"
-      description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET, Go, and Java."
+      description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET and Java."
     >
-      <Button href={links.tickets} intent="tertiary" label="Early Bird +  Workshop Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="General Admission +  Workshop Ticket" />
     </Event>
     <Event
       time="10am - 4pm"
       title="Hackathon"
-      description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
+      description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps.</br> </br> The Go Workshop is sold out."
     >
-      <Button href={links.tickets} intent="tertiary" label="Early Bird + Hackathon Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="General Admission + Hackathon Ticket" />
     </Event>
   </Events>
 
@@ -28,7 +28,7 @@
       title="Keynotes + Tech Talks"
       description="Immerse yourself in two days of technical talks from backend software engineering leaders at top organizations. They’ll discuss challenges they’ve encountered and strategies and solutions they’ve employed during their modernisation efforts and beyond. "
     >
-      <Button href={links.tickets} intent="tertiary" label="Early Bird Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="Ticket" />
     </Event>
   </Events>
 
@@ -36,14 +36,14 @@
     <Event
       time="March 5"
       title="Afterparty"
-      description="Whether you’re celebrating a successful Hackathon, reflecting on great talks, or just looking to have a good time with your new friends from Replay, the afterparty is the best place to be! Taking place on <span class='font-bold'>Thursday, March 5th from 6pm - 10pm</span>, the afterparty is a chance to live it up, connect, and continue conversations in a lively setting. You also expect food, drinks, and fun alongside your Replay community. <br/> <br/> 
+      description="Whether you’re celebrating a successful Hackathon, reflecting on great talks, or just looking to have a good time with your new friends from Replay, the afterparty is the best place to be! Taking place on <span class='font-bold'>Wednesday, March 5th from 6pm - 10pm</span>, the afterparty is a chance to live it up, connect, and continue conversations in a lively setting. You also expect food, drinks, and fun alongside your Replay community. <br/> <br/> 
       <span class='font-bold'>Restaurant:</span> <a href='https://www.drakeandmorgan.co.uk/the-folly/'
         >The Folly by Drake and Morgan</a
       > <br/>   
         <span class='font-bold'>Address:</span>  <a
         href='https://www.google.com/search?sca_esv=115fbc7a5c2d88aa&q=the+folly+address&ludocid=14826282419561904059&sa=X&sqi=2&ved=2ahUKEwiK_qz5lIqLAxXID1kFHdLLF9gQ6BN6BAg1EAI'
         >41 Gracechurch St, City of London, London EC3V 0BT, United Kingdom</a
-      > <br/><br/>  The Folly is a 6 min walk from Convene at 22 Bishopsgate. All staff and event attendees are
+      > <br/><br/>  The Folly is a 6 min walk from Convene at 22 Bishopsgate. All event attendees are
       welcome to attend."
     />
   </Events>

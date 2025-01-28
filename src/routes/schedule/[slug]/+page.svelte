@@ -1,6 +1,3 @@
-<script lang="ts" module>
-</script>
-
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
   const { data } = $props();

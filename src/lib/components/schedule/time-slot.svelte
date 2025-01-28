@@ -12,21 +12,23 @@
   const end = formatTime(endTime);
 </script>
 
-<div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
-  <div class=" p-4 text-left text-green">
+<div
+  class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0 md:grid-cols-[18rem_1fr_1fr] lg:grid-cols-[24rem_1fr_1fr]"
+>
+  <div class="font-inter p-4 text-left text-base text-green">
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkOne}
-    <div class="flex items-center p-4">
-      <a href="/schedule/{talkOne.fields.slug}" class="block font-bold">
+    <div class="font-inter items-center p-4 text-base">
+      <a href="/schedule/{talkOne.fields.slug}" class="block">
         {talkOne.fields.title}
       </a>
     </div>
   {/if}
 
   {#if talkTwo}
-    <div class="flex items-center border-l border-grey p-4">
+    <div class="items-center border-l border-grey p-4">
       <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
         {talkTwo.fields.title}
       </a>
@@ -35,17 +37,17 @@
 </div>
 
 {#if talkTwo}
-  <div class="grid w-full grid-cols-[8rem_1fr_1fr] border-b border-grey text-lg text-white">
+  <div
+    class="grid w-full grid-cols-[8rem_1fr_1fr] items-start border-b border-grey text-lg text-white last:border-b-0 max-sm:grid-cols-[2rem_1fr_1fr] md:grid-cols-[12rem_1fr_1fr] lg:grid-cols-[8rem_1fr_1fr]"
+  >
     <p>{start} -</p>
     <p>{end}</p>
   </div>
   {#if talkTwo}
-    <div class="flex items-center p-4">
+    <div class="items-center p-4">
       <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
         {talkTwo.fields.title}
       </a>
     </div>
   {/if}
 {/if}
-
-<!-- To do: need to make sure that the last instance of the time slots don't have a bottom underline -->
