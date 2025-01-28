@@ -36,7 +36,7 @@
     </div>
   {/if}
 </div>
-
+<!-- Yeah that second talk thing does need to be there for mobile view. Please don't delete him. -->
 {#if talkTwo}
   <div
     class="font-inter grid w-full grid-cols-[6rem_1fr] items-start border-b border-grey text-lg text-white
