@@ -12,13 +12,17 @@ export const load: PageServerLoad = async ({ params }) => {
   if (!session) throw error(404, 'Session not found');
 
   const speakers = await getSpeakerEntries({ 'fields.speakers.sys.id': session.sys.id });
-  const date = await getTimeSlotEntries({'fields.'})
   const description = await compileMarkdown(session.fields.description);
+  const timeSlots = await getTimeSlotEntries();
+  const timeSlot = timeSlots.items.find((slot) =>
+    slot.fields.talk?.some((talk) => talk.sys.id === session.sys.id),
+  );
 
   return {
-    speaker : session.fields.speakers,
     description,
-
+    speaker : session.fields.speakers,
     hasSpeakers: speakers.items.length > 0,
+    startTime: timeSlot?.fields.startTime,
+    endTime: timeSlot?.fields.endTime,
   };
 };
