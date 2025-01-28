@@ -13,7 +13,7 @@
 </script>
 
 <div
-  class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0"
+  class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0 md:grid-cols-[18rem_1fr_1fr] lg:grid-cols-[24rem_1fr_1fr]"
 >
   <div class="font-inter p-4 text-left text-base text-green">
     <p>{start} -</p>
@@ -38,7 +38,7 @@
 
 {#if talkTwo}
   <div
-    class="justify-content grid w-full grid-cols-[8rem_1fr_1fr] items-start border-b border-grey text-lg text-white last:border-b-0"
+    class="grid w-full grid-cols-[8rem_1fr_1fr] items-start border-b border-grey text-lg text-white last:border-b-0 max-sm:grid-cols-[2rem_1fr_1fr] md:grid-cols-[12rem_1fr_1fr] lg:grid-cols-[8rem_1fr_1fr]"
   >
     <p>{start} -</p>
     <p>{end}</p>
