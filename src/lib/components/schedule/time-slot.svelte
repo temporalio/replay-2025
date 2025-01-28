@@ -21,7 +21,7 @@
     <p>{end}</p>
   </div>
   {#if talkOne}
-    <div class="items-center p-4">
+    <div class="items-center p-4 hover:text-lilac">
       <a href="/schedule/{talkOne.fields.slug}">
         {talkOne.fields.title}
       </a>
@@ -29,7 +29,7 @@
   {/if}
 
   {#if talkTwo}
-    <div class="hidden items-center border-l border-grey p-4 md:block">
+    <div class="hidden h-full items-center border-l border-grey p-4 hover:text-lilac md:flex">
       <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
       </a>
@@ -46,7 +46,7 @@
       <p>{start} -</p>
       <p>{end}</p>
     </div>
-    <div class="items-center p-4">
+    <div class="items-center p-4 hover:text-lilac">
       <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
       </a>
