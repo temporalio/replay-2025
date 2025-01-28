@@ -26,7 +26,7 @@
             {#if 'fields' in speaker}
               <div class="flex flex-col gap-4 py-6 text-lilac">
                 <p>{speaker.fields.bio}</p>
-                <a href="/speakers/{speaker.fields.slug}">
+                <a href="/speakers/{speaker.fields.slug}" class="max-w-fit">
                   <div class="speaker-card flex">
                     <div class="aspect-square max-w-[80px]">
                       <img
