@@ -1,6 +1,6 @@
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
-
+  import type { Asset } from 'contentful';
   const { data } = $props();
   const session = data.session;
   const speakers = session.fields.speakers;
@@ -35,9 +35,9 @@
                   <div class="speaker-card flex">
                     <div class="aspect-square max-w-[80px]">
                       <img
-                        src={speaker.fields.image?.fields.file.url || ''}
+                        src={(speaker.fields.image as Asset<never, string>)?.fields?.file?.url ||
+                          ''}
                         alt={speaker.fields.fullName || 'Speaker'}
-                        class="max-w-full grayscale transition-all duration-300 hover:grayscale-0"
                       />
                     </div>
                     <div class="flex flex-col px-4">
