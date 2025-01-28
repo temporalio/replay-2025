@@ -8,7 +8,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import addClasses from './plugins/add-classes';
 
-export const compileMarkdown = async (markdown: string): Promise<string> => {
+export const compileMarkdown = async (markdown: string = ''): Promise<string> => {
   const processor = unified()
     .use(remarkParse)
     .use(githubFlavored)

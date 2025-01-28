@@ -11,9 +11,7 @@ export type SimpleSession = {
   contentType: 'session';
 };
 
-export const toSession = (
-  session: Session<'WITHOUT_UNRESOLVABLE_LINKS', never>,
-): SimpleSession => {
+export const toSession = (session: Session<'WITHOUT_UNRESOLVABLE_LINKS', never>): SimpleSession => {
   return {
     title: session.fields.title,
     location: session.fields.location,

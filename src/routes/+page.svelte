@@ -10,6 +10,8 @@
   import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
   import AbstractBanner from '$components/abstract-banner.svelte';
+  import type { Entry } from 'contentful';
+  import type { SpeakerSkeleton } from '$lib/contentful';
 
   const { data } = $props();
 </script>
@@ -25,7 +27,9 @@
 
 <AbstractBanner />
 
-<Speakers speakers={data.speakers} />
+<Speakers
+  speakers={data.speakers as Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[]}
+/>
 
 <div class="bg-lines bg-no-repeat 3xl:bg-none">
   <div

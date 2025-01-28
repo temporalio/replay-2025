@@ -25,19 +25,21 @@
 
 <AbstractBanner />
 
-<section class="relative flex flex-col items-center bg-grid py-36">
-  <div class="container">
+<section class="flex flex-col items-center bg-grid py-36">
+  <div class="container flex flex-col items-stretch gap-8">
     <h2 class="hero-subtitle uppercase tracking-wide text-white">{title}</h2>
 
     {#each categories as { title, questions }}
-      <section>
+      <section class="w-full">
         <h3 id="title" class="font-josefin mb-8 text-2xl uppercase text-teal">
           {title}
         </h3>
 
-        {#each questions as question}
-          <FaqItem question={question.question} answer={question.answer} />
-        {/each}
+        <div class="flex flex-col gap-4 border border-grey bg-black p-6">
+          {#each questions as question}
+            <FaqItem question={question.question} answer={question.answer} />
+          {/each}
+        </div>
       </section>
     {/each}
   </div>

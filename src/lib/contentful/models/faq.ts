@@ -28,10 +28,13 @@ export const toQuestionAndAnswer = (
   questionAndAnswer: Questions<'WITHOUT_UNRESOLVABLE_LINKS', never> | undefined,
 ): QuestionAndAnswer | undefined => {
   if (questionAndAnswer === undefined) return;
+
   return {
-    question: questionAndAnswer.fields.question,
-    answer: questionAndAnswer.fields.answer,
-    entityId: questionAndAnswer.sys.id,
+    fields: {
+      question: questionAndAnswer.fields.question,
+      answer: questionAndAnswer.fields.answer,
+    },
+    contentTypeId: 'questions',
     contentType: 'questions',
   };
 };

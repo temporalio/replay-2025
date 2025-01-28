@@ -9,7 +9,7 @@ import { compileMarkdown } from '$lib/utilities/compile-markdown';
 
 import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from './index';
 
-const client = createClient({
+export const client = createClient({
   space: CONTENTFUL_SPACE_ID,
   accessToken: CONTENTFUL_ACCESS_TOKEN,
   host: CONTENTFUL_HOST,
