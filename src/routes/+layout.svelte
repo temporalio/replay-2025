@@ -4,7 +4,7 @@
   import metadata from '$content/metadata.yaml';
   import { Navigation } from '$components/navigation';
   import openGraph from '$assets/open-graph.png';
-
+  import Footer from '$components/footer.svelte';
   import CookieConsent from '$components/cookie-consent.svelte';
 
   const { children } = $props();
@@ -14,6 +14,7 @@
   <Navigation />
   {@render children?.()}
   <CookieConsent />
+  <Footer />
 </main>
 
 <svelte:head>
