@@ -3,27 +3,23 @@
   import Footer from '$components/footer.svelte';
 
   const { data } = $props();
-  const speaker = data.speaker;
+  const { speaker, biography, portrait } = data;
 </script>
 
-<section class={'flex w-full  flex-col justify-start gap-12 bg-grid px-20 py-60'}>
-  <Breadcrumb text="Return to speakers" href="/speakers" />
-  <h1 class={'font-afacad text-5xl uppercase text-white'}>{speaker.fields.fullName}</h1>
-  <div class="flex w-full max-w-6xl flex-col items-center gap-4 border border-grey bg-black p-6">
-    <div class="flex flex-row items-start gap-6 max-sm:flex-col">
-      {#if speaker.fields.bio}
-        <div class="flex-1">
-          <p class="prose prose-invert text-lilac">{@html speaker.content}</p>
-        </div>
-      {/if}
-      <div
-        style="background-image: url({speaker.fields.image && 'fields' in speaker.fields.image
-          ? speaker.fields.image.fields.file?.url
-          : ''}?w=720&h=648&fm=webp);"
-        class="h-[200px] w-[200px] flex-shrink-0 bg-cover bg-center"
-      ></div>
+<section class="flex w-full flex-col justify-start gap-12 bg-grid py-24">
+  <div class="container space-y-8">
+    <Breadcrumb text="Return to speakers" href="/speakers" />
+    <h1 class="font-afacad text-5xl uppercase text-white">{speaker.fullName}</h1>
+
+    <div class="grid grid-cols-1 gap-6 border border-grey bg-black p-6 lg:grid-cols-[auto_280px]">
+      <div class="space-y-4">
+        <h3 class="font-afacad text-xl uppercase text-white">{speaker.jobTitle}</h3>
+        <div class="prose prose-invert text-lilac">{@html biography}</div>
+      </div>
+      <img src={portrait} alt={speaker.fullName} class="block max-w-full" />
     </div>
   </div>
 </section>
+
 <Footer />
 <!-- TO DO: Need to add the talks for the individual speaker -->
