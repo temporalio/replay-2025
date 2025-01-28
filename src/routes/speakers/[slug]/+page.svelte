@@ -33,7 +33,7 @@
           <h3 class="font-afacad text-xl uppercase text-white">Talks</h3>
           {#each data.talks as talk}
             <div class="flex flex-col gap-4">
-              <a href="/sessions/{talk.fields.slug}" class="font-sans text-lg font-bold text-white"
+              <a href="/schedule/{talk.fields.slug}" class="font-sans text-lg font-bold text-white"
                 >{talk.fields.title}</a
               >
             </div>
