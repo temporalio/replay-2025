@@ -46,8 +46,6 @@ export const load: PageServerLoad = async ({ params }) => {
   const portrait = getPortrait(speaker);
   const biography = await compileMarkdown(speaker.fields.bio);
 
-  console.log(JSON.stringify(talks.items, null, 2));
-
   return {
     portrait,
     biography,
