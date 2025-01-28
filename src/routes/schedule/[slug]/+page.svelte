@@ -11,6 +11,7 @@
     <Breadcrumb text="Return to schedule" href="/schedule" />
     <h1 class="font-afacad text-5xl uppercase text-white">{session.fields.title}</h1>
     <div class="flex flex-col items-start pr-10 text-green md:block">Date goes here</div>
+
     <div class="flex w-full flex-col gap-4 border border-grey bg-black p-6">
       <h3 class="font-josefin text-xl uppercase text-white">Abstract</h3>
       <div class="gap-6">
@@ -19,13 +20,13 @@
           <p class="text-lilac">{@html session.content}</p>
         {/if}
       </div>
-      <div>
-        {#if Array.isArray(speakers)}
-          {#if speakers.length > 1}
-            <h3 class="font-josefin text-xl uppercase text-white">About the Presenters</h3>
-          {:else}
-            <h3 class="font-josefin text-xl uppercase text-white">About the Presenter</h3>
-          {/if}
+
+      {#if Array.isArray(speakers)}
+        <div>
+          <h3 class="font-josefin text-xl uppercase text-white">
+            {speakers.length > 1 ? 'About the Presenters' : 'About the Presenter'}
+          </h3>
+
           {#each speakers as speaker (speaker.sys.id)}
             {#if 'fields' in speaker}
               <div class="flex flex-col gap-4 py-6 text-lilac">
@@ -36,14 +37,16 @@
                       <img
                         src={speaker.fields.image?.fields.file.url || ''}
                         alt={speaker.fields.fullName || 'Speaker'}
-                        class="max-w-full"
+                        class="max-w-full grayscale transition-all duration-300 hover:grayscale-0"
                       />
                     </div>
                     <div class="flex flex-col px-4">
                       <div class="pb-2 font-sans text-xl font-bold text-white">
                         {speaker.fields.fullName}
                       </div>
-                      <div class="font-sans text-base text-lilac">{speaker.fields.jobTitle}</div>
+                      <div class="font-sans text-base text-lilac">
+                        {speaker.fields.jobTitle}
+                      </div>
                       <div class="font-sans text-base text-lilac">
                         {speaker.fields.companyName}
                       </div>
@@ -53,8 +56,8 @@
               </div>
             {/if}
           {/each}
-        {/if}
-      </div>
+        </div>
+      {/if}
     </div>
   </div>
 </section>
