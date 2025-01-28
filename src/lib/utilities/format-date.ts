@@ -1,8 +1,14 @@
-export const formatSessionDateTime = (startIso: string, endIso: string): string => {
-  if (!startIso || !endIso) return 'Invalid date';
+import { formatTime } from '$lib/utilities/format-time';
 
-  const startDate = new Date(startIso);
-  const endDate = new Date(endIso);
+export const formatSessionDate = (start: string, end: string): string => {
+  if (!start || !end) return 'Invalid date';
+
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+
+  if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+    return 'Invalid date';
+  }
 
   const formattedDate = startDate.toLocaleDateString('en-US', {
     weekday: 'long',
@@ -11,17 +17,8 @@ export const formatSessionDateTime = (startIso: string, endIso: string): string 
     year: 'numeric',
   });
 
-  const startTime = startDate.toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
-
-  const endTime = endDate.toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
+  const startTime = formatTime(startDate.toISOString());
+  const endTime = formatTime(endDate.toISOString());
 
   return `${formattedDate} · ${startTime} - ${endTime}`;
-}
+};

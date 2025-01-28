@@ -1,5 +1,6 @@
 import { getSession } from '$lib/contentful/client';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
+  import { formatSessionDate } from '$lib/utilities/format-date.js';
 import type { LayoutServerLoad } from './$types.js';
 import { error } from '@sveltejs/kit';
 

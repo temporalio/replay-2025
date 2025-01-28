@@ -16,7 +16,7 @@
     <Event
       time="10am - 4pm"
       title="Hackathon"
-      description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
+      description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps.</br> </br> The Go Workshop is sold out."
     >
       <Button href={links.tickets} intent="tertiary" label="General Admission + Hackathon Ticket" />
     </Event>
