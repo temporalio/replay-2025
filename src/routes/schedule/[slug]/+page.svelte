@@ -1,5 +1,6 @@
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
+
   const { data } = $props();
   const session = data.session;
   const speakers = session.fields.speakers;
@@ -25,22 +26,24 @@
             {#if 'fields' in speaker}
               <div class="flex flex-col gap-4 py-6 text-lilac">
                 <p>{speaker.fields.bio}</p>
-                <div class="speaker-card flex">
-                  <div class="aspect-square max-w-[80px] bg-grey">
-                    <img
-                      src={speaker.fields.image?.fields.file.url || ''}
-                      alt={speaker.fields.fullName || 'Speaker'}
-                      class="max-w-full"
-                    />
-                  </div>
-                  <div class="flex flex-col px-4">
-                    <div class="pb-2 font-sans text-xl font-bold text-white">
-                      {speaker.fields.fullName}
+                <a href="/speakers/{speaker.fields.slug}">
+                  <div class="speaker-card flex">
+                    <div class="aspect-square max-w-[80px]">
+                      <img
+                        src={speaker.fields.image?.fields.file.url || ''}
+                        alt={speaker.fields.fullName || 'Speaker'}
+                        class="max-w-full"
+                      />
                     </div>
-                    <div class="font-sans text-base text-lilac">{speaker.fields.jobTitle}</div>
-                    <div class="font-sans text-base text-lilac">{speaker.fields.companyName}</div>
+                    <div class="flex flex-col px-4">
+                      <div class="pb-2 font-sans text-xl font-bold text-white">
+                        {speaker.fields.fullName}
+                      </div>
+                      <div class="font-sans text-base text-lilac">{speaker.fields.jobTitle}</div>
+                      <div class="font-sans text-base text-lilac">{speaker.fields.companyName}</div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             {/if}
           {/each}
