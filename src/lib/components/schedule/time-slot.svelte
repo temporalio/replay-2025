@@ -12,6 +12,7 @@
   const end = formatTime(endTime);
 </script>
 
+<!-- // TODO: Remove the second Lunch if there is a second talk -->
 <div
   class="grid w-full grid-cols-[24rem_1fr_1fr] items-center border-b border-grey text-lg text-white last:border-b-0 md:grid-cols-[18rem_1fr_1fr] lg:grid-cols-[24rem_1fr_1fr]"
 >
@@ -35,19 +36,3 @@
     </div>
   {/if}
 </div>
-
-{#if talkTwo}
-  <div
-    class="grid w-full grid-cols-[8rem_1fr_1fr] items-start border-b border-grey text-lg text-white last:border-b-0 max-sm:grid-cols-[2rem_1fr_1fr] md:grid-cols-[12rem_1fr_1fr] lg:grid-cols-[8rem_1fr_1fr]"
-  >
-    <p>{start} -</p>
-    <p>{end}</p>
-  </div>
-  {#if talkTwo}
-    <div class="items-center p-4">
-      <a href="/schedule/{talkTwo.fields.slug}" class="block font-bold">
-        {talkTwo.fields.title}
-      </a>
-    </div>
-  {/if}
-{/if}
