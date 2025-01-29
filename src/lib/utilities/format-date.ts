@@ -20,5 +20,5 @@ export const formatDate = (start: string, end: string): string => {
   const startTime = formatTime(start);
   const endTime = formatTime(end);
 
-  return `${formattedDate} · ${startTime} - ${endTime}`;
+  return `${formattedDate} • ${startTime} - ${endTime}`;
 };
