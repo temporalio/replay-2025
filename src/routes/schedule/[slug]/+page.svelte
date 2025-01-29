@@ -19,7 +19,7 @@
         {/if}
       </div>
 
-      {#if Array.isArray(speakers)}
+      {#if Array.isArray(speakers) && hasSpeakers}
         <div>
           <h3 class="font-josefin text-xl uppercase text-white">
             {speakers.length > 1 ? 'About the Presenters' : 'About the Presenter'}
