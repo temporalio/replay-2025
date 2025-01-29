@@ -22,7 +22,6 @@
   <div class="container space-y-8">
     <Breadcrumb text="Return to speakers" href="/speakers" />
     <h1 class="font-afacad text-5xl uppercase text-white">{speaker.fullName}</h1>
-
     <div class="grid grid-cols-1 gap-6 border border-grey bg-black p-6 lg:grid-cols-[auto_280px]">
       <div class="space-y-4">
         <h3 class="font-afacad text-xl uppercase text-white">{speaker.jobTitle}</h3>
@@ -42,7 +41,7 @@
         {/if}
       </div>
 
-      <div class="aspect-square min-w-[280px] bg-grey">
+      <div class="aspect-square min-w-[280px]">
         <img src={portrait} alt={speaker.fullName} class="max-w-full" />
       </div>
     </div>
