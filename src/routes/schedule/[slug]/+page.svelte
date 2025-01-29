@@ -5,7 +5,7 @@
 </script>
 
 <section class="relative flex flex-col items-center justify-center gap-8 bg-grid px-6 py-24">
-  <div class="flex max-w-6xl flex-col justify-start gap-8">
+  <div class="container flex max-w-6xl flex-col justify-start gap-8">
     <Breadcrumb text="Return to schedule" href="/schedule" />
     <h1 class="font-afacad text-5xl uppercase text-white max-xs:text-2xl">{session.title}</h1>
     <div class="flex flex-col items-start pr-10 text-green md:block">{date}</div>

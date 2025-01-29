@@ -12,9 +12,6 @@
   const dayThreeSlots = data.timeSlotsByDay.day3;
 </script>
 
-<!-- TO DO: figure out why "Talk" is mad about the type stuff -->
-<!-- TO DO: Fix date padding/margin stuff -->
-
 <AbstractBanner />
 <section class="relative flex flex-col items-center bg-grid">
   <section class="section flex flex-col justify-start gap-8 p-6 pb-16 pt-36">
