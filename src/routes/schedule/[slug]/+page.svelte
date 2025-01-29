@@ -34,12 +34,7 @@
                   <div class="speaker-card flex">
                     <div class="aspect-square max-w-[80px]">
                       <img
-<<<<<<< HEAD
                         src={speaker.portrait || ''}
-=======
-                        src={(speaker.fields.image as Asset<never, string>)?.fields?.file?.url ||
-                          ''}
->>>>>>> cb620d15bda2077969301b713c546af5f9d350e4
                         alt={speaker.fields.fullName || 'Speaker'}
                       />
                     </div>
