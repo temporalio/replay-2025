@@ -1,7 +1,7 @@
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
   const { data } = $props();
-  const { session, speakers, date, hasSpeakers } = data;
+  const { session, speakers, date, hasSpeakers, description } = data;
 </script>
 
 <section class="relative flex flex-col items-center justify-center gap-8 bg-grid px-6 pt-24">
@@ -14,8 +14,8 @@
       <h3 class="font-josefin text-xl uppercase text-white">Abstract</h3>
       <div class="gap-6">
         <p class="font-afacad text-2xl uppercase text-white">{session.location}</p>
-        {#if session.description}
-          <p class="text-lilac">{@html session.description}</p>
+        {#if description}
+          <p class="text-lilac">{@html description}</p>
         {/if}
       </div>
 
