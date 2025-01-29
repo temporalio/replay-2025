@@ -1,6 +1,5 @@
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
-  import type { Asset } from 'contentful';
   const { data } = $props();
   const { session, speakers, startTime, endTime } = data;
 </script>
