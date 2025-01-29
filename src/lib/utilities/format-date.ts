@@ -1,6 +1,6 @@
 import { formatTime } from '$lib/utilities/format-time';
 
-export const formatSessionDate = (start: string, end: string): string => {
+export const formatDate = (start: string, end: string): string => {
   if (!start || !end) return 'Invalid date';
 
   const startDate = new Date(start);
@@ -17,8 +17,8 @@ export const formatSessionDate = (start: string, end: string): string => {
     year: 'numeric',
   });
 
-  const startTime = formatTime(startDate.toISOString());
-  const endTime = formatTime(endDate.toISOString());
+  const startTime = formatTime(start);
+  const endTime = formatTime(end);
 
   return `${formattedDate} · ${startTime} - ${endTime}`;
 };

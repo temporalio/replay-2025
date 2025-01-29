@@ -1,4 +1,5 @@
 import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from '$lib/contentful/index.js';
+import { formatDate } from '$lib/utilities/format-date.js';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
 import type { PageServerLoad } from './$types.js';
 import { error } from '@sveltejs/kit';
@@ -40,12 +41,15 @@ export const load: PageServerLoad = async ({ params }) => {
     slot.fields.talk?.some((talk) => talk.sys.id === session.sys.id),
   );
 
+  const date = timeSlot
+    ? formatDate(timeSlot.fields.startTime, timeSlot.fields.endTime)
+    : 'Date unavailable';
+
   return {
     description,
     session: session.fields,
     speakers: speakersWithPortraits,
     hasSpeakers: speakersWithPortraits.length > 0,
-    startTime: timeSlot?.fields.startTime,
-    endTime: timeSlot?.fields.endTime,
+    date: date,
   };
 };

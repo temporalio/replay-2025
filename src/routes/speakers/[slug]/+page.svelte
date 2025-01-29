@@ -1,6 +1,5 @@
 <script lang="ts">
   import Breadcrumb from '$components/breadcrumb.svelte';
-  import Footer from '$components/footer.svelte';
 
   const { data } = $props();
   const { speaker, biography, portrait } = data;
