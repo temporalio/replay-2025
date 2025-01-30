@@ -25,14 +25,22 @@
       <a href="/schedule/{talkOne.fields.slug}">
         {talkOne.fields.title}
       </a>
+      <div class="text-sm text-green">
+        {talkOne.fields.location}
+      </div>
     </div>
   {/if}
 
   {#if talkTwo}
-    <div class="hidden h-full items-center border-l border-grey p-4 hover:text-lilac md:flex">
+    <div
+      class="flex hidden h-full flex-col items-start border-l border-grey p-4 hover:text-lilac md:flex"
+    >
       <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
       </a>
+      <div class="text-sm text-green">
+        {talkTwo.fields.location}
+      </div>
     </div>
   {/if}
 </div>
@@ -50,6 +58,9 @@
       <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
       </a>
+      <div class="text-sm text-green">
+        {talkTwo.fields.location}
+      </div>
     </div>
   </div>
 {/if}
