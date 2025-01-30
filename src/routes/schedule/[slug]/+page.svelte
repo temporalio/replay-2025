@@ -9,12 +9,14 @@
   <div class="container flex max-w-6xl flex-col justify-start gap-8">
     <Breadcrumb text="Return to schedule" href="/schedule" />
     <h1 class="font-afacad text-5xl uppercase text-white max-xs:text-2xl">{session.title}</h1>
-    <div class="flex flex-col items-start pr-10 text-green md:block">{date}</div>
+    <div class="flex flex-col items-start pr-10 text-green md:block">
+      {date} •
+      {session.location}
+    </div>
 
     <div class="flex w-full flex-col gap-4 border border-grey bg-black p-6">
       <h3 class="font-josefin text-xl uppercase text-white">Abstract</h3>
       <div class="gap-6">
-        <p class="font-afacad text-2xl uppercase text-white">{session.location}</p>
         {#if description}
           <p class="prose prose-invert text-xl text-lilac">{@html description}</p>
         {/if}
