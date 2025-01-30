@@ -13,7 +13,7 @@
 </script>
 
 <div
-  class="font-inter container grid w-full min-w-10 max-w-xl grid-cols-[6rem_1fr] items-center border-b border-grey text-lg text-white
+  class="font-inter grid w-full min-w-10 grid-cols-[6rem_1fr] items-center border-b border-grey text-lg text-white
          last:border-b-0 md:grid-cols-[8rem_1fr_1fr]"
 >
   <div class="p-4 text-left text-base text-green">
