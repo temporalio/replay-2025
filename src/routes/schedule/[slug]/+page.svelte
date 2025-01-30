@@ -16,7 +16,7 @@
       <div class="gap-6">
         <p class="font-afacad text-2xl uppercase text-white">{session.location}</p>
         {#if description}
-          <p class="prose prose-invert text-lilac">{@html description}</p>
+          <p class="prose prose-invert text-xl text-lilac">{@html description}</p>
         {/if}
       </div>
 
@@ -28,7 +28,7 @@
 
           {#each speakers as speaker (speaker.sys.id)}
             {#if 'fields' in speaker}
-              <div class="flex flex-col gap-4 py-6 text-lilac">
+              <div class="flex flex-col gap-4 py-6 text-xl text-lilac">
                 <p>{speaker.fields.bio}</p>
                 <a href="/speakers/{speaker.fields.slug}" class="max-w-fit">
                   <div class="speaker-card flex">
