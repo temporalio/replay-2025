@@ -20,7 +20,9 @@
 
 <section class="flex w-full flex-col justify-start gap-12 bg-grid py-24">
   <div class="container space-y-8">
-    <Breadcrumb text="Return to speakers" href="/speakers" />
+    <div class="hover:underline">
+      <Breadcrumb text="Return to speakers" href="/speakers" />
+    </div>
     <h1 class="font-afacad text-5xl uppercase text-white">{speaker.fullName}</h1>
     <div class="grid grid-cols-1 gap-6 border border-grey bg-black p-6 lg:grid-cols-[auto_280px]">
       <div class="space-y-4">
