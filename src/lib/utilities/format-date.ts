@@ -43,5 +43,5 @@ export const formatSpeakerDate = (start: string, end: string): string => {
   const startTime = formatTime(start);
   const endTime = formatTime(end);
 
-  return `${formattedDate} </br>${startTime} - ${endTime}`;
+  return `${formattedDate} <br>${startTime} - ${endTime}`;
 };
