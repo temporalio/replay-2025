@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Breadcrumb from '$components/breadcrumb.svelte';
-  import { formatSpeakerDate } from '$lib/utilities/format-date.js';
   import type { Entry } from 'contentful';
   import type { SessionSkeleton } from '$lib/contentful/session.js';
+
+  import Breadcrumb from '$components/breadcrumb.svelte';
 
   type TalkWithDate = Entry<SessionSkeleton> & { date: string };
 
@@ -26,9 +26,7 @@
 
 <section class="flex w-full flex-col justify-start gap-12 bg-grid py-24">
   <div class="container space-y-8">
-    <div class="hover:underline">
-      <Breadcrumb text="Return to speakers" href="/speakers" />
-    </div>
+    <Breadcrumb text="Return to speakers" href="/speakers" />
     <h1 class="font-afacad text-5xl uppercase text-white">{speaker.fullName}</h1>
     <div class="grid grid-cols-1 gap-6 border border-grey bg-black p-6 lg:grid-cols-[auto_280px]">
       <div class="space-y-4">
@@ -37,17 +35,18 @@
         {#if hasTalks}
           <div class="space-y-6">
             <h3 class="font-afacad text-xl uppercase text-white">Talks</h3>
-            {#each talks as talk}
-              <div class="flex flex-col gap-4">
-                <a
-                  href="/schedule/{talk.fields.slug}"
-                  class="font-sans text-lg font-bold text-white">{talk.fields.title}</a
-                >
-              </div>
-            {/each}
-            {#each talks as talk}
-              <p class="font-sans text-lg text-lilac">{@html talk.date}</p>
-            {/each}
+            <ul>
+              {#each talks as talk}
+                <li>
+                  <a href="/schedule/{talk.fields.slug}" class="group space-y-2">
+                    <h4 class="font-sans text-lg font-bold text-white group-hover:underline">
+                      {talk.fields.title}
+                    </h4>
+                    <p class="font-sans text-lg text-lilac">{@html talk.date}</p>
+                  </a>
+                </li>
+              {/each}
+            </ul>
           </div>
         {/if}
       </div>

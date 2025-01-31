@@ -32,7 +32,7 @@
             {#if 'fields' in speaker}
               <div class="flex flex-col gap-4 py-6 text-xl text-lilac">
                 <p>{speaker.fields.bio}</p>
-                <a href="/speakers/{speaker.fields.slug}" class="max-w-fit">
+                <a href="/speakers/{speaker.fields.slug}" class="group max-w-fit">
                   <div class="speaker-card flex">
                     <div class="aspect-square max-w-[80px]">
                       <img
@@ -41,7 +41,9 @@
                       />
                     </div>
                     <div class="flex flex-col px-4">
-                      <div class="pb-2 font-sans text-xl font-bold text-white">
+                      <div
+                        class="pb-2 font-sans text-xl font-bold text-white group-hover:underline"
+                      >
                         {speaker.fields.fullName}
                       </div>
                       <div class="font-sans text-base text-lilac">
