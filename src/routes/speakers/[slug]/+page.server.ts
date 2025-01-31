@@ -1,10 +1,11 @@
+import { error } from '@sveltejs/kit';
+
 import { getSessionEntries, getSpeakerEntries, getTimeSlotEntries } from '$lib/contentful/index.js';
 import type { Speaker } from '$lib/contentful/speaker.js';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
-import type { PageServerLoad } from './$types.js';
-import { error } from '@sveltejs/kit';
-import type { SessionSkeleton } from '$lib/contentful/session.js';
 import { formatSpeakerDate } from '$lib/utilities/format-date.js';
+
+import type { PageServerLoad } from './$types.js';
 
 export const prerender = true;
 
@@ -35,12 +36,11 @@ export const load: PageServerLoad = async ({ params }) => {
       slot.fields.talk?.some((t) => t.sys.id === talk.sys.id),
     );
 
-    const startTime = timeSlot?.fields.startTime;
-    const endTime = timeSlot?.fields.endTime;
+    const { startTime, endTime } = timeSlot?.fields || {};
     const date = startTime && endTime ? formatSpeakerDate(startTime, endTime) : 'Schedule TBA';
 
     return {
-      fields: talk.fields as unknown as SessionSkeleton['fields'],
+      fields: talk.fields,
       sys: talk.sys,
       date,
     };
