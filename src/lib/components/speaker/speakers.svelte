@@ -21,7 +21,7 @@
   {#if animation}
     <div class="abstract"></div>
   {/if}
-  <div class="section pb-16 pt-36">
+  <div class="section space-y-8 pb-16 pt-36">
     {#if home}
       <h2 class="mb-8 title-medium">Speakers</h2>
     {:else}
