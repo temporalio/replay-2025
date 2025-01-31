@@ -21,3 +21,5 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 *storybook.log
+.env*.local
+contentful-export-error-log-*

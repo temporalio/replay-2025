@@ -30,7 +30,7 @@
         time="9am - 5pm"
         description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET, Go, and Java."
       >
-        <Button intent="tertiary" label="Register" />
+        <Button href="" intent="tertiary" label="Register" />
         <Link href="#">Learn More</Link>
       </Event>
     </Events>
@@ -45,7 +45,7 @@
         time="9am - 5pm"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt risus nec tellus maximus, dictum fermentum felis interdum. In rutrum egestas erat finibus imperdiet. Vestibulum velit libero, vehicula at pretium."
       >
-        <Button intent="tertiary" label="Register" />
+        <Button href="" intent="tertiary" label="Register" />
         <Link href="#">Learn More</Link>
       </Event>
       <Event
@@ -53,7 +53,7 @@
         time="9am - 5pm"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt risus nec tellus maximus, dictum fermentum felis interdum. In rutrum egestas erat finibus imperdiet. Vestibulum velit libero, vehicula at pretium."
       >
-        <Button intent="tertiary" label="Register" />
+        <Button href="" intent="tertiary" label="Register" />
         <Link href="#">Learn More</Link>
       </Event>
     </Events>

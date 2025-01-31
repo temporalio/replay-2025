@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 export const speaker = cva(['group', 'text-black', 'flex', 'w-full', 'flex-col'], {
   variants: {
     type: {
-      keynote: ['bg-green', 'xl:w-80', 'sm:flex-row', 'md:text-2xl', 'xl:flex-col'],
+      keynote: ['bg-green', 'xl:w-[22.5rem]', 'sm:flex-row', 'md:text-2xl', 'xl:flex-col'],
       speaker: ['bg-teal', 'flex-col'],
     },
   },
@@ -30,7 +30,7 @@ export const portrait = cva(
   {
     variants: {
       type: {
-        keynote: ['w-full', 'md:w-80', 'md:max-w-80'],
+        keynote: ['w-full', 'md:max-w-[22.5rem]'],
         speaker: [],
       },
     },
@@ -43,7 +43,7 @@ export const portrait = cva(
 export const speakerName = cva(['text-lg', 'font-semibold'], {
   variants: {
     type: {
-      keynote: ['md:text-3xl'],
+      keynote: ['md:text-2xl'],
       speaker: [],
     },
     defaultVariants: {
@@ -59,4 +59,6 @@ export type SpeakerProps = VariantProps<typeof speaker> &
     name: string;
     company: string;
     jobTitle: string;
+    bio?: string;
+    slug: string;
   };

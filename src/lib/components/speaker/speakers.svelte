@@ -1,60 +1,55 @@
-<script>
+<script lang="ts">
+  import type { Entry } from 'contentful';
+  import type { SpeakerSkeleton } from '$lib/contentful';
+
   import Speaker from './speaker.svelte';
+  const {
+    speakers,
+    animation = true,
+    home = true,
+  }: {
+    speakers: Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[];
+    animation?: boolean;
+    home?: boolean;
+  } = $props();
+
+  const keynotes = speakers.filter((speaker) => speaker.fields.keynote);
+  const regularSpeakers = speakers.filter((speaker) => !speaker.fields.keynote);
 </script>
 
 <section class="relative bg-grid">
-  <div class="abstract"></div>
-  <div class="section pb-16 pt-36">
-    <h2 class="mb-8 title-medium">Speakers</h2>
+  {#if animation}
+    <div class="abstract"></div>
+  {/if}
+  <div class="section space-y-8 pb-16 pt-36">
+    {#if home}
+      <h2 class="mb-8 title-medium">Speakers</h2>
+    {:else}
+      <h1 class="hero-subtitle text-4xl uppercase text-white lg:text-5xl">Speakers</h1>
+    {/if}
     <div class="flex flex-col gap-8">
       <div class="flex flex-col gap-8 xl:flex-row xl:flex-wrap xl:justify-between">
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-          type="keynote"
-        />
+        {#each keynotes as speaker}
+          <Speaker
+            name={speaker.fields.fullName}
+            jobTitle={speaker.fields.jobTitle}
+            company={speaker.fields.companyName}
+            image={speaker.fields.image?.fields.file?.url!}
+            type="keynote"
+            slug={speaker.fields.slug}
+          />
+        {/each}
       </div>
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
-        <Speaker
-          name="Jen Looper"
-          jobTitle="Senior Developer Advocate"
-          company="Microsoft"
-          image="https://placebeard.it/360x400"
-        />
+        {#each regularSpeakers as speaker}
+          <Speaker
+            name={speaker.fields.fullName}
+            jobTitle={speaker.fields.jobTitle}
+            company={speaker.fields.companyName}
+            image={speaker.fields.image?.fields.file?.url!}
+            slug={speaker.fields.slug}
+          />
+        {/each}
       </div>
     </div>
   </div>

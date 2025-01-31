@@ -14,6 +14,9 @@ export default {
         dark: '#61682C',
         DEFAULT: '#DDEE59',
       },
+      grey: {
+        DEFAULT: '#374761',
+      },
       lilac: {
         DEFAULT: '#D9CAFB',
         dark: '#47588E',
@@ -44,6 +47,7 @@ export default {
       backgroundImage: {
         grid: "url('$assets/backgrounds/grid.svg')",
         line: 'linear-gradient(to right, #61682C calc(100% / 2 - 20px), transparent calc(100% / 2 - 20px), transparent calc(100% / 2 + 20px), #61682C calc(100% / 2 + 20px))',
+        lines: "url('$assets/backgrounds/lines.svg')",
         'pink-to-red': 'linear-gradient(180deg, #E3038C 3.52%, #FF0045 101%)',
         'red-to-pink': 'linear-gradient(180deg, #FF0045 1%, #E3038C 98.48%)',
         'mint-to-yellow': 'linear-gradient(180deg, #A7FFBB 4.67%, #E2FF6E 104.22%)',
@@ -56,6 +60,7 @@ export default {
       backgroundPosition: {
         'center-bottom': 'center bottom',
         speaker: 'top left',
+        lines: 'top left',
       },
       container: {
         center: true,
@@ -83,6 +88,7 @@ export default {
       },
       screens: {
         xs: '375px',
+        '3xl': '1920px',
       },
       spacing: {
         128: '32rem',

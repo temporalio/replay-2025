@@ -4,60 +4,75 @@
 </script>
 
 <header class="flex flex-col bg-black px-1 pt-12">
-  <div class="container mx-auto flex max-w-7xl flex-col gap-8 2xl:max-w-9xl">
+  <div class="container mx-auto flex max-w-7xl flex-col gap-4 2xl:max-w-9xl">
     <time class="hero-subtitle block text-nowrap uppercase text-white" datetime="2025-03-03">
       London • Mar 3-5, 2025
     </time>
     <h1 class="hero-title uppercase">
+      <span class="block text-nowrap after:content-[':']">Replay</span>
       <span class="block text-nowrap">Modernise</span>
-      <span class="block text-nowrap">the Monolith</span>
     </h1>
+    <p class="font-afacad text-3xl uppercase tracking-widest text-white">
+      Leave behind outdated, monolithic systems and methodologies, and embrace cutting edge
+      technology at Replay 2025.
+    </p>
     <Button intent="primary" href={links.tickets} label="Get Your Ticket" />
   </div>
 </header>
 
 <style lang="postcss">
   :root {
-    --stonehenge-origin: center;
+    --stonehenge-background: url('$assets/backgrounds/stonehenge.png');
     --stonehenge-height: 738px;
-    --stonehenge-space-below: theme('spacing.96');
-    --stonehenge-scroll-adjustment: 20%;
-  }
-
-  header {
-    background-image: url('$assets/backgrounds/stonehenge@2x.png');
-    background-repeat: no-repeat;
-    padding-bottom: var(--stonehenge-space-below);
-    background-position: var(--stonehenge-origin) bottom
-      calc(var(--stonehenge-space-below) - var(--stonehenge-height));
-  }
-
-  @supports (animation-timeline: scroll(y)) {
-    @keyframes stonehenge-move {
-      0% {
-        background-position: var(--stonehenge-origin) bottom
-          calc(var(--stonehenge-space-below) - var(--stonehenge-height));
-      }
-      10% {
-        background-position: var(--stonehenge-origin) bottom
-          calc(
-            var(--stonehenge-space-below) - var(--stonehenge-height) +
-              var(--stonehenge-scroll-adjustment)
-          );
-      }
-    }
-
-    header {
-      background-position: initial;
-      animation: stonehenge-move 1s linear;
-      animation-timeline: scroll(y nearest);
-    }
+    --stonehenge-space-below: theme('spacing.72');
+    --lines-background: url('$assets/backgrounds/lines.svg');
   }
 
   @media screen(md) {
-    header {
-      --stonehenge-origin: left;
+    :root {
       --stonehenge-space-below: theme('spacing.144');
+    }
+  }
+
+  header {
+    background-image: var(--stonehenge-background), var(--lines-background);
+    background-repeat: no-repeat;
+    padding-bottom: var(--stonehenge-space-below);
+    background-size: auto, auto;
+    background-position:
+      50% calc(100% + var(--stonehenge-height) - var(--stonehenge-space-below)),
+      top left;
+  }
+
+  @supports (background-image: url('$assets/backgrounds/stonehenge.webp')) {
+    :root {
+      --stonehenge-background: url('$assets/backgrounds/stonehenge.webp');
+    }
+  }
+
+  @supports (animation-timeline: scroll(y nearest)) {
+    @keyframes stonehenge-parallax {
+      0% {
+        background-size:
+          auto var(--stonehenge-height),
+          auto;
+        background-position:
+          50% calc(100% + var(--stonehenge-height) - var(--stonehenge-space-below)),
+          top left;
+      }
+      15% {
+        background-size:
+          auto var(--stonehenge-space-below),
+          auto;
+        background-position:
+          40% calc(100% + 4rem),
+          top left;
+      }
+    }
+
+    header {
+      animation: stonehenge-parallax 1s forwards;
+      animation-timeline: scroll(y nearest);
     }
   }
 </style>

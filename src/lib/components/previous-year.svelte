@@ -16,7 +16,7 @@
       class="flex gap-2 bg-blue-to-mint px-8 py-4 font-sans text-lg font-bold uppercase text-black hover:cursor-pointer hover:text-pink-dark hover:ring-4 hover:ring-pink"
     >
       <span class="block">Play 2024 Reel</span>
-      <img src={play} class="block" alt="Play" />
+      <enhanced:img src="$assets/icons/play.svg" class="block" alt="Play" />
     </a>
   </div>
 </section>
