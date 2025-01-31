@@ -3,7 +3,6 @@ import type { Speaker } from '$lib/contentful/speaker.js';
 import { compileMarkdown } from '$lib/utilities/compile-markdown';
 import type { PageServerLoad } from './$types.js';
 import { error } from '@sveltejs/kit';
-import type { Entry } from 'contentful';
 import type { SessionSkeleton } from '$lib/contentful/session.js';
 import { formatSpeakerDate } from '$lib/utilities/format-date.js';
 
@@ -19,12 +18,6 @@ const getPortrait = (speaker: Speaker<never, string>) => {
   throw new Error('Invalid image');
 };
 
-type TalkWithDate = {
-  fields: SessionSkeleton['fields'];
-  sys: Entry<SessionSkeleton>['sys'];
-  date: string;
-};
-
 export const load: PageServerLoad = async ({ params }) => {
   const speakers = await getSpeakerEntries({ 'fields.slug': params.slug });
   const [speaker] = speakers.items;
@@ -37,7 +30,7 @@ export const load: PageServerLoad = async ({ params }) => {
   const talks = await getSessionEntries({ 'fields.speakers.sys.id': speaker.sys.id });
   const timeSlots = await getTimeSlotEntries();
 
-  const talksWithDate: TalkWithDate[] = talks.items.map((talk) => {
+  const talksWithDate = talks.items.map((talk) => {
     const timeSlot = timeSlots.items.find((slot) =>
       slot.fields.talk?.some((t) => t.sys.id === talk.sys.id),
     );
