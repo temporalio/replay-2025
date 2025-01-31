@@ -21,11 +21,10 @@
   </ul>
 
   <enhanced:img
-    src="$assets/replay-full-logo.svg"
+    src="$assets/replay-logo-modernise.svg"
     alt="Replay: Modernise the Monolith"
     class="w-96"
   />
-
   <div class="flex items-center gap-4 text-sm uppercase">
     <enhanced:img src="$assets/icons/temporal-logo.svg" alt="Temporal" class="block h-16 w-16" />
     <p class="text-nowrap">© {new Date().getFullYear()} Temporal Technologies INC.</p>

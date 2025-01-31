@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Hero } from '$components/hero';
-  import { Navigation } from '$components/navigation';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
   import Footer from '$components/footer.svelte';
@@ -10,6 +9,9 @@
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
+  import AbstractBanner from '$components/abstract-banner.svelte';
+  import type { Entry } from 'contentful';
+  import type { SpeakerSkeleton } from '$lib/contentful';
 
   const { data } = $props();
 </script>
@@ -18,13 +20,16 @@
   <title>Replay 2025 — March 3–5 — London, UK</title>
 </svelte:head>
 
-<Navigation />
 <Hero />
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
 
-<Speakers speakers={data.speakers} />
+<AbstractBanner />
+
+<Speakers
+  speakers={data.speakers as Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[]}
+/>
 
 <div class="bg-lines bg-no-repeat 3xl:bg-none">
   <div
@@ -41,4 +46,3 @@
 
 <Location />
 <Tickets heading="Build the future of scalable, resilient systems" />
-<Footer />

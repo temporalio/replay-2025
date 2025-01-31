@@ -14,9 +14,9 @@
 {/snippet}
 
 <nav
-  class="sticky top-0 z-10 flex h-20 flex-row items-center justify-between border-b-2 border-b-lilac-dark bg-black p-4 lg:gap-8"
+  class="sticky top-0 z-20 flex h-20 flex-row items-center justify-between border-b-2 border-b-lilac-dark bg-black p-4 lg:gap-8"
 >
-  <div class="background absolute left-0 top-0 -z-10 h-full w-full"></div>
+  <div class="background absolute left-0 top-0 -z-20 h-full w-full"></div>
   <input
     type="checkbox"
     id="navigation-menu"
@@ -33,6 +33,9 @@
     class="absolute left-0 top-20 hidden w-full flex-col bg-black/90 text-white backdrop-blur-lg peer-checked:flex lg:relative lg:top-0 lg:flex lg:flex-row lg:gap-4 lg:bg-transparent"
     role="list"
   >
+    {@render navigationItem({ href: links.speakers, label: 'Speakers' })}
+    {@render navigationItem({ href: links.schedule, label: 'Schedule' })}
+    {@render navigationItem({ href: links.faq, label: 'FAQ' })}
     {@render navigationItem({ href: links.codeOfConduct, label: 'Code of Conduct' })}
   </ul>
 </nav>
