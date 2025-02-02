@@ -9,7 +9,7 @@
     <Event
       time="9am - 5pm"
       title="Workshops"
-      description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET and Java."
+      description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET. The Go and Java Workshops are sold out."
     >
       <Button href={links.tickets} intent="tertiary" label="General Admission +  Workshop Ticket" />
     </Event>
