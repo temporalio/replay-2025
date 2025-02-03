@@ -8,7 +8,7 @@
   <div class="flex flex-col gap-8 lg:flex-row">
     {@render content({
       title: 'What to Expect',
-      body: "Replay '25 is an opportunity to transition away from outdated, monolithic systems and methodologies to embrace cutting edge technologies. Bring your team along for three days packed with insightful tech talks, hands on workshops, and meaningful conversations.",
+      body: "Replay '25 is your opportunity to transition from outdated systems and methodologies to cutting-edge technologies. Bring your team along for three days packed with insightful tech talks, hands-on workshops, and meaningful conversations.",
     })}
     {@render content({
       title: "What You'll Learn",
