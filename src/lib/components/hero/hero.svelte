@@ -13,7 +13,7 @@
       <span class="block text-nowrap">Modernise</span>
     </h1>
     <p class="font-afacad text-3xl uppercase tracking-widest text-white">
-      Leave behind outdated, monolithic systems and methodologies, and embrace cutting edge
+      Leave behind outdated systems and traditional approaches to embrace cutting-edge
       technology at Replay 2025.
     </p>
     <Button intent="primary" href={links.tickets} label="Get Your Ticket" />
