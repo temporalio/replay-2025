@@ -2,7 +2,6 @@
   import { Hero } from '$components/hero';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
-  import Footer from '$components/footer.svelte';
   import Location from '$components/location.svelte';
   import PreviousYear from '$components/previous-year.svelte';
   import Quote from '$components/quote.svelte';
