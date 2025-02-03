@@ -8,7 +8,6 @@
   import Tickets from '$components/tickets.svelte';
   import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
-  import AbstractBanner from '$components/abstract-banner.svelte';
   import type { Entry } from 'contentful';
   import type { SpeakerSkeleton } from '$lib/contentful';
 
@@ -23,9 +22,6 @@
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
-
-<AbstractBanner />
-
 <Speakers
   speakers={data.speakers as Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[]}
 />
