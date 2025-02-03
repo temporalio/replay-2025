@@ -33,7 +33,7 @@
 
   {#if talkTwo}
     <div
-      class="flex hidden h-full flex-col items-start border-l border-grey p-4 hover:text-lilac md:flex"
+      class="hidden h-full flex-col items-start border-l border-grey p-4 hover:text-lilac md:flex"
     >
       <a href="/schedule/{talkTwo.fields.slug}">
         {talkTwo.fields.title}
