@@ -14,7 +14,7 @@
       <Button href={links.tickets} intent="tertiary" label="General Admission +  Workshop Ticket" />
     </Event>
     <Event
-      time="10am - 4pm"
+      time="9:30am - 4pm"
       title="Hackathon"
       description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
     >
