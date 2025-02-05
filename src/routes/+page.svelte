@@ -16,6 +16,7 @@
   const { data } = $props();
   const { elite, premier, impact } = data;
 
+  console.log(impact[0].fields.darkLogo);
   console.log(elite[0].fields.darkLogo);
 </script>
 

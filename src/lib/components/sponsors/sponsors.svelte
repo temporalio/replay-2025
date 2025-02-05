@@ -59,7 +59,7 @@
                 <img
                   src={getImageUrl(sponsor.fields.darkLogo)}
                   alt={sponsor.fields.name}
-                  class={merge('block', 'max-h-8')}
+                  class={merge('block', 'h-8')}
                 />
               </a>
             {/if}
