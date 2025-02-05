@@ -27,7 +27,7 @@
     <Events {title} {background} {...args}>
       <Event
         title={title ?? ''}
-        time="9am - 5pm"
+        time="9:30am - 5pm"
         description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET, Go, and Java."
       >
         <Button href="" intent="tertiary" label="Register" />
