@@ -14,7 +14,9 @@
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   const { data } = $props();
-  console.log(data.sponsors);
+  const { elite, premier, impact } = data;
+
+  console.log(elite[0].fields.darkLogo);
 </script>
 
 <svelte:head>
@@ -42,6 +44,6 @@
   </div>
 </div>
 
-<Sponsors />
+<Sponsors {elite} {premier} {impact} />
 <Location />
 <Tickets heading="Build the future of scalable, resilient systems" />

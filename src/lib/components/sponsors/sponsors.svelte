@@ -1,83 +1,71 @@
 <script lang="ts">
   import Tier from './sponsor-tier.svelte';
-  import bitovi from '$assets/sponsors/bitovi.svg';
-  import type { SponsorTier } from './sponsor.types';
+  import type { Sponsor } from '$lib/contentful/sponsor';
   import { twMerge as merge } from 'tailwind-merge';
-</script>
 
-{#snippet sponsor({
-  name,
-  image,
-  href,
-  tier,
-}: {
-  name: string;
-  image: string;
-  href: string;
-  tier: SponsorTier;
-})}
-  <a {href} class="block">
-    <img
-      src={image}
-      alt={name}
-      class={merge(
-        'block',
-        tier === 'Impact' && 'max-h-8',
-        tier === 'Premier' && 'max-h-14',
-        tier === 'Elite' && 'max-h-20',
-      )}
-    />
-  </a>
-{/snippet}
+  export let elite: Sponsor<never, string>[] = [];
+  export let premier: Sponsor<never, string>[] = [];
+  export let impact: Sponsor<never, string>[] = [];
+
+  const getImageUrl = (asset: any): string | null => {
+    return asset?.fields?.file?.url ? `https:${asset.fields.file.url}` : null;
+  };
+</script>
 
 <section class="bg-green text-black">
   <div class="section py-16">
     <header class="mb-20">
       <h2 class="uppercase title-medium">Sponsors</h2>
     </header>
+
     <div class="space-y-16">
-      <Tier title="Elite">
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Elite',
-        })}
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Elite',
-        })}
-      </Tier>
-      <Tier title="Premier">
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Premier',
-        })}
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Premier',
-        })}
-      </Tier>
-      <Tier title="Impact">
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Impact',
-        })}
-        {@render sponsor({
-          name: 'Bitovi',
-          image: bitovi,
-          href: 'https://bitovi.com',
-          tier: 'Impact',
-        })}
-      </Tier>
+      {#if elite.length}
+        <Tier title="Elite">
+          {#each elite as sponsor}
+            {#if getImageUrl(sponsor.fields.darkLogo)}
+              <a href={sponsor.fields.externalUrl} class="block">
+                <img
+                  src={getImageUrl(sponsor.fields.darkLogo)}
+                  alt={sponsor.fields.name}
+                  class={merge('block', 'max-h-20')}
+                />
+              </a>
+            {/if}
+          {/each}
+        </Tier>
+      {/if}
+
+      {#if premier.length}
+        <Tier title="Premier">
+          {#each premier as sponsor}
+            {#if getImageUrl(sponsor.fields.darkLogo)}
+              <a href={sponsor.fields.externalUrl} class="block">
+                <img
+                  src={getImageUrl(sponsor.fields.darkLogo)}
+                  alt={sponsor.fields.name}
+                  class={merge('block', 'max-h-14')}
+                />
+              </a>
+            {/if}
+          {/each}
+        </Tier>
+      {/if}
+
+      {#if impact.length}
+        <Tier title="Impact">
+          {#each impact as sponsor}
+            {#if getImageUrl(sponsor.fields.darkLogo)}
+              <a href={sponsor.fields.externalUrl} class="block">
+                <img
+                  src={getImageUrl(sponsor.fields.darkLogo)}
+                  alt={sponsor.fields.name}
+                  class={merge('block', 'max-h-8')}
+                />
+              </a>
+            {/if}
+          {/each}
+        </Tier>
+      {/if}
     </div>
   </div>
 </section>
