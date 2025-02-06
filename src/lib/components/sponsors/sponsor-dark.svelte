@@ -3,7 +3,7 @@
   import { twMerge as merge } from 'tailwind-merge';
 </script>
 
-<div>
+<div class="w-full">
   {#if sponsor.fields.lightLogo}
     <div>
       <img
@@ -13,12 +13,12 @@
       />
     </div>
   {/if}
-  <p class="prose prose-invert py-2 text-lilac">{sponsor.fields.description}</p>
+  <p class="prose prose-invert py-4 text-lilac">{sponsor.fields.description}</p>
   <a
     href={sponsor.fields.externalUrl}
     target="_blank"
     class="text-lilac underline hover:text-white hover:no-underline"
-    >{sponsor.fields.name}
+    >{sponsor.fields.externalUrl}
   </a>
 </div>
 
