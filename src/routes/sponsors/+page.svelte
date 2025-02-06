@@ -12,14 +12,17 @@
 
 <AbstractBanner />
 
-<section class="relative bg-grid">
-  {#if elite.length}
-    <SponsorSection title="Elite Sponsors" sponsors={elite} />
-  {/if}
-  {#if premier.length}
-    <SponsorSection title="Premier Sponsors" sponsors={premier} />
-  {/if}
-  {#if impact.length}
-    <SponsorSection title="Impact Sponsors" sponsors={impact} />
-  {/if}
+<section class="flex flex-col items-center justify-center bg-grid pt-36">
+  <div class="flex max-w-6xl flex-col justify-start gap-6 p-6 pb-16 pt-36">
+    <h1 class="hero-subtitle text-4xl uppercase text-white lg:text-5xl">Sponsors</h1>
+    {#if elite.length}
+      <SponsorSection title="Elite Sponsors" sponsors={elite} />
+    {/if}
+    {#if premier.length}
+      <SponsorSection title="Premier Sponsors" sponsors={premier} />
+    {/if}
+    {#if impact.length}
+      <SponsorSection title="Impact Sponsors" sponsors={impact} />
+    {/if}
+  </div>
 </section>
