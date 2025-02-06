@@ -35,6 +35,7 @@
   >
     {@render navigationItem({ href: links.speakers, label: 'Speakers' })}
     {@render navigationItem({ href: links.schedule, label: 'Schedule' })}
+    {@render navigationItem({ href: links.sponsors, label: 'Sponsors' })}
     {@render navigationItem({ href: links.faq, label: 'FAQ' })}
     {@render navigationItem({ href: links.codeOfConduct, label: 'Code of Conduct' })}
   </ul>

@@ -1,18 +1,20 @@
 <script lang="ts">
-  import { Hero } from '$components/hero';
+  import About from '$components/about.svelte';
   import Agenda from '$components/agenda.svelte';
   import Benefits from '$components/benefits.svelte';
+  import { Hero } from '$components/hero';
   import Location from '$components/location.svelte';
   import PreviousYear from '$components/previous-year.svelte';
-  import Quote from '$components/quote.svelte';
-  import Tickets from '$components/tickets.svelte';
-  import About from '$components/about.svelte';
   import Speakers from '$components/speaker/speakers.svelte';
-  import AbstractBanner from '$components/abstract-banner.svelte';
+  import Sponsors from '$components/sponsors/sponsors.svelte';
+  import Tickets from '$components/tickets.svelte';
+  import Quote from '$components/quote.svelte';
+
   import type { Entry } from 'contentful';
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   const { data } = $props();
+  const { elite, premier, impact } = data;
 </script>
 
 <svelte:head>
@@ -23,9 +25,6 @@
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
-
-<AbstractBanner />
-
 <Speakers
   speakers={data.speakers as Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[]}
 />
@@ -43,5 +42,6 @@
   </div>
 </div>
 
+<Sponsors {elite} {premier} {impact} />
 <Location />
 <Tickets heading="Build the future of scalable, resilient systems" />

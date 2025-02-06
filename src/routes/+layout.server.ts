@@ -8,5 +8,15 @@ export const load: LayoutServerLoad = async () => {
   const speakers = await getSpeakerEntries();
   const sponsors = await getSponsorEntries();
 
-  return { speakers: speakers.items, sponsors: sponsors.items };
+  const impact = sponsors.items.filter((sponsor) => sponsor.fields.sponsorType === 'Impact');
+  const premier = sponsors.items.filter((sponsor) => sponsor.fields.sponsorType === 'Premier');
+  const elite = sponsors.items.filter((sponsor) => sponsor.fields.sponsorType === 'Elite');
+
+  return {
+    speakers: speakers.items,
+    sponsors: sponsors.items,
+    impact: impact,
+    premier: premier,
+    elite: elite,
+  };
 };
