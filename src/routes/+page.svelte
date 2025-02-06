@@ -14,6 +14,7 @@
   import type { SpeakerSkeleton } from '$lib/contentful';
 
   const { data } = $props();
+  const { elite, premier, impact } = data;
 </script>
 
 <svelte:head>

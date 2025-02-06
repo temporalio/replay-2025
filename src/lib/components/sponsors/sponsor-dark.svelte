@@ -1,32 +1,16 @@
 <script lang="ts">
-  import type { Sponsor } from '$lib/contentful/sponsor';
   export let sponsor;
+  import { twMerge as merge } from 'tailwind-merge';
 </script>
 
 <div>
   {#if sponsor.fields.lightLogo}
     <div>
-      {#if sponsor.fields.sponsorType === 'Elite'}
-        <img
-          src={sponsor.fields.lightLogo.fields.file.url}
-          alt={sponsor.fields.name}
-          class="sponsor-logo max-h-20"
-        />
-      {/if}
-      {#if sponsor.fields.sponsorType === 'Premier'}
-        <img
-          src={sponsor.fields.lightLogo.fields.file.url}
-          alt={sponsor.fields.name}
-          class="sponsor-logo max-h-10"
-        />
-      {/if}
-      {#if sponsor.fields.sponsorType === 'Impact'}
-        <img
-          src={sponsor.fields.lightLogo.fields.file.url}
-          alt={sponsor.fields.name}
-          class="sponsor-logo max-h-8"
-        />
-      {/if}
+      <img
+        src={sponsor.fields.lightLogo.fields.file.url}
+        alt={sponsor.fields.name}
+        class={merge('block', sponsor.fields.sponsorType.toLowerCase() || '')}
+      />
     </div>
   {/if}
   <p class="prose prose-invert py-2 text-lilac">{sponsor.fields.description}</p>
@@ -37,3 +21,17 @@
     >{sponsor.fields.name}
   </a>
 </div>
+
+<style lang="postcss">
+  .elite {
+    max-height: 5rem;
+  }
+
+  .premier {
+    max-height: 2.5rem;
+  }
+
+  .impact {
+    max-height: 2rem;
+  }
+</style>
