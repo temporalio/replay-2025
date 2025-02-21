@@ -1,6 +1,7 @@
 <script lang="ts">
   import About from '$components/about.svelte';
   import Agenda from '$components/agenda.svelte';
+  import Banner from '$components/banner/banner.svelte';
   import Benefits from '$components/benefits.svelte';
   import { Hero } from '$components/hero';
   import Location from '$components/location.svelte';
@@ -25,6 +26,7 @@
 <Tickets heading="Break Free from the Status Quo" />
 <About />
 <Agenda />
+<Banner />
 <Speakers
   speakers={data.speakers as Entry<SpeakerSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>[]}
 />
