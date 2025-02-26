@@ -7,7 +7,7 @@
   <div class="flex flex-col">
     <div class="font-jaro text-4xl uppercase max-md:text-2xl">ANNOUNCING SPECIAL GUESTS</div>
     <div class="font-afacad text-5xl uppercase max-md:text-2xl">
-      The Tech Roast Show is coming to Replay for their first show in London
+      The Tech Roast Show is joining Replay in London
     </div>
   </div>
   <div class="w-full min-w-[300px] max-w-[400px]">
