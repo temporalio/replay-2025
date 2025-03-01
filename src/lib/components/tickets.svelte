@@ -12,7 +12,7 @@
       <ul class="flex items-end justify-between gap-8">
         <li class="font-jaro text-8xl md:text-9xl">£200</li>
       </ul>
-      <Button intent="secondary" label="Get Your Ticket" href={links.tickets} />
+      <Button intent="secondary" label="SOLD OUT" href={links.tickets} />
     </div>
   </div>
 </section>
