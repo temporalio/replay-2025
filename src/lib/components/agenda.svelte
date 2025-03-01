@@ -9,16 +9,16 @@
     <Event
       time="9am - 5pm"
       title="Workshops"
-      description="Join us for in-depth workshops led by Temporal experts to deepen your skills. Available in .NET. The Go and Java Workshops are sold out."
+      description="Join us for in-depth workshops led by Temporal experts to deepen your skills."
     >
-      <Button href={links.tickets} intent="tertiary" label="General Admission +  Workshop Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="SOLD OUT" />
     </Event>
     <Event
       time="9:30am - 4pm"
       title="Hackathon"
       description="Collaborate with other like-minded devs at the Hackathon to write sample workflows and build cool apps."
     >
-      <Button href={links.tickets} intent="tertiary" label="General Admission + Hackathon Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="SOLD OUT" />
     </Event>
   </Events>
 
@@ -28,7 +28,7 @@
       title="Keynotes + Tech Talks"
       description="Immerse yourself in two days of technical talks from backend software engineering leaders at top organizations. They’ll discuss challenges they’ve encountered and strategies and solutions they’ve employed during their modernisation efforts and beyond. "
     >
-      <Button href={links.tickets} intent="tertiary" label="Ticket" />
+      <Button href={links.tickets} intent="tertiary" label="SOLD OUT" />
     </Event>
   </Events>
 
