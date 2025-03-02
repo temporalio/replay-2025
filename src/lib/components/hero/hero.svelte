@@ -16,7 +16,7 @@
       Leave behind outdated systems and traditional approaches to embrace cutting-edge
       technology at Replay 2025.
     </p>
-    <Button intent="primary" href={links.tickets} label="Get Your Ticket" />
+    <Button intent="primary" href={links.tickets} label="SOLD OUT" />
   </div>
 </header>
 
