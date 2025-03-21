@@ -9,5 +9,11 @@
       "destination": "https://replay-2024.preview.thundergun.io/2024/replay-2024/:subdir*"
     },
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://temporal.io/replay/2025"
+    }
   ]
 }
