@@ -65,7 +65,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
     "rimraf": "^6.0.1",
-    "storybook": "^8.4.7",
+    "storybook": "^8.6.15",
     "svelte": "^5.14.4",
     "svelte-check": "^4.1.1",
     "tailwind-merge": "^2.5.5",
